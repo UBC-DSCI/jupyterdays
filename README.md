@@ -45,7 +45,7 @@ Theme: New developments in the Data Science and Jupyter education space
 | 11:15 am | Speaker #3 |  |  |
 | 11:45 pm | Speaker #4 |  |  |
 | 12:15 pm | Lunch | | |
-| 1:30 pm | Speaker #4 |  |  |
-| 2:00 pm | Speaker #5 |  |  |
+| 1:30 pm | Speaker #5 |  |  |
+| 2:00 pm | Speaker #6 |  |  |
 | 2:30 pm | Closing remarks | | |
 | 3:00 pm | Session ends | | |
