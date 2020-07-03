@@ -33,7 +33,7 @@ Theme: Pedagogy & Assessment
 | 10:00 am | 10 min break | | |
 | 10:15 am | Intro to using Gradescope with Jupyter (?) | Mike Gelbart (?) | |
 | 11:30 am | 90 min break | | | 
-| 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | [Tiffany Timbers](bios.md#tiffany-timbers) | |
+| 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | [Mike Gelbart](bios.md#mike-gelbart) | |
 | 2:15 pm | 10 min break | | |
 | 2:25 pm | Teaching data science in an inclusive and accessible manner (classroom code of conduct, choosing datasets for teaching, encouraging language, tool choice) | Warren Code | |
 | 3:30 pm | Session ends | | |
