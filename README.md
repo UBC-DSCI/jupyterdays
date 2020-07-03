@@ -14,7 +14,7 @@ Theme: Getting started teaching with Jupyter
 | Time | Session Title | Session Lead | Links |
 |------|---------------|--------------|-------|
 | 9:00 am | Welcome | Patrick Walls |  |
-| 9:10 am | Intro to Jupyter & [Syzygy.ca](https://ubc.syzygy.ca/) | Joel Oestblom | |
+| 9:10 am | Intro to Jupyter & [Syzygy.ca](https://ubc.syzygy.ca/) | Joel Ostblom | |
 | 9:40 am | 10 min break | | |
 | 9:50 am | Sharing your teaching materials using Git & GitHub | Tiffany Timbers | |
 | 11:30 am | 90 min break | | | 
