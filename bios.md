@@ -1,4 +1,4 @@
-## Bio's of Jupyter Days session leaders
+# Bio's of Jupyter Days session leaders
 
 
 ## Tom Beuzen
