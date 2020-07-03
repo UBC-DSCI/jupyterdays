@@ -14,13 +14,13 @@ Theme: Getting started teaching with Jupyter
 | Time | Session Title | Session Lead | Links |
 |------|---------------|--------------|-------|
 | 9:00 am | Welcome | Patrick Walls |  |
-| 9:10 am | Intro to Jupyter & [Syzygy.ca](https://ubc.syzygy.ca/) | Joel Ostblom | |
+| 9:10 am | Intro to Jupyter & [Syzygy.ca](https://ubc.syzygy.ca/) | [Joel Ostblom](bios.md#joel-ostblom) | |
 | 9:40 am | 10 min break | | |
-| 9:50 am | Sharing your teaching materials using Git & GitHub | Tiffany Timbers | |
+| 9:50 am | Sharing your teaching materials using Git & GitHub | [Tiffany Timbers](bios.md#tiffany-timbers) | |
 | 11:30 am | 90 min break | | | 
 | 1:00 pm | Distributing assignments to students using nbgigtpuller & [Syzygy.ca](https://ubc.syzygy.ca/) | Patrick Walls | |
 | 1:50 pm | 10 min break | | |
-| 2:00 pm | Creating open and executable textbooks via Jupyter book | Tom Beuzen | |
+| 2:00 pm | Creating open and executable textbooks via Jupyter book | [Tom Beuzen](bios.md#tom-beuzen) | |
 | 3:30 pm | Session ends | | |
 
 ### Day 2: August 13, 2020
@@ -33,7 +33,7 @@ Theme: Pedagogy & Assessment
 | 10:00 am | 10 min break | | |
 | 10:15 am | Intro to using Gradescope with Jupyter (?) | Mike Gelbart (?) | |
 | 11:30 am | 90 min break | | | 
-| 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | Tiffany Timbers | |
+| 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | [Tiffany Timbers](bios.md#tiffany-timbers) | |
 | 2:15 pm | 10 min break | | |
 | 2:25 pm | Teaching data science in an inclusive and accessible manner (classroom code of conduct, choosing datasets for teaching, encouraging language, tool choice) | Warren Code | |
 | 3:30 pm | Session ends | | |
