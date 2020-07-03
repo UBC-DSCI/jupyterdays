@@ -1,7 +1,12 @@
-# Jupyter days
+# UBC JupyterDays 2020
 
-August 12 - 14, 2020
+## August 12 - 14, 2020
 
+[Jupyter notebook](https://jupyter.org) is a web application for producing computational narratives: a notebook in the browser which runs code and renders text, mathematical notation, images and videos. Jupyter notebook is a powerful open source tool for scientific computing and reproducible research.
+
+Come join other instructors, researchers and students at UBC to share their Jupyter experiences and to learn about new Jupyter tools!
+
+Register at [CTLT event link](#)
 
 ### Day 1: August 12, 2020
 Theme: Getting started teaching with Jupyter
