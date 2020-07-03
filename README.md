@@ -29,9 +29,9 @@ Theme: Pedagogy & Assessment
 | Time | Session Title | Session Lead | Links |
 |------|---------------|--------------|-------|
 | 9:00 am | Welcome |  |  |
-| 9:10 am | Intro to nbgrader | Patrick Walls | |
+| 9:05 am | Intro to using Speedgrader or Gradescope with Jupyter | | |
+| 9:20 am | Intro to nbgrader | Patrick Walls | |
 | 10:00 am | 10 min break | | |
-| 10:15 am | Intro to using Gradescope with Jupyter (?) | Mike Gelbart (?) | |
 | 11:30 am | 90 min break | | | 
 | 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | [Mike Gelbart](bios.md#mike-gelbart) | |
 | 2:15 pm | 10 min break | | |
