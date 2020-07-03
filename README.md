@@ -29,9 +29,10 @@ Theme: Pedagogy & Assessment
 | Time | Session Title | Session Lead | Links |
 |------|---------------|--------------|-------|
 | 9:00 am | Welcome |  |  |
-| 9:05 am | Intro to using Speedgrader or Gradescope with Jupyter | | |
+| 9:05 am | Intro to using Canvas Speedgrader with Jupyter | [Tiffany Timbers](bios.md#tiffany-timbers) | |
 | 9:20 am | Intro to nbgrader | Patrick Walls | |
-| 10:00 am | 10 min break | | |
+| 10:15 am | 10 min break | | |
+| 10:35 am | Intro to nbgrader (cont'd) | Patrick Walls | |
 | 11:30 am | 90 min break | | | 
 | 1:00 pm | Effective pedagogies for teaching data science (e.g., live coding, exercises for coding, classroom activities, etc) | [Mike Gelbart](bios.md#mike-gelbart) | |
 | 2:15 pm | 10 min break | | |
