@@ -38,12 +38,14 @@ Theme: New developments in the Data Science and Jupyter education space
 
 | Time | Session Title | Session Lead | Links |
 |------|---------------|--------------|-------|
-| 9:00 am | Welcome |  |  |
-| 9:10 am |  10 min break |  | |
-| 9:40 am || | |
-| 9:50 am |  |  | |
-| 11:30 am | 90 min break | | | 
-| 1:00 pm | | | |
-| 1:50 pm | 10 min break | | |
-| 2:00 pm |  |  | |
-| 3:30 pm | Session ends | | |
+| 9:50 am | Welcome |  |  |
+| 10:00 am | Speaker #1 |  |  |
+| 10:30 am | Speaker #2 |  |  |
+| 11:00 am | Break | | |
+| 11:15 am | Speaker #3 |  |  |
+| 11:45 pm | Speaker #4 |  |  |
+| 12:15 pm | Lunch | | |
+| 1:30 pm | Speaker #4 |  |  |
+| 2:00 pm | Speaker #5 |  |  |
+| 2:30 pm | Closing remarks | | |
+| 3:00 pm | Session ends | | |
