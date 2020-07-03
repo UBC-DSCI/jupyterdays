@@ -1,7 +1,13 @@
 # Bio's of Jupyter Days session leaders
 
 
-## Tom Beuzen
+## Tomas Beuzen
+
+Tomas Beuzen is a postdoctoral teaching and learning fellow with the Master of Data Science program (Vancouver option) at the University of British Columbia. In the Master of Data Science program Tom enjoys teaching programming (R and Python), data wrangling, visualisation and machine learning. While now a self-proclaimed data-scientist, Tom has a background in coastal engineering and the Earth sciences - which is where his passion for using data science to solve real-world problems originated.
+
+- Website: [tomasbeuzen.com](https://www.tomasbeuzen.com/)
+- Twitter: [TBeuzen](https://twitter.com/TBeuzen)
+- GitHub: [TomasBeuzen](https://github.com/TomasBeuzen)
 
 ## Warren Code
 
