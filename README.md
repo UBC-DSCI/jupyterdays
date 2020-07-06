@@ -1,5 +1,7 @@
 # UBC JupyterDays 2020
 
+![build](https://github.com/UBC-DSCI/jupyter_days/workflows/build-and-deploy/badge.svg?branch=master)
+
 <p align="center">
   <img src="jupyterdays/content/img/jupyter-days-hex.png" width="260">
 </p>
