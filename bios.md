@@ -26,8 +26,8 @@ Tiffany Timbers is an Assistant Professor of Teaching in the Department of Stati
 
 ## Patrick Walls
 
-Tiffany Timbers is an Assistant Professor of Teaching in the Department of Statistics and a Co-Director for the Master of Data Science program (Vancouver Option) at the of University of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems.
+Patrick Walls is an Asscociate Professor of Teaching in the Department of Mathematics at the of University of British Columbia. Patrick teaches mathematical computing with Python, SciPy and Jupyter, and calculus, differential equations and scientific computing for mechanical engineering.
 
 - Website: [math.ubc.ca/~pwalls](https://www.math.ubc.ca/~pwalls)
 - Twitter: [PatrickJWalls](https://twitter.com/PatrickJWalls)
-- GitHub: [ttimbers](https://github.com/patrickwalls)
+- GitHub: [patrickwalls](https://github.com/patrickwalls)
