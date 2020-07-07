@@ -56,7 +56,7 @@ Theme: New developments in the Data Science and Jupyter education space
 | 10:00 am |                 | Speaker #1                         |       |
 | 10:30 am | Writing Canvas quizzes with Jupyter | [Phil Austin](bios.md#phil-austin) |       |
 | 11:00 am | Break           |                                    |       |
-| 11:15 am | Online courses with Jupyter | [Hayley Boyce](bios.md#hayley-boyce) |       |
+| 11:15 am | How to build an interactive online course | [Hayley Boyce](bios.md#hayley-boyce) |       |
 | 11:45 pm | Intro to Julia and Jupyter | [Marie Burle](bios.md#marie-burle) |       |
 | 12:15 pm | Lunch           |                                    |       |
 | 1:30 pm  | Interactive exploration with Jupyter widgets and dashboards | [Lindsey Heagy](bios.md#lindsey-heagy) |       |
