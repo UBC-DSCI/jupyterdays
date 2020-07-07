@@ -19,14 +19,14 @@ Mike Gelbart is an Assistant Professor of Teaching in the UBC Department of Comp
 
 ## Tiffany Timbers
 
-Tiffany Timbers is an Assistant Professor of Teaching in the Department of Statistics and a Co-Director for the Master of Data Science program (Vancouver Option) at the of University of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems.
+Tiffany Timbers is an Assistant Professor of Teaching in the Department of Statistics and a Co-Director for the Master of Data Science program (Vancouver Option) at the University of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems.
 
 - Twitter: [TiffanyTimbers](https://twitter.com/TiffanyTimbers)
 - GitHub: [ttimbers](https://github.com/ttimbers)
 
 ## Patrick Walls
 
-Patrick Walls is an Asscociate Professor of Teaching in the Department of Mathematics at the of University of British Columbia. Patrick teaches mathematical computing with Python, SciPy and Jupyter, and calculus, differential equations and scientific computing for mechanical engineering.
+Patrick Walls is an Associate Professor of Teaching in the Department of Mathematics at the University of British Columbia. Patrick teaches mathematical computing with Python, SciPy and Jupyter, and calculus, differential equations and scientific computing for mechanical engineering.
 
 - Website: [math.ubc.ca/~pwalls](https://www.math.ubc.ca/~pwalls)
 - Twitter: [PatrickJWalls](https://twitter.com/PatrickJWalls)
