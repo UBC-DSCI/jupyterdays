@@ -1,5 +1,6 @@
 # Bio's of Jupyter Days session leaders
 
+## Phil Austin
 
 ## Tomas Beuzen
 
@@ -11,11 +12,15 @@ Tomas Beuzen is a postdoctoral teaching and learning fellow with the Master of D
 
 ## Hayley Boyce
 
+## Marie Burle
+
 ## Warren Code
 
 ## Mike Gelbart
 
 Mike Gelbart is an Assistant Professor of Teaching in the UBC Department of Computer Science and an Option Co-Director for the Master of Data Science program. Mike received his PhD in machine learning, specifically hyperparameter optimization, in 2015. Since then, he has focussed on teaching data science and machine learning. To learn more about Mike, see [here](https://www.mikegelbart.com/).
+
+## Lindsey Heagy
 
 ## Joel Ostblom
 
