@@ -1,10 +1,9 @@
 # Book settings
-title: jupyterdays
-author: Tomas Beuzen
-logo: content/img/jupyter-days-hex.png
-
+title: "UBC JupyterDays 2020"
+author: Tomas Beuzen, Warren Code, Tiffany Timbers, Patrick Walls
+#logo: img/jupyterdays.png
 repository:
-  url: https://github.com/TomasBeuzen/jupyterdays
+  url: https://github.com/UBC-DSCI/jupyterdays
 
 latex:
   latex_documents:

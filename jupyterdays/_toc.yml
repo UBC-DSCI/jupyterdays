@@ -1,3 +1,13 @@
-- file: content/introduction
-- file: content/notebook
-- file: content/plotting
+- file: index
+- header: Schedule
+- file: schedule/day1.md
+  title: "Day 1: Getting Started"
+- file: schedule/day2.md
+  title: "Day 2: Pedagogy and Assessment"
+- file: schedule/day3.md
+  title: "Day 3: New Developments"
+- file: schedule/speakers.md
+
+- header: Sessions
+- file: sessions/beuzen/notebook.ipynb
+- file: sessions/beuzen/plotting.ipynb
