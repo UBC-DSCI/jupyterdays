@@ -9,6 +9,8 @@ Tomas Beuzen is a postdoctoral teaching and learning fellow with the Master of D
 - Twitter: [TBeuzen](https://twitter.com/TBeuzen)
 - GitHub: [TomasBeuzen](https://github.com/TomasBeuzen)
 
+## Hayley Boyce
+
 ## Warren Code
 
 ## Mike Gelbart
