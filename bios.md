@@ -1,6 +1,12 @@
 # Bio's of Jupyter Days session leaders
 
-## Phil Austin
+## Philip Austin
+
+Phil Austin is an Associate Professor and Chair of the Atmospheric Sciences Programme in the Department of Earth, Ocean and Atmospheric Sciences at UBC.  His research focusses on cloud-climate interactions, and he is also involved in teaching and learning development as part of OCESE (Open Source Computing in Earth Sciences Education) and the Minor in Data Science initiative.
+
+- OCESE website: [OCESE project](https://eoas-ubc.github.io/)
+- Google scholar: [Scholar - phaustin](https://scholar.google.com/citations?user=HS6eBM4AAAAJ&hl=en)
+- Github: [phaustin](https://github.com/phaustin)
 
 ## Tomas Beuzen
 
