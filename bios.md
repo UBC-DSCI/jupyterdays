@@ -18,6 +18,12 @@ Tomas Beuzen is a postdoctoral teaching and learning fellow with the Master of D
 
 ## Hayley Boyce
 
+Hayley is an Education Specialist for the Master of Data Science program at the University of British Columbia.  As an alumna of the program, she enjoys giving a student's perspective for many of the Master of Data Science courses as well as continuing to broaden her teaching and data science skills. Hayley is currently working on building an interactive online course with UBC's Extended Learning program. 
+
+- Website: [hayleyfboyce.com](https://www.hayleyfboyce.com/)
+- Twitter: [hfboyce](https://twitter.com/hayleyfboyce)
+- GitHub: [hfboyce](https://github.com/hfboyce)
+
 ## Marie Burle
 
 ## Warren Code
