@@ -22,6 +22,12 @@ Mike Gelbart is an Assistant Professor of Teaching in the UBC Department of Comp
 
 ## Lindsey Heagy
 
+Lindsey Heagy is a Postdoctoral Researcher at UC Berkeley where she works with members of the Jupyter team. She will be joining the Department of Earth, Ocean and Atmospheric Sciences at UBC in July 2021 as an Assistant Professor in Data Science. Lindsey works on machine learning, numerical modelling, and inversion with geophysical data.  
+
+- Website: [lindseyjh.ca](https://lindseyjh.ca)
+- Twitter: [lindsey_jh](https://twitter.com/lindsey_jh)
+- GitHub: [lheagy](http://github.com/lheagy)
+
 ## Joel Ostblom
 
 ## Tiffany Timbers
