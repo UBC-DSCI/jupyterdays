@@ -26,7 +26,13 @@ Hayley is an Education Specialist for the Master of Data Science program at the 
 
 ## Jeremy Buhler
 
-## Marie Burle
+## Marie-Hélène Burle
+
+Marie is a Research Computing Training Assistant at [WestGrid](https://westgrid.ca) and [Compute Canada](https://computecanada.ca).
+
+- Website: [marie-helene-burle.netlify.com](https://marie-helene-burle.netlify.com)
+- Twitter: [MHBurle](https://twitter.com/MHBurle)
+- GitHub: [prosoitos](https://github.com/prosoitos)
 
 ## Warren Code
 
