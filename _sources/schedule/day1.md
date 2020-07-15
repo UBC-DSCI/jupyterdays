@@ -7,17 +7,13 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 ## August 12, 2020
 
 | Time | Session Title | Session Lead |
-| -- | -- | -- | -- |
-| 9:00 am  | *Welcome* | [Patrick Walls](speakers.html#patrick-walls) |
-| 9:10 am  | Introduction to Jupyter and Syzygy | [Joel Ostblom](speakers.html#joel-ostblom) |
-| 9:40 am  | *Break* | |
-| 9:50 am  | Sharing your teaching materials using Git & GitHub | [Tiffany Timbers](speakers.html#tiffany-timbers) |
+| -- | -- | -- |
+| 9:00 am | *Welcome* | [Patrick Walls](speakers.html#patrick-walls) |
+| 9:15 am | Introduction to Jupyter and Syzygy | [Joel Ostblom](speakers.html#joel-ostblom) |
+| 10:00 am | *Break* | |
+| 10:15 am | Sharing your teaching materials using Git & GitHub | [Tiffany Timbers](speakers.html#tiffany-timbers) |
 | 11:30 am | *Lunch* | |
-| 1:00 pm  | [Deploy course content with nbgitpuller and Syzygy](#deploy-course-content-with-nbgitpuller-and-syzygy) | [Patrick Walls](speakers.html#patrick-walls) |
-| 1:50 pm  | *Break* | |
-| 2:00 pm  | Creating open and executable textbooks via Jupyter book | [Tomas Beuzen](speakers.html#tomas-beuzen) |
-| 3:30 pm  | *Session ends* | |
-
-### Deploy course content with nbgitpuller and Syzygy
-
-[nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) allows instructors to share Jupyter notebooks with students in a single click! We will complete a full example from start to finish: create a repository on GitHub, create Jupyter notebooks, push to GitHub, create a nbgitpuller link to Syzygy and share!
+| 1:00 pm | Creating open and executable textbooks via Jupyter book | [Tomas Beuzen](speakers.html#tomas-beuzen) |
+| 2:15 pm | *Break* | |
+| 2:30 pm | A tour of Python packages for data science | [Patrick Walls](speakers.html#patrick-walls) |
+| 3:30 pm | *Session ends* | |

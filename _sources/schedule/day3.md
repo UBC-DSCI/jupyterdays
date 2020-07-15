@@ -20,5 +20,3 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 | 2:30 pm  | *Break* | |
 | 2:45 pm  | | Speaker #7 |
 | 3:15 pm  | *Closing remarks* | |
-
-## Descriptions
