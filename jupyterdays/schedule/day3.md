@@ -13,7 +13,7 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 | 10:15 am | Writing Canvas quizzes with Jupyter | [Philip Austin](speakers.html#philip-austin) |
 | 10:45 am | *Break* | |
 | 11:00 am | How to build an interactive online course | [Hayley Boyce](speakers.html#hayley-boyce) |
-| 11:30 pm | Introduction to Julia and Jupyter | [Marie Burle](speakers.html#marie-burle) |
+| 11:30 pm | Introduction to Julia and Jupyter | [Marie-Hélène Burle](speakers.html#marie-helene-burle) |
 | 12:00 pm | *Lunch* | |
 | 1:30 pm  | Interactive exploration with Jupyter widgets and dashboards | [Lindsey Heagy](speakers.html#lindsey-heagy) |
 | 2:00 pm  | | Speaker #6 |
