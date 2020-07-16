@@ -28,7 +28,7 @@ Hayley is an Education Specialist for the Master of Data Science program at the 
 
 ## Marie-Hélène Burle
 
-Marie is a Research Computing Training Assistant at [WestGrid](https://westgrid.ca) and [Compute Canada](https://computecanada.ca).
+Marie is a Research Computing Training Assistant at [WestGrid](https://westgrid.ca) and [Compute Canada](https://computecanada.ca) where she develops workshops and webinars on machine learning, Julia, Git, R, HPC, and linux tools. She is also a Data/Software Carpentry instructor and an open source advocate.
 
 - Website: [marie-helene-burle.netlify.com](https://marie-helene-burle.netlify.com)
 - Twitter: [MHBurle](https://twitter.com/MHBurle)
