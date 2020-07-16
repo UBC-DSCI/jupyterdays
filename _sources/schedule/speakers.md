@@ -26,6 +26,10 @@ Hayley is an Education Specialist for the Master of Data Science program at the 
 
 ## Jeremy Buhler
 
+Jeremy Buhler is a Data Librarian at the [UBC Library Research Commons](https://researchcommons.library.ubc.ca) and responsible for UBC Library's collection of open and licensed data. He works alongside specialists in GIS, digital scholarship, and research data management to provide access to data for teaching and research and to develop data skills workshops for UBC graduate students.
+
+- Research Commons GitHub: (ubc-library-rc)[https://github.com/ubc-library-rc]
+
 ## Marie-Hélène Burle
 
 Marie is a Research Computing Training Assistant at [WestGrid](https://westgrid.ca) and [Compute Canada](https://computecanada.ca) where she develops workshops and webinars on machine learning, Julia, Git, R, HPC, and linux tools. She is also a Data/Software Carpentry instructor and an open source advocate.
@@ -51,6 +55,8 @@ Lindsey Heagy is a Postdoctoral Researcher at UC Berkeley where she works with m
 ## Firas Moosvi
 
 ## Joel Ostblom
+
+## Arnav Sood
 
 ## Tiffany Timbers
 
