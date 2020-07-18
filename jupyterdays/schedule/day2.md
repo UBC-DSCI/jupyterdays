@@ -1,7 +1,7 @@
 # Day 2:  Pedagogy and assessment
 
 ```{important}
-All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT Events](https://events.ctlt.ubc.ca) to join us!
+All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT Events](https://events.ctlt.ubc.ca/events/jupyter-days-2020/) to join us!
 ```
 
 ## August 13, 2020
