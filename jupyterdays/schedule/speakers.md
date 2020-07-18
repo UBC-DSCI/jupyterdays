@@ -28,7 +28,7 @@ Hayley is an Education Specialist for the Master of Data Science program at the 
 
 Jeremy Buhler is a Data Librarian at the [UBC Library Research Commons](https://researchcommons.library.ubc.ca) and responsible for UBC Library's collection of open and licensed data. He works alongside specialists in GIS, digital scholarship, and research data management to provide access to data for teaching and research and to develop data skills workshops for UBC graduate students.
 
-- Research Commons GitHub: (ubc-library-rc)[https://github.com/ubc-library-rc]
+- Research Commons GitHub: [ubc-library-rc](https://github.com/ubc-library-rc)
 
 ## Marie-Hélène Burle
 
@@ -52,11 +52,11 @@ Lindsey Heagy is a Postdoctoral Researcher at UC Berkeley where she works with m
 - Twitter: [lindsey_jh](https://twitter.com/lindsey_jh)
 - GitHub: [lheagy](http://github.com/lheagy)
 
+## Melissa Lee
+
 ## Firas Moosvi
 
 ## Joel Ostblom
-
-## Arnav Sood
 
 ## Tiffany Timbers
 
@@ -72,3 +72,5 @@ Patrick Walls is an Associate Professor of Teaching in the Department of Mathema
 - Website: [math.ubc.ca/~pwalls](https://www.math.ubc.ca/~pwalls)
 - Twitter: [PatrickJWalls](https://twitter.com/PatrickJWalls)
 - GitHub: [patrickwalls](https://github.com/patrickwalls)
+
+## Peifan Wu
