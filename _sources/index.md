@@ -1,4 +1,4 @@
-# UBC JupyterDays 2020
+![UBC JupyterDays 2020](img/jupyterdays.png)
 
 [Jupyter notebook](https://jupyter.org) is a web application for producing computational narratives: a notebook in the browser which runs code and renders text, mathematical notation, images and videos. Jupyter notebook is a powerful open source tool for scientific computing, reproducible research and teaching data science.
 
@@ -6,14 +6,14 @@ Come join other instructors, researchers and students at UBC to share their Jupy
 
 ## Registration
 
-All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT Events](https://events.ctlt.ubc.ca) to join us!
+All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT Events](https://events.ctlt.ubc.ca/events/jupyter-days-2020/) to join us!
 
 
 ## August 12, 2020
 
 [**Day 1: Getting started teaching with Jupyter**](schedule/day1.md)
 
-Get up and running quickly with [Jupyter](https://jupyter.org) and start developing content for your courses. Learn about [Syzygy](https://syzygy.ca), [GitHub](https://github.com), [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/) and [Jupyter Book](https://jupyterbook.org).
+Get up and running quickly with [Jupyter](https://jupyter.org) and start developing content for your courses. Learn about [Syzygy](https://syzygy.ca), [GitHub](https://github.com), [nbgitpuller](https://jupyterhub.github.io/nbgitpuller/), [Jupyter Book](https://jupyterbook.org) and [Python](https://www.python.org) packages for data science.
 
 ## August 13, 2020
 
