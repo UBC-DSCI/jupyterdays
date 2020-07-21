@@ -74,3 +74,8 @@ Patrick Walls is an Associate Professor of Teaching in the Department of Mathema
 - GitHub: [patrickwalls](https://github.com/patrickwalls)
 
 ## Peifan Wu
+
+Peifan Wu is a postdoctoral Research/Teaching Fellow in Vancouver School of Economics at the University of British Columbia. Peifan works on macroeconomics, industrial organization, as well as econometric methods. He is one of the instructors of [QuantEcon DataScience](https://datascience.quantecon.org/) which is a hybrid course of Data Science and Economics.
+
+- Twitter: [peifanwu](https://twitter.com/peifanwu)
+- Github: [wupeifan](https://github.com/wupeifan)
