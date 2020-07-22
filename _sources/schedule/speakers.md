@@ -52,6 +52,8 @@ Lindsey Heagy is a Postdoctoral Researcher at UC Berkeley where she works with m
 - Twitter: [lindsey_jh](https://twitter.com/lindsey_jh)
 - GitHub: [lheagy](http://github.com/lheagy)
 
+## Varada Kolhatkar
+
 ## Melissa Lee
 
 ## Firas Moosvi
