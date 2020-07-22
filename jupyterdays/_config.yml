@@ -1,7 +1,5 @@
-# Book settings
 title: "UBC JupyterDays 2020"
 author: Tomas Beuzen, Warren Code, Tiffany Timbers, Patrick Walls
-#logo: img/jupyterdays.png
 repository:
   url: https://github.com/UBC-DSCI/jupyterdays
 
@@ -9,11 +7,9 @@ latex:
   latex_documents:
     targetname: book.tex
 
-# Execution settings
 execute:
   execute_notebooks         : force  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
 
-# HTML-specific settings
 html:
   favicon                   : ""  # A path to a favicon image
   navbar_number_sections    : false  # Add a number to each section in your left navbar
