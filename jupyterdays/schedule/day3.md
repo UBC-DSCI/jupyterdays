@@ -18,6 +18,6 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 | 1:00 pm  | Interactive exploration with Jupyter widgets and dashboards | [Lindsey Heagy](speakers.html#lindsey-heagy) |
 | 1:30 pm | How to build an interactive online course | [Hayley Boyce](speakers.html#hayley-boyce) |
 | 2:00 pm  | *Break* | |
-| 2:15 pm  | *TBD* | [Varada Kolhatkar](#varada-kolhatkar) |
+| 2:15 pm  | Teaching computational linguistics with Jupyter | [Varada Kolhatkar](#varada-kolhatkar) |
 | 2:45 pm  | | Speaker #8 |
 | 3:15 pm  | *Closing remarks* | |
