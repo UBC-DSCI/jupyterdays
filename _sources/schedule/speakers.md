@@ -54,6 +54,11 @@ Lindsey Heagy is a Postdoctoral Researcher at UC Berkeley where she works with m
 
 ## Varada Kolhatkar
 
+Varada is an Assistant Professor of Teaching at UBC in the Department of Computer Science. She primarily teaches machine learning and artificial intelligence related courses in the Master of Data Science program. She received her Ph.D. in computational linguistics from the [Department of Computer Science at the University of Toronto](https://web.cs.toronto.edu/). She enjoys teaching complex and relevant topics in an approachable way!
+
+- Website: [kvarada.github.io](https://kvarada.github.io/)
+- GitHub: [kvarada](https://github.com/kvarada)
+
 ## Melissa Lee
 
 ## Firas Moosvi
