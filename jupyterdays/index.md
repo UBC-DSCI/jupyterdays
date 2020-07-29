@@ -1,5 +1,7 @@
 ![UBC JupyterDays 2020](img/jupyterdays.png)
 
+# UBC Jupyter Days
+
 [Jupyter notebook](https://jupyter.org) is a web application for producing computational narratives: a notebook in the browser which runs code and renders text, mathematical notation, images and videos. Jupyter notebook is a powerful open source tool for scientific computing, reproducible research and teaching data science.
 
 Come join other instructors, researchers and students at UBC to share their Jupyter experiences and to learn about new Jupyter tools!

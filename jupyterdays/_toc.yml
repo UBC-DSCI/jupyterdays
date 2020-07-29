@@ -8,6 +8,6 @@
   title: "Day 3: New Developments"
 - file: schedule/speakers.md
 
-- header: Sessions
-- file: sessions/beuzen/notebook.ipynb
-- file: sessions/beuzen/plotting.ipynb
+- header: Day 1 Sessions
+- file: sessions/beuzen/jupyter_book_tutorial.ipynb
+  title: Jupyter Book
