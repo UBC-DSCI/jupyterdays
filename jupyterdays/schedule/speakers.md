@@ -60,6 +60,7 @@ Varada is an Assistant Professor of Teaching at UBC in the Department of Compute
 - GitHub: [kvarada](https://github.com/kvarada)
 
 ## Melissa Lee
+Melissa Lee is an Assistant Professor of Teaching in the Department of Statistics at the University of British Columbia. Melissa teaches introductory statistics and data science courses. She strives to use evidence-based teaching practices, emphasizing student-centred learning.
 
 ## Firas Moosvi
 
