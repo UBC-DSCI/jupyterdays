@@ -1,7 +1,9 @@
 title: "UBC JupyterDays 2020"
 author: Tomas Beuzen, Warren Code, Tiffany Timbers, Patrick Walls
 repository:
-  url: https://github.com/UBC-DSCI/jupyterdays
+  url                       : https://github.com/UBC-DSCI/jupyterdays
+  path_to_book              : jupyterdays
+
 
 latex:
   latex_documents:
