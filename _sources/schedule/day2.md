@@ -23,3 +23,12 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 ### Introduction to nbgrader
 
 [nbgrader](https://nbgrader.readthedocs.io) is an application for creating and grading assignments with Jupyter notebook. We will learn how to create assignments with nbgrader and how to write meaningful tests with feedback to evaluate student code. The magic of nbgrader is the autograding! Evaluate student code and give feedback automatically. But there's a catch... we need to write a custom Python script to move student submissions into the nbgrader folders and then we need another script to reassemble the graded notebooks for uploading back to Canvas. It can be done and it will be fun!
+
+### Effective pedagogies for teaching data science
+In this session I will discuss a few tips for teaching data science, especially with Jupyter notebooks: 
+
+- A problem-first teaching methodology. 
+- Live coding.
+- My implementation of [think-pair-share](https://en.wikipedia.org/wiki/Think-pair-share).
+- Real-time collaborative documents (perfect for online teaching!).
+- (Time-permitting) Some thoughts on teaching in general.
