@@ -15,3 +15,7 @@
 - header: Day 3 Sessions
 - file: sessions/boyce/interactive_online_course
   title: Building an Interactive Online Course
+  
+- header: Code of Conduct
+- file: CODE_OF_CONDUCT.md
+  title: Code of Conduct for Jupyterdays
