@@ -11,7 +11,7 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 | 9:00 am | *Welcome* | [Patrick Walls](speakers.html#patrick-walls) |
 | 9:15 am | Introduction to Jupyter and Syzygy | [Joel Ostblom](speakers.html#joel-ostblom) |
 | 10:00 am | *Break* | |
-| 10:15 am | Sharing your teaching materials using Git & GitHub | [Tiffany Timbers](speakers.html#tiffany-timbers) |
+| 10:15 am | [Sharing your teaching materials using Git & GitHub](https://ubc-dsci.github.io/jupyterdays/sessions/timbers/sharing-materials-with-git/sharing-materials-with-git.html) | [Tiffany Timbers](speakers.html#tiffany-timbers) |
 | 11:30 am | *Lunch* | |
 | 1:00 pm | [Creating open and executable textbooks via Jupyter book](https://ubc-dsci.github.io/jupyterdays/sessions/beuzen/jupyter_book_tutorial.html) | [Tomas Beuzen](speakers.html#tomas-beuzen) |
 | 2:15 pm | *Break* | |
