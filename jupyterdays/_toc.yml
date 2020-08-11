@@ -14,6 +14,10 @@
 - file: sessions/beuzen/jupyter_book_tutorial
   title: Jupyter Book
   
+- header: Day 2 Sessions
+- file: sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter
+  title: Intro to using Canvas Speedgrader with Jupyter
+  
 - header: Day 3 Sessions
 - file: sessions/wu/Jupyter_and_QuantEcon.ipynb
   title: Jupyter and QuantEcon
