@@ -9,6 +9,8 @@
 - file: schedule/speakers.md
 
 - header: Day 1 Sessions
+- file: sessions/timbers/sharing-materials-with-git/sharing-materials-with-git
+  title: Sharing your teaching materials using Git & GitHub
 - file: sessions/beuzen/jupyter_book_tutorial
   title: Jupyter Book
   
