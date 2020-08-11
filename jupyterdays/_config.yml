@@ -1,7 +1,9 @@
 title: "UBC JupyterDays 2020"
-author: Tomas Beuzen, Warren Code, Tiffany Timbers, Patrick Walls
+author: Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu
 repository:
-  url: https://github.com/UBC-DSCI/jupyterdays
+  url                       : https://github.com/UBC-DSCI/jupyterdays
+  path_to_book              : jupyterdays
+
 
 latex:
   latex_documents:
@@ -21,3 +23,6 @@ html:
   google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : false  # Whether to include your home page in the left Navigation Bar
   baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+
+launch_buttons:
+  jupyterhub_url            : "https://ubc.syzygy.ca/jupyter"

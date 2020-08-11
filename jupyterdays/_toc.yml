@@ -9,5 +9,17 @@
 - file: schedule/speakers.md
 
 - header: Day 1 Sessions
-- file: sessions/beuzen/jupyter_book_tutorial.ipynb
+- file: sessions/timbers/sharing-materials-with-git/sharing-materials-with-git
+  title: Sharing your teaching materials using Git & GitHub
+- file: sessions/beuzen/jupyter_book_tutorial
   title: Jupyter Book
+  
+- header: Day 3 Sessions
+- file: sessions/wu/Jupyter_and_QuantEcon.ipynb
+  title: Jupyter and QuantEcon
+- file: sessions/boyce/interactive_online_course
+  title: Building an Interactive Online Course
+  
+- header: Code of Conduct
+- file: CODE_OF_CONDUCT.md
+  title: Code of Conduct for Jupyterdays

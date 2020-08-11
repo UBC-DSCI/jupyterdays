@@ -13,11 +13,11 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 | 9:45 am | Writing Canvas quizzes with Jupyter | [Philip Austin](speakers.html#philip-austin) |
 | 10:15 am | *Break* | |
 | 10:30 am | The Julia kernel for Jupyter | [Marie-Hélène Burle](speakers.html#marie-helene-burle) |
-| 11:00 am  | Jupyter and QuantEcon | [Peifan Wu](speakers.html#peifan-wu) |
+| 11:00 am  | [Jupyter and QuantEcon](https://ubc-dsci.github.io/jupyterdays/sessions/wu/Jupyter_and_QuantEcon.html) | [Peifan Wu](speakers.html#peifan-wu) |
 | 11:30 am | *Lunch* | |
 | 1:00 pm  | Interactive exploration with Jupyter widgets and dashboards | [Lindsey Heagy](speakers.html#lindsey-heagy) |
-| 1:30 pm | How to build an interactive online course | [Hayley Boyce](speakers.html#hayley-boyce) |
+| 1:30 pm | [How to build an interactive online course](https://ubc-dsci.github.io/jupyterdays/sessions/boyce/interactive_online_course.html) | [Hayley Boyce](speakers.html#hayley-boyce) |
 | 2:00 pm  | *Break* | |
 | 2:15 pm  | Teaching computational linguistics with Jupyter | [Varada Kolhatkar](#varada-kolhatkar) |
-| 2:45 pm  | | Speaker #8 |
-| 3:15 pm  | *Closing remarks* | |
+| 2:45 pm  | *Closing remarks* | |
+| 3:00pm | *Session ends* | |
