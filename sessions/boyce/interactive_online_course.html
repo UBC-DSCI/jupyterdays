@@ -348,7 +348,7 @@
 </div>
 <div class="section" id="course-options">
 <h2>Course Options<a class="headerlink" href="#course-options" title="Permalink to this headline">¶</a></h2>
-<p>Currently this course is available in 2 programming languages:</p>
+<p>Currently this platform is available in 2 programming languages:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ines/course-starter-python">Python</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ines/course-starter-r">R</a></p></li>
@@ -362,9 +362,98 @@
 <li><p>Python Course <a class="reference external" href="https://ines.github.io/course-starter-python/">Documentation</a></p></li>
 <li><p>Installation of Node and Gatsby</p></li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have any issues with Python setup, I recommend looking in the issue of the <a class="reference external" href="https://github.com/ines/course-starter-python/issues">course-starter-python repo</a> or even referring to her <a class="reference external" href="https://github.com/ines/spacy-course">SpaCy course repo</a>.</p>
+</div>
 </div>
 <div class="section" id="repository-structure">
 <h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>course-starter-python
+├── .gitignore          
+├── .prettierrc          
+├── LICENSE             
+├── README.md            
+├── docker-compose.yml  
+├── dockerfile          
+├── gatsby-browser.js    
+├── gatsby-config.js    
+├── gatsby-node.js      
+├── main.js
+├── meta.json         
+├── package-lock.json
+├── package.json
+├── theme.sass          
+│   │
+├── binder   
+|   └── requirements.txt     
+│   │
+├── chapter               
+|   ├── module0.md
+|   ├── module1.md
+|   ├── ...
+|   └── moduleN.md
+│   │    
+├── data                     
+    └── exercise-data.csv
+│   │
+├── exercises            
+|   ├── exercise_01.py
+|   ├── solution_01.py
+|   └── test_01.py
+│   │
+├── slides              
+|   ├── module0_00.md
+|   ├── ...
+|   └── moduleN_nn.md
+│   │
+├── src                 
+|   ├── markdown.js
+|   ├── context.js
+|   ├── components              
+|   |   ├── button.js
+|   |   ├── choice.js
+|   |   ├── code.js
+|   |   ├── exercise.js
+|   |   ├── hint.js
+|   |   ├── juniper.js
+|   |   ├── layout.js
+|   |   ├── link.js
+|   |   ├── seo.js
+|   |   ├── slides.js
+|   |   └── typography.js
+|   |   |   
+|   ├── pages              
+|   |   └── index.js
+|   |   |
+|   ├── styles               
+|   |   ├── button.module.sass
+|   |   ├── choice.module.sass
+|   |   ├── code.module.sass
+|   |   ├── exercise.module.sass
+|   |   ├── hint.module.sass
+|   |   ├── index.module.sass
+|   |   ├── index.sass
+|   |   ├── layout.module.sass
+|   |   ├── link.module.sass
+|   |   ├── reveal.css
+|   |   ├── slides.module.sass
+|   |   └── typography.module.sass
+|   |   |
+    └── templates              
+        └── chapter.js
+|   |   |
+└── static               
+    ├── icon.png
+    ├── icon_check.svg
+    ├── icon_slides.svg
+    ├── logo.svg
+    ├── profile.jpg
+    └── social.jpg
+
+</pre></div>
+</div>
+<p>We are going to concentrate on these ones:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">chapters/</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">slides/</span></code></p></li>
@@ -373,7 +462,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code></p></li>
 <li><p>Important things I don’t have time to talk about but that are explained in the documentation:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">Meta.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meta.json</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme.sass</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">src/</span></code></p></li>
 </ul>
@@ -388,13 +477,18 @@
 <li><p>Making a multiple choice exercise question</p></li>
 <li><p>Making a coding question (exc, solution, test)</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s important that before doing any of the content and question making, you build a binder and change the information in the <code class="docutils literal notranslate"><span class="pre">meta.json</span></code> file. This is explained in the setup documentation provided in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> of the <code class="docutils literal notranslate"><span class="pre">course-starter</span></code> repositories.</p>
+</div>
 </div>
 <div class="section" id="sneak-peak-a-brief-look-at-what-i-ve-been-working-on">
 <h2>Sneak Peak: A brief  look at what I’ve been working on:<a class="headerlink" href="#sneak-peak-a-brief-look-at-what-i-ve-been-working-on" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Small customizations</p></li>
+<li><p>Similar video style as Ines’s SpaCy course</p></li>
 <li><p>A bit of a different repo structure</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">rmd</span></code> and a script for slides -&gt; Much easier!</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">rmd</span></code> and a script to produce slides -&gt; Much easier!</p></li>
 </ul>
 </div>
 <div class="section" id="resources">
