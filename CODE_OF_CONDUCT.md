@@ -10,7 +10,7 @@ The Jupyterdays organizing team are responsible for enforcing the Code of Conduc
 ### The Jupyterdays Code of Conduct
 For Jupyterdays, we are dedicated to providing a welcoming and supportive environment for all people, regardless of background or identity. As such, we do not tolerate behaviour that is disrespectful to our speakers or participants or that excludes, intimidates, or causes discomfort to others. We do not tolerate discrimination or harassment based on characteristics that include, but are not limited to, gender identity and expression, sexual orientation, disability, physical appearance, body size, citizenship, nationality, ethnic or social origin, pregnancy, familial status, veteran status, genetic information, religion or belief (or lack thereof), membership of a national minority, property, age, education, socio-economic status, technical choices, and experience level.
 
-Everyone who participates in the Jupyterdays activities is required to conform to this Code of Conduct. It applies to all spaces managed by DSCI 100 including, but not limited to, class meetings, email communication, and online forums such as Piazza and GitHub. The DSCI 100 teaching team are expected to assist with the enforcement of the Code of Conduct. 
+Everyone who participates in the Jupyterdays activities is required to conform to this Code of Conduct. It applies to all spaces managed by Jupyterdays including, but not limited to, class meetings, email communication, and online forums such as Slack and GitHub. The Jupyterdays organizing team are expected to assist with the enforcement of the Code of Conduct. 
 
 #### Expected Behavior
 
