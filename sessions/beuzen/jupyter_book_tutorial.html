@@ -401,7 +401,7 @@
 <div class="section" id="id1">
 <h3>1.1. Jupyter Book<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default" id="book-logo">
-<img alt="sessions/beuzen/img/book_logo.jpg" src="sessions/beuzen/img/book_logo.jpg" />
+<img alt="../../_images/book_logo.png" src="../../_images/book_logo.png" />
 <p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">The Jupyter Book logo.</span><a class="headerlink" href="#book-logo" title="Permalink to this image">¶</a></p>
 </div>
 <p>Jupyter Book is an open-source project for building books and documents from standard computational and data science materials such as Jupyter Notebooks and Markdown documents.</p>
@@ -435,6 +435,7 @@
 <div class="section" id="tutorial-requirements">
 <h2>2. Tutorial Requirements<a class="headerlink" href="#tutorial-requirements" title="Permalink to this headline">¶</a></h2>
 <p>In this tutorial we are going to build our very own Jupyter Book, containing text, images and code related to our favourite planet - <strong>Jupiter</strong>!</p>
+<p>Let’s take a look at that book now: <a class="reference external" href="http://www.tomasbeuzen.com/my-jupiter-book/">http://www.tomasbeuzen.com/my-jupiter-book/</a></p>
 <p>If you want to follow this tutorial on your own machine, you’ll need the following:</p>
 <ul class="simple">
 <li><p>Python (recommended: install the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> distribution)</p></li>
@@ -445,7 +446,7 @@
 <p class="admonition-title">Attention</p>
 <p>A note from Phil Austin, who is actively working on Windows integration:</p>
 <blockquote>
-<div><p>The “<a class="reference external" href="https://jupyterbook.org/advanced/advanced.html#working-on-windows">working on windows</a>” documentation I wrote at the beginning of the summer is completely out of date. Windows is very close to parity with unix now.  If anyone needs to make a jupyter-book on windows, the extra steps after installing would be to upgrade jupyter-book using this <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/723">PR</a> and use the current master for <a class="reference external" href="https://github.com/jupyter/jupyter-sphinx/pull/147">jupyter-sphinx</a></p>
+<div><p>The “<a class="reference external" href="https://jupyterbook.org/advanced/advanced.html#working-on-windows">Working on Windows</a>” documentation I wrote at the beginning of the summer is completely out of date. Windows is very close to parity with unix now.  If anyone needs to make a jupyter-book on windows, the extra steps after installing would be to upgrade jupyter-book using this <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/723">PR</a> and use the current master for <a class="reference external" href="https://github.com/jupyter/jupyter-sphinx/pull/147">jupyter-sphinx</a>.</p>
 </div></blockquote>
 </div>
 </div>
@@ -462,11 +463,11 @@ $ conda activate jdays
 <p>Note that we are naming our environment “jdays” here but you can call it anything you like.</p>
 </div>
 <p>Now it’s time to install Jupyter Book:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install -U jupyter-book
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install jupyter-book
 </pre></div>
 </div>
-<p>We’ll also need the <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> and <a class="reference external" href="https://plotly.com/">Plotly</a> and <a class="reference external" href="https://sphinx-thebe.readthedocs.io/en/latest/?badge=latest">sphinx-thebe</a> libraries later on so go ahead an install that too:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install -U pandas plotly sphinx-thebe
+<p>We’ll also need the <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>, <a class="reference external" href="https://plotly.com/">Plotly</a> and <a class="reference external" href="https://sphinx-thebe.readthedocs.io/en/latest/?badge=latest">sphinx-thebe</a> libraries later on so go ahead an install that too:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install pandas plotly sphinx-thebe
 </pre></div>
 </div>
 </div>
@@ -501,9 +502,6 @@ $ conda activate jdays
 <h2>5. Adding Content<a class="headerlink" href="#adding-content" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="re-structuring-our-book-directory">
 <h3>5.1. Re-structuring Our Book Directory<a class="headerlink" href="#re-structuring-our-book-directory" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>delete content.md intro.md markdown.md and notebooks.ipynb</p></li>
-</ul>
 <p>Jupyter Book supports a number of file types:</p>
 <ul class="simple">
 <li><p>Markdown (.md)</p></li>
@@ -511,16 +509,17 @@ $ conda activate jdays
 <li><p>etc.</p></li>
 </ul>
 <p>As Markdown and Jupyter Notebooks will likely be the most common file types you will use, I’ll show an example of them here.</p>
+<p>We’ll start from scratch, so go ahead and <strong>delete</strong> the following starter files in your book directory:</p>
 <ul class="simple">
-<li><p>Types of content</p></li>
-<li><p>Add one markdown document (show images, bibliography, etc)</p></li>
-<li><p>Modifying the TOC + building</p></li>
-<li><p>Add one notebook document (show code blocks, creating content, hiding content)</p></li>
+<li><p>content.md</p></li>
+<li><p>intro.md</p></li>
+<li><p>markdown.md</p></li>
+<li><p>notebooks.ipynb</p></li>
 </ul>
 </div>
 <div class="section" id="adding-a-markdown-content-file">
 <h3>5.2. Adding a Markdown Content File<a class="headerlink" href="#adding-a-markdown-content-file" title="Permalink to this headline">¶</a></h3>
-<p>Let’s start our book by adding a markdown file. Open up your new book in the editor of your choice (I recommend Jupyter as we’ll be adding a Jupyter Notebook in the next section) and create a new markdown file named <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code>. We’ll use this file as a demonstration of some of the main types of content you can add to a Jupyter Book.</p>
+<p>Let’s start our book by adding a markdown file. Open up your new book in an editor of your choice (I recommend Jupyter as we’ll be adding a Jupyter Notebook in the next section) and create a new markdown file named <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code>. We’ll use this file as a demonstration of some of the main types of content you can add to a Jupyter Book.</p>
 <div class="section" id="markdown-text">
 <h4>5.2.1. Markdown Text<a class="headerlink" href="#markdown-text" title="Permalink to this headline">¶</a></h4>
 <p>We’ll start by adding some simple Markdown text to our file. If you are not familiar with markdown syntax, check out this <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">cheat sheet</a>. You can copy-paste the following content directly into your <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file.</p>
@@ -529,6 +528,7 @@ $ conda activate jdays
 This book contains information about the planet **Jupiter** - the fifth planet from the sun and the largest planet in the solar system!
 </pre></div>
 </div>
+<p>Before we take a look at how our book renders with this text, let’s add an image too.</p>
 </div>
 <div class="section" id="figures">
 <h4>5.2.2. Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h4>
@@ -556,7 +556,7 @@ The beautiful planet Jupiter!
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{numref}`jupiter-figure`
 </pre></div>
 </div>
-<p>Let’s add a sentence including a reference to our <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file to demosntrate this. The full file should now look like this:</p>
+<p>Let’s add a sentence including a reference to our figure to demonstrate this. The full file should now look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Jupiter Book
 
 This book contains information about the planet Jupiter - the fifth planet from the sun and the largest planet in the solar system! {numref}`jupiter-figure` below shows an image of Jupiter captured by the Hubble Space Telescope on June 27, 2019.
@@ -578,7 +578,7 @@ The beautiful planet Jupiter! Source: [NASA](https://solarsystem.nasa.gov/resour
 <p class="admonition-title">Note</p>
 <p>There are a number of ways you can configure your table of contents, e.g., with Headers, Sub-headers, Chapters, Section, etc, that I won’t go into here because it is all very well explained in the official <a class="reference external" href="https://jupyterbook.org/customize/toc.html">Jupyter Book documentation</a>!</p>
 </div>
-<p>We can do that from the command line by making sure that we are in our book’s root directory and then using:</p>
+<p>We can now build our book from the command line by making sure that we are in our book’s root directory and then using:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ jb build ./
 </pre></div>
 </div>
