@@ -11,7 +11,7 @@ Once registered, you can visit the Jupyterdays Canvas course shell: [https://can
 | Time | Session Title | Session Lead |
 | -- | -- | -- |
 | 9:00 am  | *Welcome* | [Tiffany Timbers](speakers.html#tiffany-timbers) |
-| 9:15 am  | Intro to using Canvas Speedgrader with Jupyter | [Tiffany Timbers](speakers.html#tiffany-timbers) |
+| 9:15 am  | [Intro to using Canvas Speedgrader with Jupyter](https://ubc-dsci.github.io/jupyterdays/sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html) | [Tiffany Timbers](speakers.html#tiffany-timbers) |
 | 9:30 am  | [Introduction to nbgrader](#introduction-to-nbgrader) | [Patrick Walls](speakers.html#patrick-walls) |
 | 10:45 am | *Break* | |
 | 11:00 am | [Teaching in an online setting](https://github.com/UBC-DSCI/jupyterdays/blob/master/jupyterdays/schedule/day2.md#teaching-in-an-online-setting) | [Melissa Lee](speakers.html#melissa-lee) |
