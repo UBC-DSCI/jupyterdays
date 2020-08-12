@@ -25,6 +25,8 @@
 - header: Day 3 Sessions
 - file: sessions/wu/Jupyter_and_QuantEcon.ipynb
   title: Jupyter and QuantEcon
+- file: sessions/heagy/widgets-and-dashboards.ipynb
+  title: Interactive exploration with Jupyter widgets and dashboards
 - file: sessions/boyce/interactive_online_course
   title: Building an Interactive Online Course
 
