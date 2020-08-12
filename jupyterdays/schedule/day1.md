@@ -2,7 +2,11 @@
 
 ```{important}
 All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT Events](https://events.ctlt.ubc.ca/events/jupyter-days-2020/) to join us!
+
+Once registered, you can visit the Jupyterdays Canvas course shell: [https://canvas.ubc.ca/courses/66517](https://canvas.ubc.ca/courses/66517)
 ```
+
+Visit the Jupyterdays Canvas course shell: [https://canvas.ubc.ca/courses/66517](https://canvas.ubc.ca/courses/66517)
 
 ## August 12, 2020
 
