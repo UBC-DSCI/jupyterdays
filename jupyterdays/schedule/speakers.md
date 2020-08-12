@@ -66,6 +66,11 @@ Melissa Lee is an Assistant Professor of Teaching in the Department of Statistic
 
 ## Joel Ostblom
 
+Joel Ostblom is a PhD student in Biomedical Engineering at the University of Toronto, where he uses computational and experimental approaches to better understand fundamental stem cell decisions. He will be starting as a Post-Doc for the UBC Master of Data Science program this fall.
+
+- Website: [joelostblom.com](https://joelostblom.com)
+- GitHub: [joelostblom](https://github.com/joelostblom)
+
 ## Tiffany Timbers
 
 Tiffany Timbers is an Assistant Professor of Teaching in the Department of Statistics and a Co-Director for the Master of Data Science program (Vancouver Option) at the University of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems.
