@@ -6,8 +6,6 @@ All workshops and presentations are hosted on Zoom. Please register at [UBC CTLT
 Once registered, you can visit the Jupyterdays Canvas course shell: [https://canvas.ubc.ca/courses/66517](https://canvas.ubc.ca/courses/66517)
 ```
 
-Visit the Jupyterdays Canvas course shell: [https://canvas.ubc.ca/courses/66517](https://canvas.ubc.ca/courses/66517)
-
 ## August 12, 2020
 
 | Time | Session Title | Session Lead |
