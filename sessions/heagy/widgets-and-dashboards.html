@@ -1,0 +1,540 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive exploration with widgets and dashboards &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="How to Build an Interactive Course" href="../boyce/interactive_online_course.html" />
+    <link rel="prev" title="Jupyter and QuantEcon" href="../wu/Jupyter_and_QuantEcon.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Schedule
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day1.html">
+   Day 1: Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day2.html">
+   Day 2: Pedagogy and Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day3.html">
+   Day 3: New Developments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/speakers.html">
+   Speakers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 1 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ostblom/jupyterlab-intro.html">
+   Introduction to JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">
+   Sharing your teaching materials using Git &amp; GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../beuzen/jupyter_book_tutorial.html">
+   Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../walls/a_tour_of_python_packages_for_scientific_computing.html">
+   Python packages for scientific computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 2 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">
+   Intro to using Canvas Speedgrader with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 3 Sessions
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wu/Jupyter_and_QuantEcon.html">
+   Jupyter and QuantEcon
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Interactive exploration with Jupyter widgets and dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../boyce/interactive_online_course.html">
+   Building an Interactive Online Course
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Code of Conduct
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html#the-jupyterdays-code-of-conduct">
+   The Jupyterdays Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html#incident-reporting-guidelines">
+   Incident Reporting Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html#attribution">
+   Attribution
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/heagy/widgets-and-dashboards.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/heagy/widgets-and-dashboards.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/heagy/widgets-and-dashboards.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hello">
+   1. 👋  Hello
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivating-example-co-2-at-mauna-loa">
+   2. Motivating example: CO
+   <span class="math notranslate nohighlight">
+    \(_2\)
+   </span>
+   at Mauna Loa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-our-data">
+     2.1 What are our data?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-widgets">
+   3. Jupyter widgets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-started">
+     Getting started
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#demo">
+     Demo!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#voila-dashboards">
+   4. Voilà Dashboards
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Getting Started
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Demo!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="interactive-exploration-with-widgets-and-dashboards">
+<h1>Interactive exploration with widgets and dashboards<a class="headerlink" href="#interactive-exploration-with-widgets-and-dashboards" title="Permalink to this headline">¶</a></h1>
+<p>Here, we will use a motivating example that looks at CO<span class="math notranslate nohighlight">\(_2\)</span> data for Mauna Loa and takes advantage of:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/index.html">Jupyter Widgets</a> and</p></li>
+<li><p><a class="reference external" href="https://voila.readthedocs.io/en/latest/?badge=latest">Voilà dashboards</a></p></li>
+</ul>
+<p>The example we follow is adapted from the <a class="reference external" href="https://github.com/ICESAT-2HackWeek/intro-jupyter">Intro-Jupyter tutorial from ICESat-2Hackweek</a>, which has contributions from: <a class="reference external" href="https://github.com/espg">Shane Grigsby (&#64;espg)</a>, <a class="reference external" href="https://github.com/lheagy">Lindsey Heagy (&#64;lheagy)</a>, <a class="reference external" href="https://github.com/yaramohajerani">Yara Mohajerani (&#64;yaramohajerani)</a>, and <a class="reference external" href="https://github.com/fperez">Fernando Pérez (&#64;fperez)</a>.</p>
+<div class="section" id="hello">
+<h2>1. 👋  Hello<a class="headerlink" href="#hello" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="im-lindsey">
+<a class="reference internal image-reference" href="../../_images/lindsey.jpg"><img alt="../../_images/lindsey.jpg" src="../../_images/lindsey.jpg" style="height: 280px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Hi, I’m Lindsey</span><a class="headerlink" href="#im-lindsey" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>I am currently a Postdoc at UC Berkeley in the Department of Statistics</p></li>
+<li><p>I will be joining UBC-EOAS as an Asst. Prof in July 2021</p></li>
+<li><p>My PhD was in computational geophysics (modelling and inversions)</p></li>
+<li><p>Throughout my academic career, I have been involved in development of open source software in Python &amp; open educational resources</p></li>
+</ul>
+</div>
+<div class="section" id="motivating-example-co-2-at-mauna-loa">
+<h2>2. Motivating example: CO<span class="math notranslate nohighlight">\(_2\)</span> at Mauna Loa<a class="headerlink" href="#motivating-example-co-2-at-mauna-loa" title="Permalink to this headline">¶</a></h2>
+<p><strong>Question:</strong> Based on historical CO<span class="math notranslate nohighlight">\(_2\)</span> data, can we estimate what CO<span class="math notranslate nohighlight">\(_2\)</span> concentrations will be in the future?</p>
+<p>Scripps institute of Oceanography has a research station at Mauna Loa in Hawaii where they have been measuring atmospheric CO<span class="math notranslate nohighlight">\(_2\)</span> since 1958. The data we will focus on are the seasonally adjusted data.</p>
+<p><img alt="scrippsco2" src="https://scrippsco2.ucsd.edu/assets/images/mlo_station_map.png" /></p>
+<p><strong>Data Source</strong></p>
+<p>C. D. Keeling, S. C. Piper, R. B. Bacastow, M. Wahlen, T. P. Whorf, M. Heimann, and  H. A. Meijer, Exchanges of atmospheric CO2 and 13CO2 with the terrestrial biosphere and  oceans from 1978 to 2000.  I. Global aspects, SIO Reference Series, No. 01-06, Scripps  Institution of Oceanography, San Diego, 88 pages, 2001. https://scrippsco2.ucsd.edu/data/atmospheric_co2/primary_mlo_co2_record.html</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;font.size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="what-are-our-data">
+<h3>2.1 What are our data?<a class="headerlink" href="#what-are-our-data" title="Permalink to this headline">¶</a></h3>
+<p>Before we dive into widgets, lets take a look at our data. The measured atmospheric data are the column titled <code class="docutils literal notranslate"><span class="pre">co2</span></code>. In this data set, there is one measurement per month. The seasonally adjusted data are what we will work with – these smooth over the 6 month seasonal variations. For details on how this correction is applied, see the original <span class="xref myst">excel file</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">co2_data_source</span> <span class="o">=</span> <span class="s2">&quot;./data/monthly_in_situ_co2_mlo.csv&quot;</span>
+<span class="n">co2_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">co2_data_source</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">56</span><span class="p">),</span> <span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;-99.99&quot;</span>
+<span class="p">)</span>
+
+<span class="n">co2_data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;date (int)&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;co2&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonally adjusted&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fit&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonally adjusted fit&quot;</span><span class="p">,</span> <span class="s2">&quot;co2 filled&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonally adjusted filled&quot;</span> 
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">co2_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonally adjusted&quot;</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;CO$_2$ concentration [ppm]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;CO$_2$ concentration [ppm]&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/widgets-and-dashboards_7_1.png" src="../../_images/widgets-and-dashboards_7_1.png" />
+</div>
+</div>
+<p>In the <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets">demo repository</a>, we will explore building linear models using the “eye-ball” norm with widgets. To follow along:</p>
+<ul class="simple">
+<li><p>UBC Students &amp; Faculty: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2ubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
+<li><p>or if you don’t have a UBC CWL: <a class="reference external" href="https://mybinder.org/v2/gh/lheagy/ubc-jupyterdays-2020-widgets/master"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p></li>
+<li><p>or you can follow the <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets#installing">installation instructions on the repository</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="jupyter-widgets">
+<h2>3. Jupyter widgets<a class="headerlink" href="#jupyter-widgets" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/index.html">Jupyter widgets</a> allow you to connect interactive controls such as slide bars and toggle buttons to your code.</p>
+<p>They can be used to create <a class="reference external" href="https://jupyter4edu.github.io/jupyter-edu-book/catalogue.html#notebook-as-an-app">“notebook apps”</a> that abstract away details of the code and focus conversations on the role of parameters in a computation, or be a quick way to create a “Just-in-time-research-GUI” (GUI: graphical user interface) to explore results.</p>
+<p><img alt="widget-conversation" src="../../_images/widgets-simulations.png" /></p>
+<div class="section" id="getting-started">
+<h3>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<p>Widgets can be <a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/user_install.html">installed</a> with pip</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipywidgets</span>
+<span class="n">jupyter</span> <span class="n">nbextension</span> <span class="n">enable</span> <span class="o">--</span><span class="n">py</span> <span class="n">widgetsnbextension</span>
+</pre></div>
+</div>
+<p>or conda (which also enables the extension)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ipywidgets</span>
+</pre></div>
+</div>
+<p>To enable the Jupyter Lab extension</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@jupyter</span><span class="o">-</span><span class="n">widgets</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">manager</span>
+</pre></div>
+</div>
+<p>For your first interaction with widgets, I recommend trying out <code class="docutils literal notranslate"><span class="pre">interact</span></code>. The <code class="docutils literal notranslate"><span class="pre">interact</span></code> function <a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html"><code class="docutils literal notranslate"><span class="pre">ipywidgets.interact</span></code></a> is a quick way to create user interface controls on your functions. At the most basic level, <code class="docutils literal notranslate"><span class="pre">interact</span></code> autogenerates controls for function arguments, and then calls the function with those arguments when you manipulate the controls interactively. To use <code class="docutils literal notranslate"><span class="pre">interact</span></code>, you need to define a function that you want to explore.</p>
+</div>
+<div class="section" id="demo">
+<h3>Demo!<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets">ubc-jupyterdays-2020-widgets</a> contains notebooks which demonstrate using widgets to explore data as well as a notebook which covers some of the basics of using widgets.</p></li>
+<li><p>UBC Students &amp; Faculty can run on Syzygy: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2ubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
+<li><p>or if you don’t have a UBC CWL you can use: <a class="reference external" href="https://mybinder.org/v2/gh/lheagy/ubc-jupyterdays-2020-widgets/master"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="voila-dashboards">
+<h2>4. Voilà Dashboards<a class="headerlink" href="#voila-dashboards" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://voila.readthedocs.io/en/stable/using.html#using-voila">Voilà</a> turns Jupyter notebooks into standalone web applications.</p>
+<p>Unlike the usual HTML-converted notebooks, each user connecting to the Voilà tornado application gets a dedicated Jupyter kernel which can execute the callbacks to changes in Jupyter interactive widgets.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The <a class="reference external" href="https://blog.jupyter.org/and-voil%C3%A0-f6a2c08a4a93">intro blog</a> provides an overview and resources for getting up and running with Voilà</p></li>
+<li><p>The <a class="reference external" href="https://voila-gallery.org/">Voilà gallery</a> has a collection of examples built with Voilà and Jupyter widgets.</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Getting Started<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Voilà can be installed using <code class="docutils literal notranslate"><span class="pre">conda</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">voila</span>
+</pre></div>
+</div>
+<p>or from PyPI</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">voila</span>
+</pre></div>
+</div>
+<p>Once Voilà has been installed,</p>
+<ul>
+<li><p>you can run it as a standalone server</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">voila</span> <span class="n">notebook</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
+</li>
+<li><p>or as a server extention by changing the url to <code class="docutils literal notranslate"><span class="pre">&lt;url-of-my-server&gt;/voila</span></code> (e.g. if you launched <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> locally, and it was running at <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/lab</span></code>, then then Voilà would be accessed at <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/voila</span></code>.</p></li>
+<li><p>there is also a JupyterLab extention for previewing your dashboard</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@jupyter</span><span class="o">-</span><span class="n">voila</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">preview</span>
+</pre></div>
+</div>
+</li>
+<li><p>by default, Voilà will strip out the source code from view. It can be displayed if the option <code class="docutils literal notranslate"><span class="pre">strip_sources</span></code> is set to False</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Demo!<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/lheagy/ubc-jupyterdays-2020-widgets/master?urlpath=voila%2Frender%2F2-voila.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../wu/Jupyter_and_QuantEcon.html" title="previous page">Jupyter and QuantEcon</a>
+    <a class='right-next' id="next-link" href="../boyce/interactive_online_course.html" title="next page">How to Build an Interactive Course</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
