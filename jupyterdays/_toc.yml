@@ -23,6 +23,8 @@
   title: Intro to using Canvas Speedgrader with Jupyter
 - file: sessions/lee/teaching_online_jupyter_days
   title: Teaching in an Online Setting
+- url: https://firas.moosvi.com/books/active-learning-technologies/
+  title: Active learning with Jupyter Book
 - file: sessions/gelbart/ds-pedagogies
   title: Effective pedagogies for teaching data science
 
