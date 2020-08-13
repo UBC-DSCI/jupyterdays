@@ -354,21 +354,21 @@
                 
   <div class="section" id="interactive-exploration-with-widgets-and-dashboards">
 <h1>Interactive exploration with widgets and dashboards<a class="headerlink" href="#interactive-exploration-with-widgets-and-dashboards" title="Permalink to this headline">¶</a></h1>
-<p>Here, we will use a motivating example that looks at CO<span class="math notranslate nohighlight">\(_2\)</span> data for Mauna Loa and takes advantage of:</p>
+<p>Here, we will use a motivating example that looks at atmospheric CO<span class="math notranslate nohighlight">\(_2\)</span> data measured at Mauna Loa. We will be using:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/index.html">Jupyter Widgets</a> and</p></li>
-<li><p><a class="reference external" href="https://voila.readthedocs.io/en/latest/?badge=latest">Voilà dashboards</a></p></li>
+<li><p><a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/index.html">Jupyter Widgets</a> to connect interactive controls (sliders, toggle buttons, etc) to code and</p></li>
+<li><p><a class="reference external" href="https://voila.readthedocs.io/en/latest/?badge=latest">Voilà dashboards</a> to create computational “apps”</p></li>
 </ul>
 <p>The example we follow is adapted from the <a class="reference external" href="https://github.com/ICESAT-2HackWeek/intro-jupyter">Intro-Jupyter tutorial from ICESat-2Hackweek</a>, which has contributions from: <a class="reference external" href="https://github.com/espg">Shane Grigsby (&#64;espg)</a>, <a class="reference external" href="https://github.com/lheagy">Lindsey Heagy (&#64;lheagy)</a>, <a class="reference external" href="https://github.com/yaramohajerani">Yara Mohajerani (&#64;yaramohajerani)</a>, and <a class="reference external" href="https://github.com/fperez">Fernando Pérez (&#64;fperez)</a>.</p>
 <div class="section" id="hello">
 <h2>1. 👋  Hello<a class="headerlink" href="#hello" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="im-lindsey">
-<a class="reference internal image-reference" href="../../_images/lindsey.jpg"><img alt="../../_images/lindsey.jpg" src="../../_images/lindsey.jpg" style="height: 280px;" /></a>
+<a class="reference internal image-reference" href="../../_images/lindsey.jpg"><img alt="../../_images/lindsey.jpg" src="../../_images/lindsey.jpg" style="height: 260px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Hi, I’m Lindsey</span><a class="headerlink" href="#im-lindsey" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
-<li><p>I am currently a Postdoc at UC Berkeley in the Department of Statistics</p></li>
-<li><p>I will be joining UBC-EOAS as an Asst. Prof in July 2021</p></li>
+<li><p>I am currently a Postdoc at <a class="reference external" href="https://statistics.berkeley.edu/">UC Berkeley in the Department of Statistics</a></p></li>
+<li><p>I will be joining <a class="reference external" href="https://www.eoas.ubc.ca/">UBC-EOAS</a> as an Asst. Prof in July 2021</p></li>
 <li><p>My PhD was in computational geophysics (modelling and inversions)</p></li>
 <li><p>Throughout my academic career, I have been involved in development of open source software in Python &amp; open educational resources</p></li>
 </ul>
@@ -432,7 +432,7 @@
 </div>
 <p>In the <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets">demo repository</a>, we will explore building linear models using the “eye-ball” norm with widgets. To follow along:</p>
 <ul class="simple">
-<li><p>UBC Students &amp; Faculty: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2ubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
+<li><p>UBC Students &amp; Faculty: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2Fubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
 <li><p>or if you don’t have a UBC CWL: <a class="reference external" href="https://mybinder.org/v2/gh/lheagy/ubc-jupyterdays-2020-widgets/master"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p></li>
 <li><p>or you can follow the <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets#installing">installation instructions on the repository</a></p></li>
 </ul>
@@ -464,7 +464,7 @@
 <h3>Demo!<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://github.com/lheagy/ubc-jupyterdays-2020-widgets">ubc-jupyterdays-2020-widgets</a> contains notebooks which demonstrate using widgets to explore data as well as a notebook which covers some of the basics of using widgets.</p></li>
-<li><p>UBC Students &amp; Faculty can run on Syzygy: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2ubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
+<li><p>UBC Students &amp; Faculty can run on the UBC Syzygy: <a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flheagy%2Fubc-jupyterdays-2020-widgets&amp;urlpath=tree%2Fubc-jupyterdays-2020-widgets%2F&amp;branch=master"><img alt="Syzygy" src="https://img.shields.io/badge/launch-syzygy-important" /></a></p></li>
 <li><p>or if you don’t have a UBC CWL you can use: <a class="reference external" href="https://mybinder.org/v2/gh/lheagy/ubc-jupyterdays-2020-widgets/master"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p></li>
 </ul>
 </div>
