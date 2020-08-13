@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Teaching in an online setting &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Jupyter and QuantEcon" href="../wu/Jupyter_and_QuantEcon.html" />
+    <link rel="prev" title="Intro to using Canvas Speedgrader with Jupyter" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Schedule
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day1.html">
+   Day 1: Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day2.html">
+   Day 2: Pedagogy and Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day3.html">
+   Day 3: New Developments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/speakers.html">
+   Speakers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 1 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ostblom/jupyterlab-intro.html">
+   Introduction to JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">
+   Sharing your teaching materials using Git &amp; GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../beuzen/jupyter_book_tutorial.html">
+   Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../walls/a_tour_of_python_packages_for_scientific_computing.html">
+   Python packages for scientific computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 2 Sessions
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">
+   Intro to using Canvas Speedgrader with Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Teaching in an online setting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#student-survey-results">
+   Student survey results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id7">
+   Student survey results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id8">
+   Student survey results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id9">
+   Student survey results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#id11">
+   Student survey results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#thank-you">
+   Thank you!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 3 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wu/Jupyter_and_QuantEcon.html">
+   Jupyter and QuantEcon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../heagy/widgets-and-dashboards.html">
+   Interactive exploration with Jupyter widgets and dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../boyce/interactive_online_course.html">
+   Building an Interactive Online Course
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../kolhatkar/language-models-with-Jupyter.html">
+   Computational linguistics with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Code of Conduct
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html">
+   Code of Conduct for Jupyterdays
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/lee/teaching_online_jupyter_days.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/lee/teaching_online_jupyter_days.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/lee/teaching_online_jupyter_days.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline-of-dsci100-in-person-version">
+   Outline of DSCI100: In-Person Version
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transitioning-online-activity-5-min">
+   Transitioning Online: Activity (~5 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-what-do-you-think-are-some-of-the-biggest-challenges-with-teaching-online-br">
+   a. What do you think are some of the biggest challenges with teaching online?
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#br">
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#br-b-what-are-some-strategies-you-have-tried-or-would-try-to-mitigate-those-challenges-br">
+   <br/>
+   b. What are some strategies you have tried (or would try) to mitigate those challenges?
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   <br/>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#student-challenges-with-online-transition">
+   Student Challenges with Online Transition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Student Challenges with Online Transition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thinking-about-our-upcoming-dsci100-class-what-if-anything-are-you-most-worried-anxious-about">
+     Thinking about our upcoming DSCI100 class, what, if anything, are you most worried/anxious about?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Student Challenges with Online Transition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Thinking about our upcoming DSCI100 class, what, if anything, are you most worried/anxious about?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructor-challenges-with-online-transition">
+   Instructor Challenges with Online Transition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline-of-dsci100-online-version">
+   Outline of DSCI100: Online Version
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategies-to-overcome-challenges">
+   Strategies to overcome challenges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strategies-for-active-learning-and-group-work">
+   Strategies for active learning and group work
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="teaching-in-an-online-setting">
+<h1>Teaching in an online setting<a class="headerlink" href="#teaching-in-an-online-setting" title="Permalink to this headline">¶</a></h1>
+<img src="https://students.ubc.ca/sites/students.ubc.ca/files/styles/header_image_tablet_1_5x/public/flagpole_20130926__Geoff-Lister-2.jpg?itok=jR8oytJ9&timestamp=1481586233/" width = "1200">
+<p>Melissa Lee <br>
+Department of Statistics<br>
+University of British Columbia <br>
+Aug 13, 2020</p>
+<img src="img/ubc-logo-2018-fullsig-blue-rgb72.jpg" /><div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Outline of the Introduction to Data Science (DSCI100) course</p></li>
+<li><p>Challenges with online transition</p></li>
+<li><p>Strategies for active learning and group work</p></li>
+<li><p>Results from student surveys</p></li>
+<li><p>Key takeaways and lessons learned</p></li>
+</ol>
+</div>
+<div class="section" id="outline-of-dsci100-in-person-version">
+<h2>Outline of DSCI100: In-Person Version<a class="headerlink" href="#outline-of-dsci100-in-person-version" title="Permalink to this headline">¶</a></h2>
+<p> <img src="https://cpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/f/255/files/2015/05/active-learning-17c4bho.jpg"  align="left" width = "800" /></p>
+<ul class="simple">
+<li><p>Class structure:</p>
+<ul>
+<li><p>1.5 hour lectures</p></li>
+<li><p>15 min - 20 min of lecture at the start of class</p></li>
+<li><p>Students work in class on <a class="reference external" href="https://hub-prod-dsci.stat.ubc.ca/jupyter/user/616/notebooks/dsci-100/materials/worksheet_01/worksheet_01.ipynb">worksheets using Jupyter Notebook</a></p></li>
+<li><p>Teaching team circulate around room to help students through worksheets/tutorials</p></li>
+<li><p>Class activity + wrap up at the end of the lecture</p></li>
+</ul>
+</li>
+<li><p>Assessments:</p>
+<ul>
+<li><p>Worksheets &amp; tutorials (Jupyter Notebooks)</p></li>
+<li><p>Group project</p></li>
+<li><p>Online quizzes via Canvas</p></li>
+</ul>
+</li>
+</ul>
+<p>Photo source: https://davidwacks.uoregon.edu/</p>
+</div>
+<div class="section" id="transitioning-online-activity-5-min">
+<h2>Transitioning Online: Activity (~5 min)<a class="headerlink" href="#transitioning-online-activity-5-min" title="Permalink to this headline">¶</a></h2>
+<p> <img src="https://learningspaces.ubc.ca/sites/learningspaces.ubc.ca/files/styles/room_images/public/initiatives-images/IMG_1999.jpg?itok=Th9dath4&c=feafd7f5ab7d60c363652d23929d0aee"  width="800" align = "right" /></p>
+In your groups, discuss the following questions: 
+</div>
+<div class="section" id="a-what-do-you-think-are-some-of-the-biggest-challenges-with-teaching-online-br">
+<h2>a. What do you think are some of the biggest challenges with teaching online?
+<br><a class="headerlink" href="#a-what-do-you-think-are-some-of-the-biggest-challenges-with-teaching-online-br" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="br">
+<h2><br><a class="headerlink" href="#br" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id1">
+<h2><br><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="br-b-what-are-some-strategies-you-have-tried-or-would-try-to-mitigate-those-challenges-br">
+<h2><br>
+b. What are some strategies you have tried (or would try) to mitigate those challenges?
+<br><a class="headerlink" href="#br-b-what-are-some-strategies-you-have-tried-or-would-try-to-mitigate-those-challenges-br" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id2">
+<h2><br><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2><br><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<br></div>
+<div class="section" id="student-challenges-with-online-transition">
+<h2>Student Challenges with Online Transition<a class="headerlink" href="#student-challenges-with-online-transition" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Student survey one week before the course start date</p></li>
+<li><p>All 117 students in the class filled out the survey</p></li>
+</ul>
+<blockquote>
+<div><p>Thinking about our upcoming DSCI100 class, what, if anything, are you most worried/anxious about?</p>
+</div></blockquote>
+<p> <img src="img/survey_worries.png"  width="1200" align = "left" /></p></div>
+<div class="section" id="id4">
+<h2>Student Challenges with Online Transition<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="thinking-about-our-upcoming-dsci100-class-what-if-anything-are-you-most-worried-anxious-about">
+<h3>Thinking about our upcoming DSCI100 class, what, if anything, are you most worried/anxious about?<a class="headerlink" href="#thinking-about-our-upcoming-dsci100-class-what-if-anything-are-you-most-worried-anxious-about" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Online assessments</p></li>
+</ul>
+<blockquote>
+<div><p><em>I am a bit worried about how the online exams will be conducted!</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Technical issues</p></li>
+</ul>
+<blockquote>
+<div><p><em>Technical issues, group work efficiency without in-person meeting</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Different student situations</p></li>
+</ul>
+<blockquote>
+<div><p><em>The course is online which makes it automatically harder for me to do well :( because I cannot for the life of me do homework at home…</em> <br> <br>
+<em>Having to wake up at 4am to attend lectures</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Student Challenges with Online Transition<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Thinking about our upcoming DSCI100 class, what, if anything, are you most worried/anxious about?<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Expectations</p></li>
+</ul>
+<blockquote>
+<div><p><em>not too sure how the class is going to be, especially under current situation</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Community</p></li>
+</ul>
+<blockquote>
+<div><p><em>Since I’m a visual person, I’m a bit worried about online courses in which I can’t see the professor. I’m not sure how I will be able to get help from TAs and communicate with the professor and other classmates.</em> <br> <br>
+<em>After taking the online courses, I realize that the break out group is really difficult to achieve due to the bad internet environment of some students, and it always wastes a lot of the class time. Also, there is no one talking and do any working at all.</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="instructor-challenges-with-online-transition">
+<h2>Instructor Challenges with Online Transition<a class="headerlink" href="#instructor-challenges-with-online-transition" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Online assessments</p></li>
+<li><p>Technical issues</p></li>
+<li><p>Accommodating different students’ needs</p></li>
+<li><p>Setting expectations</p></li>
+<li><p>Creating community among students, TAs and instructor</p></li>
+</ul>
+</div>
+<div class="section" id="outline-of-dsci100-online-version">
+<h2>Outline of DSCI100: Online Version<a class="headerlink" href="#outline-of-dsci100-online-version" title="Permalink to this headline">¶</a></h2>
+<img src = "img/canvas.png" width = "600" align = "right">
+<ul class="simple">
+<li><p>Synchronous lectures</p></li>
+<li><p>Class structure:</p>
+<ul>
+<li><p>15 min to 20 min of lecture at the start of class</p></li>
+<li><p>Students go to pre-assigned breakout rooms</p></li>
+<li><p>Students work in class on <a class="reference external" href="https://hub-prod-dsci.stat.ubc.ca/jupyter/user/616/notebooks/dsci-100/materials/worksheet_01/worksheet_01.ipynb">worksheets using Jupyter Notebook</a></p></li>
+<li><p>Teaching team circulates between breakout rooms</p></li>
+<li><p>TAs &amp; instructors answer questions</p></li>
+<li><p>Class activity + wrap up at the end of lecture</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="strategies-to-overcome-challenges">
+<h2>Strategies to overcome challenges<a class="headerlink" href="#strategies-to-overcome-challenges" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Online assessments</p>
+<ul>
+<li><p>Online quizzes invigilated with Zoom</p></li>
+</ul>
+</li>
+<li><p>Technical issues</p>
+<ul>
+<li><p>List of resources on course page</p></li>
+</ul>
+</li>
+<li><p>Accommodating different students’ needs</p>
+<ul>
+<li><p>Recorded lectures</p></li>
+<li><p>List of resources on course page</p></li>
+</ul>
+</li>
+<li><p>Setting expectations</p>
+<ul>
+<li><p>Page on course website</p></li>
+<li><p>First day of class</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="strategies-for-active-learning-and-group-work">
+<h2>Strategies for active learning and group work<a class="headerlink" href="#strategies-for-active-learning-and-group-work" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Creating community among students, TAs and instructor</p>
+<ul>
+<li><p>Whiteboard + polling for class discussion</p></li>
+<li><p>Breakout rooms</p></li>
+<li><p>Activities with Google Docs</p></li>
+<li><p>Group discussion board on Canvas</p></li>
+<li><p>Peer Scholar for project peer review</p></li>
+<li><p>Piazza discussion board</p></li>
+</ul>
+</li>
+</ul>
+<img src = "img/whiteboard.png"></div>
+</div>
+<div class="section" id="student-survey-results">
+<h1>Student survey results<a class="headerlink" href="#student-survey-results" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Mid-course survey sent out in week 4 of 6 in the course</p></li>
+<li><p>48% response rate</p></li>
+</ul>
+<div class="section" id="on-a-scale-of-1-10-with-10-being-the-highest-meaning-you-like-it-a-lot-rate-how-much-you-like-using-jupyter-on-our-server-as-where-work-on-your-worksheets-and-tutorials">
+<h2>On a scale of 1-10 (with 10 being the highest, meaning you like it a lot), rate how much you like using Jupyter on our server as where work on your worksheets and tutorials<a class="headerlink" href="#on-a-scale-of-1-10-with-10-being-the-highest-meaning-you-like-it-a-lot-rate-how-much-you-like-using-jupyter-on-our-server-as-where-work-on-your-worksheets-and-tutorials" title="Permalink to this headline">¶</a></h2>
+<img src = "survey/jupyter.png" width = "700"></div>
+</div>
+<div class="section" id="id7">
+<h1>Student survey results<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="on-a-scale-of-1-10-with-10-being-the-highest-meaning-you-like-it-a-lot-rate-how-much-you-like-the-classroom-format-we-are-using-recorded-synchronous-real-time-lectures-with-time-given-to-work-in-groups-on-worksheets">
+<h2>On a scale of 1-10 (with 10 being the highest, meaning you like it a lot), rate how much you like the classroom format we are using (recorded synchronous real-time lectures with time given to work in groups on worksheets):<a class="headerlink" href="#on-a-scale-of-1-10-with-10-being-the-highest-meaning-you-like-it-a-lot-rate-how-much-you-like-the-classroom-format-we-are-using-recorded-synchronous-real-time-lectures-with-time-given-to-work-in-groups-on-worksheets" title="Permalink to this headline">¶</a></h2>
+<img src = "survey/class_format.png" alt = "class_format" width = "700"></div>
+</div>
+<div class="section" id="id8">
+<h1>Student survey results<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-working-for-you-in-this-course-and-what-should-we-keep-doing-this-semester-and-next-time-we-teach-the-course">
+<h2>What is working for you in this course and what should we keep doing this semester (and next time we teach the course)?<a class="headerlink" href="#what-is-working-for-you-in-this-course-and-what-should-we-keep-doing-this-semester-and-next-time-we-teach-the-course" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Jupyter Notebook worksheets</p></li>
+</ul>
+<blockquote>
+<div><p><em>I love the use of Jupyter for assignments. It’s so convenient to just have all the instructions and software in one place and makes writing homework a breeze.</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Breakout rooms</p></li>
+</ul>
+<blockquote>
+<div><p><em>I really like the breakout rooms. I find that my group members and I work through the worksheets and tutorials together and everybody helps everybody out.</em>
+<br><br>
+<em>Working on worksheets and tutorials in groups, with a TA. It is super easy to ask questions when you’re unsure of something, and everyone learns together.</em>
+<br><br>
+<em>Breakout rooms are a great idea especially when someone has questions, it is way easier to get help than in the main room. Since we can even share screen content for the TAs.</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id9">
+<h1>Student survey results<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id10">
+<h2>What is working for you in this course and what should we keep doing this semester (and next time we teach the course)?<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fixed groups</p></li>
+</ul>
+<blockquote>
+<div><p><em>I really loved that we were given fixed groups to work with! It gave me the opportunity to really get comfortable with the people I was working with and made the course very enjoyable!</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Dedicated time in class</p></li>
+</ul>
+<blockquote>
+<div><p><em>Having time during the tutorials to work in our project groups has been helpful, especially considering it is online.</em>
+<br></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Canvas page</p></li>
+</ul>
+<blockquote>
+<div><p><em>I really like how organized this class is. The canvas page is really straight forward and it’s clear what needs to be done each week. I also really like that we have worksheets and tutorials for this class. It makes it easy for me to consolidate the material I’m learning for this course.</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id11">
+<h1>Student survey results<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-not-working-for-you-in-this-course-and-should-we-consider-doing-something-different-this-semester-if-we-can-and-next-time-we-teach-the-course">
+<h2>What is NOT working for you in this course and should we consider doing something different this semester (if we can) and next time we teach the course?<a class="headerlink" href="#what-is-not-working-for-you-in-this-course-and-should-we-consider-doing-something-different-this-semester-if-we-can-and-next-time-we-teach-the-course" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Quiz format</p></li>
+</ul>
+<blockquote>
+<div><p><em>Taking the quiz with only one question at a time and no going back. I know it is supposed to help prevent cheating, but not seeing all the questions makes it hard to time manage. Maybe have all the questions of the same varying hardness, or allow viewing of all the questions.</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>In-person help</p></li>
+</ul>
+<blockquote>
+<div><p><em>cant meet face to face with group members, cant meet face to face with ta for assignment help etc</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>TA support</p></li>
+</ul>
+<blockquote>
+<div><p><em>Please assign a TA to monitor each breakout room and stay there.</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Group project collaboration</p></li>
+</ul>
+<blockquote>
+<div><p><em>In groups, not everyone can work on the same file at once. If this could be added, it would make group work A LOT easier to manage. We had to setup Github, which a lot of people didn’t know how to use. Overall, group work is turning out to not be too pleasant of an experience because of this limitation.</em></p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Technical issues</p></li>
+</ul>
+<blockquote>
+<div><p><em>it gets laggy on collab ultra and Jupyter sometimes don’t work</em></p>
+</div></blockquote>
+</div>
+<div class="section" id="key-takeaways">
+<h2>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>TAs during lecture was a big help</p></li>
+<li><p>Students liked breakout rooms + Jupyter Notebooks</p></li>
+<li><p>Set expectations about academic integrity and reasoning for exam format early in the course</p></li>
+<li><p>Technical issues are hard to avoid
+<img src = "img/survey_excited_visualization.png" align = "right" width = "1000"/></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="thank-you">
+<h1>Thank you!<a class="headerlink" href="#thank-you" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html" title="previous page">Intro to using Canvas Speedgrader with Jupyter</a>
+    <a class='right-next' id="next-link" href="../wu/Jupyter_and_QuantEcon.html" title="next page">Jupyter and QuantEcon</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
