@@ -77,7 +77,7 @@ toc-showmarkdowntxt: true
 
 ### What is it?
 
-[md2canvas](https://github.com/maracieco/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
+[md2canvas](https://github.com/eoas-ubc/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
 
 The documentation is [here](https://maracieco.github.io/md2canvas/index.html).
 
