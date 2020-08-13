@@ -286,7 +286,63 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-me">
+   About me
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#live-coding-in-jupyter-5-min">
+   Live coding in Jupyter (5 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-based-learning-20-min">
+   Problem-based learning (20 min)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-canadian-cheese-dataset">
+     Example: Canadian cheese dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#break-5-min">
+   Break (5 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#think-pair-share-15-min">
+   Think-pair-share (15 min)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-validation-true-false-questions">
+     Cross-validation true/false questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#real-time-documents-5-min">
+   Real-time documents (5 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#q-a-15-min">
+   Q&amp;A (15 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-thoughts-on-teaching-in-general-time-permitting">
+   Some thoughts on teaching in general (time-permitting)
+  </a>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -299,14 +355,735 @@
 <h1>Effective pedagogies for teaching data science<a class="headerlink" href="#effective-pedagogies-for-teaching-data-science" title="Permalink to this headline">¶</a></h1>
 <p>Mike Gelbart</p>
 <p>UBC Jupyter Days 2020</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">,</span> <span class="n">FunctionTransformer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Ridge</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>In this session I will discuss a few tips for teaching data science, especially with Jupyter notebooks:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.queensu.ca/ctl/teaching-support/instructional-strategies/problem-based-learning">Problem-based learning</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Live_coding">Live coding</a></p></li>
-<li><p>My implementation of <a class="reference external" href="https://en.wikipedia.org/wiki/Think-pair-share">think-pair-share</a>.</p></li>
-<li><p>Real-time collaborative documents (perfect for online teaching!).</p></li>
-<li><p>(Time-permitting) Some thoughts on teaching in general.</p></li>
+<li><p>My implementation of <a class="reference external" href="https://en.wikipedia.org/wiki/Think-pair-share">think-pair-share</a></p></li>
+<li><p>Real-time collaborative documents (perfect for online teaching!)</p></li>
+<li><p>(Time-permitting) Some thoughts on teaching in general</p></li>
 </ul>
+<div class="section" id="about-me">
+<h2>About me<a class="headerlink" href="#about-me" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Assistant Professor of Teaching, UBC Computer Science</p></li>
+<li><p>Option Co-Director, UBC Master of Data Science program</p></li>
+<li><p>Background in machine learning</p></li>
+</ul>
+</div>
+<div class="section" id="live-coding-in-jupyter-5-min">
+<h2>Live coding in Jupyter (5 min)<a class="headerlink" href="#live-coding-in-jupyter-5-min" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>I’m a big fan of live experiments.</p></li>
+<li><p>I don’t do much “live coding” but I do “live execution”.</p></li>
+<li><p>You’ve probably seen a lot of this but here’s my version:</p></li>
+</ul>
+<div><img src="img/regularization_ppt.png" width="500"/></div>
+<p>vs.</p>
+<div><img src="img/regularization_ipynb.png" width="750"/></div><p>Main ideas:</p>
+<ul class="simple">
+<li><p>No “magic”.</p></li>
+<li><p>Cultivates an atmosphere of experimentation.</p></li>
+</ul>
+</div>
+<div class="section" id="problem-based-learning-20-min">
+<h2>Problem-based learning (20 min)<a class="headerlink" href="#problem-based-learning-20-min" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>My CPSC 340 syllabus:</p>
+<ul>
+<li><p>Day 1: Decision Trees</p></li>
+<li><p>Day 2: <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours</p></li>
+<li><p>etc.
+My CPSC 330 syllabus:</p></li>
+<li><p>Week 1: census dataset</p></li>
+<li><p>Week 2: houseing dataset</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>Jupyter facilitates this “problem-based learning” really well.</p></li>
+</ul>
+<div class="section" id="example-canadian-cheese-dataset">
+<h3>Example: Canadian cheese dataset<a class="headerlink" href="#example-canadian-cheese-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Below I will show a pretend lesson using the <a class="reference external" href="https://open.canada.ca/data/en/dataset/3c16cd48-3ac3-453f-8260-6f745181c83b">Canadian Cheese Directory dataset</a> from Agriculture and Agri-Food Canada. This data is distributed under the <a class="reference external" href="https://open.canada.ca/en/open-government-licence-canada">Canadian Open Government License</a> so I have bundled it with this Jupyterbook.</p>
+<p>We will be predicting <code class="docutils literal notranslate"><span class="pre">FatContentPercent</span></code> based on the other features.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/canadianCheeseDirectory.csv&quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will be predicting <code class="docutils literal notranslate"><span class="pre">FatContentPercent</span></code>, which is not available for all the cheeses, so I will first filter out those where this is not available:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FatContentPercent&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span><span class="p">,</span> <span class="n">df_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="s1">&#39;FatContentPercent&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">()</span>
+<span class="c1"># lm.fit(df_train, y_train)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Now we run into our first error.</p></li>
+<li><p>I like to leave these in.</p>
+<ul>
+<li><p>However, they cause problems when running all cells (or building a Jupyter Book?).</p></li>
+<li><p>Fixing this issue seems to be <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/issues/2412">in progress</a>.</p></li>
+</ul>
+</li>
+<li><p>Not all the “problems” we encounter are Python errors.</p></li>
+<li><p>Problem types:</p>
+<ul>
+<li><p>Python error</p></li>
+<li><p>Poor model accuracy</p></li>
+<li><p>Prohibitively slow code</p></li>
+<li><p>Problems you didn’t know you had (the worst kind!), especially around train/test contamination</p></li>
+<li><p>I don’t know where to start</p></li>
+</ul>
+</li>
+</ul>
+<p>Problem: non-numeric data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CheeseNameEn</th>
+      <th>CheeseNameFr</th>
+      <th>ManufacturerNameEn</th>
+      <th>ManufacturerNameFr</th>
+      <th>ManufacturerProvCode</th>
+      <th>ManufacturingTypeEn</th>
+      <th>ManufacturingTypeFr</th>
+      <th>WebSiteEn</th>
+      <th>WebSiteFr</th>
+      <th>FatContentPercent</th>
+      <th>...</th>
+      <th>Organic</th>
+      <th>CategoryTypeEn</th>
+      <th>CategoryTypeFr</th>
+      <th>MilkTypeEn</th>
+      <th>MilkTypeFr</th>
+      <th>MilkTreatmentTypeEn</th>
+      <th>MilkTreatmentTypeFr</th>
+      <th>RindTypeEn</th>
+      <th>RindTypeFr</th>
+      <th>LastUpdateDate</th>
+    </tr>
+    <tr>
+      <th>CheeseId</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1432</th>
+      <td>NaN</td>
+      <td>Chèvre des Alpes BIO</td>
+      <td>Damafro</td>
+      <td>Damafro</td>
+      <td>QC</td>
+      <td>Industrial</td>
+      <td>Industrielle</td>
+      <td>http://www.damafro.ca/en/home.html</td>
+      <td>http://www.damafro.ca</td>
+      <td>22.0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>Fresh Cheese</td>
+      <td>Pâte fraîche</td>
+      <td>Goat</td>
+      <td>Chèvre</td>
+      <td>Pasteurized</td>
+      <td>Pasteurisé</td>
+      <td>No Rind</td>
+      <td>Sans croûte</td>
+      <td>2016-02-03</td>
+    </tr>
+    <tr>
+      <th>2281</th>
+      <td>NaN</td>
+      <td>Frère Chasseur (Le)</td>
+      <td>NaN</td>
+      <td>Fromagerie Au Gré des Champs</td>
+      <td>QC</td>
+      <td>Artisan</td>
+      <td>Artisanale</td>
+      <td>NaN</td>
+      <td>http://www.augredeschamps.com</td>
+      <td>35.0</td>
+      <td>...</td>
+      <td>1</td>
+      <td>Firm Cheese</td>
+      <td>Pâte ferme</td>
+      <td>Cow</td>
+      <td>Vache</td>
+      <td>Raw Milk</td>
+      <td>Lait cru</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2016-02-03</td>
+    </tr>
+    <tr>
+      <th>1908</th>
+      <td>NaN</td>
+      <td>Mon précieux</td>
+      <td>NaN</td>
+      <td>Fromagerie Couland</td>
+      <td>QC</td>
+      <td>Artisan</td>
+      <td>Artisanale</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>22.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>Fresh Cheese</td>
+      <td>Pâte fraîche</td>
+      <td>Goat</td>
+      <td>Chèvre</td>
+      <td>Pasteurized</td>
+      <td>Pasteurisé</td>
+      <td>No Rind</td>
+      <td>Sans croûte</td>
+      <td>2016-02-03</td>
+    </tr>
+    <tr>
+      <th>2224</th>
+      <td>NaN</td>
+      <td>Tomme de Brebis de Charlevoix</td>
+      <td>NaN</td>
+      <td>Maison d'affinage Maurice Dufour (La)</td>
+      <td>QC</td>
+      <td>Artisan</td>
+      <td>Artisanale</td>
+      <td>NaN</td>
+      <td>http://www.fromagefin.com</td>
+      <td>33.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>Firm Cheese</td>
+      <td>Pâte ferme</td>
+      <td>Ewe</td>
+      <td>Brebis</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Washed Rind</td>
+      <td>Croûte lavée</td>
+      <td>2016-02-03</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>NaN</td>
+      <td>Cheddar Littoral</td>
+      <td>NaN</td>
+      <td>Fromagerie Ferme du littoral</td>
+      <td>QC</td>
+      <td>Farmstead</td>
+      <td>Fermière</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>30.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>Firm Cheese</td>
+      <td>Pâte ferme</td>
+      <td>Cow</td>
+      <td>Vache</td>
+      <td>Pasteurized</td>
+      <td>Pasteurisé</td>
+      <td>No Rind</td>
+      <td>Sans croûte</td>
+      <td>2016-02-03</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 29 columns</p>
+</div></div></div>
+</div>
+<p>Now perhaps the lesson goes to encoding categorical variables…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ManufacturerName&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ManufacturerNameEn&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ManufacturerNameFr&quot;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ManufacturerNameEn&quot;</span><span class="p">,</span> <span class="s2">&quot;ManufacturerNameFr&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;CheeseName&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;CheeseNameEn&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;CheeseNameFr&quot;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;CheeseNameEn&quot;</span><span class="p">,</span> <span class="s2">&quot;CheeseNameFr&quot;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;Fr&quot;</span><span class="p">)])</span>
+<span class="n">df_train</span><span class="p">,</span> <span class="n">df_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeric_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MoisturePercent&#39;</span><span class="p">]</span>
+<span class="n">categorical_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ManufacturerProvCode&#39;</span><span class="p">,</span> <span class="s1">&#39;ManufacturingTypeEn&#39;</span><span class="p">,</span> <span class="s1">&#39;Organic&#39;</span><span class="p">,</span> <span class="s1">&#39;CategoryTypeEn&#39;</span><span class="p">,</span> <span class="s1">&#39;MilkTypeEn&#39;</span><span class="p">,</span> <span class="s1">&#39;MilkTreatmentTypeEn&#39;</span><span class="p">,</span> <span class="s1">&#39;RindTypeEn&#39;</span><span class="p">,</span> <span class="s1">&#39;ManufacturerName&#39;</span><span class="p">]</span>
+<span class="n">text_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CheeseName&#39;</span><span class="p">,</span> <span class="s1">&#39;FlavourEn&#39;</span><span class="p">,</span> <span class="s1">&#39;CharacteristicsEn&#39;</span><span class="p">]</span>
+<span class="n">drop_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;WebSiteEn&#39;</span><span class="p">,</span> <span class="s1">&#39;ParticularitiesEn&#39;</span><span class="p">,</span> <span class="s1">&#39;RipeningEn&#39;</span><span class="p">,</span> <span class="s1">&#39;LastUpdateDate&#39;</span><span class="p">]</span>
+<span class="n">target_column</span> <span class="o">=</span> <span class="s1">&#39;FatContentPercent&#39;</span>
+<span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">numeric_features</span> <span class="o">+</span> <span class="n">categorical_features</span> <span class="o">+</span> <span class="n">text_features</span> <span class="o">+</span> <span class="n">drop_features</span> <span class="o">+</span> <span class="p">[</span><span class="n">target_column</span><span class="p">])</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y_train</span> <span class="o">=</span> <span class="n">df_train</span><span class="p">[</span><span class="n">target_column</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="n">target_column</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Note how I’ve minimized some of the code cells.</p></li>
+<li><p>In class, I would show more of them.</p></li>
+<li><p>But not necessarily all, if they are beyond the scope, not relevant, or old news.</p></li>
+</ul>
+<p>Now to the key code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeric_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;scaler&#39;</span><span class="p">,</span> <span class="n">StandardScaler</span><span class="p">())</span>
+<span class="p">])</span>
+
+<span class="n">categorical_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;onehot&#39;</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="p">])</span>
+
+<span class="c1"># Fit a separate CountVectorizer for each of the text columns.</span>
+<span class="c1"># Need to convert the resulting sparse matrices to dense separately.</span>
+<span class="n">text_transformer</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;imputer&#39;</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;tolist&#39;</span><span class="p">,</span> <span class="n">FunctionTransformer</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;countvec&#39;</span><span class="p">,</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s1">&#39;todense&#39;</span><span class="p">,</span> <span class="n">FunctionTransformer</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">validate</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="p">])</span>
+
+<span class="n">preprocessor</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;numeric&#39;</span><span class="p">,</span> <span class="n">numeric_transformer</span><span class="p">,</span> <span class="n">numeric_features</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;categorical&#39;</span><span class="p">,</span> <span class="n">categorical_transformer</span><span class="p">,</span> <span class="n">categorical_features</span><span class="p">)</span>
+<span class="p">]</span> <span class="o">+</span> <span class="p">[(</span><span class="n">f</span><span class="p">,</span> <span class="n">text_transformer</span><span class="p">,</span> <span class="p">[</span><span class="n">f</span><span class="p">])</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">text_features</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">preprocessor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_column_names</span><span class="p">(</span><span class="n">preprocessor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the feature names from a preprocessor.</span>
+<span class="sd">    This entails looking at the OHE feature names and also</span>
+<span class="sd">    the words used by the CountVectorizers.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    preprocessor: ColumnTransformer</span>
+<span class="sd">        A fit preprocessor following the specific format above.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        A list of column names.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ohe_feature_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">named_transformers_</span><span class="p">[</span><span class="s1">&#39;categorical&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s1">&#39;onehot&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">(</span><span class="n">categorical_features</span><span class="p">))</span>
+    <span class="n">text_feature_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">word</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">text_features</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">named_transformers_</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s1">&#39;countvec&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()]</span>
+    <span class="k">return</span> <span class="n">numeric_features</span> <span class="o">+</span> <span class="n">ohe_feature_names</span> <span class="o">+</span> <span class="n">text_feature_names</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">new_columns</span> <span class="o">=</span> <span class="n">get_column_names</span><span class="p">(</span><span class="n">preprocessor</span><span class="p">)</span>
+    
+<span class="n">df_train_enc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_train</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">df_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">new_columns</span><span class="p">)</span>
+<span class="n">df_train_enc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MoisturePercent</th>
+      <th>ManufacturerProvCode_AB</th>
+      <th>ManufacturerProvCode_BC</th>
+      <th>ManufacturerProvCode_MB</th>
+      <th>ManufacturerProvCode_NB</th>
+      <th>ManufacturerProvCode_NL</th>
+      <th>ManufacturerProvCode_NS</th>
+      <th>ManufacturerProvCode_ON</th>
+      <th>ManufacturerProvCode_PE</th>
+      <th>ManufacturerProvCode_QC</th>
+      <th>...</th>
+      <th>CharacteristicsEn_cheese</th>
+      <th>CharacteristicsEn_colored</th>
+      <th>CharacteristicsEn_creamy</th>
+      <th>CharacteristicsEn_interior</th>
+      <th>CharacteristicsEn_pressed</th>
+      <th>CharacteristicsEn_rind</th>
+      <th>CharacteristicsEn_ripened</th>
+      <th>CharacteristicsEn_smooth</th>
+      <th>CharacteristicsEn_texture</th>
+      <th>CharacteristicsEn_white</th>
+    </tr>
+    <tr>
+      <th>CheeseId</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1432</th>
+      <td>1.127656</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2281</th>
+      <td>-1.459684</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1908</th>
+      <td>2.266086</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2224</th>
+      <td>-1.459684</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>-0.528242</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 224 columns</p>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>Awesome, we’ve got everything into numeric data!</p></li>
+<li><p>Now let’s train a model:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipeline_dummy</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+    <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">DummyRegressor</span><span class="p">())])</span>
+
+<span class="c1"># scores_dummy = cross_validate(pipeline_dummy, df_train, y_train, cv=5, return_train_score=True)</span>
+<span class="c1">#pd.DataFrame(scores_dummy)[[&quot;train_score&quot;, &quot;test_score&quot;]].mean()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Oh no, another error - what is going on this time? Etc.</p>
+<p>Going back to the problem types:</p>
+<ul class="simple">
+<li><p>Python error</p></li>
+<li><p>Poor model accuracy</p></li>
+<li><p>Prohibitively slow code</p></li>
+<li><p>Problems you didn’t know you had (the worst kind!), especially around train/test contamination</p></li>
+</ul>
+<p>Most of the topics / learning outcomes in the course fit into one of these categories.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Problem</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>One-hot encoding</p></td>
+<td><p>Python error</p></td>
+</tr>
+<tr class="row-odd"><td><p>Overfitting</p></td>
+<td><p>Poor model accuracy</p></td>
+</tr>
+<tr class="row-even"><td><p>Fancy models, e.g. CatBoost</p></td>
+<td><p>Poor model accuracy</p></td>
+</tr>
+<tr class="row-odd"><td><p>Feature importances, e.g. SHAP</p></td>
+<td><p>Lack of interpretability</p></td>
+</tr>
+<tr class="row-even"><td><p>Pipelines</p></td>
+<td><p>Problems you didn’t know you had, hard-to-maintain code</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cross-validation</p></td>
+<td><p>Poor model accuracy, problems you didn’t know you had</p></td>
+</tr>
+<tr class="row-even"><td><p>Survival analysis</p></td>
+<td><p>Problems you didn’t know you had</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pre-trained deep networks</p></td>
+<td><p>Don’t know where to start</p></td>
+</tr>
+</tbody>
+</table>
+<p>etc.</p>
+</div>
+</div>
+<div class="section" id="break-5-min">
+<h2>Break (5 min)<a class="headerlink" href="#break-5-min" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="think-pair-share-15-min">
+<h2>Think-pair-share (15 min)<a class="headerlink" href="#think-pair-share-15-min" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Think-pair-share is an evidence-based teaching approach.</p></li>
+<li><p>The idea is for students to learn from each other.</p></li>
+<li><p>I find it works great in DS teaching.</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="section" id="cross-validation-true-false-questions">
+<h3>Cross-validation true/false questions<a class="headerlink" href="#cross-validation-true-false-questions" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(k\)</span>-fold cross validation calls <code class="docutils literal notranslate"><span class="pre">fit</span></code> <span class="math notranslate nohighlight">\(k\)</span> times and <code class="docutils literal notranslate"><span class="pre">predict</span></code> <span class="math notranslate nohighlight">\(k\)</span> times.</p></li>
+<li><p>The goal of cross-validation is to obtain a better estimate of test error than just using a single validation set.</p></li>
+<li><p>The main disadvantage of using a large <span class="math notranslate nohighlight">\(k\)</span> in cross-validation is running time.</p></li>
+<li><p><span class="math notranslate nohighlight">\(2\)</span>-fold cross validation is the same thing as using a validation set that’s 50% the size of your training set.</p></li>
+</ol>
+<p>I would usually allocate 10-15 min for the above.</p>
+<p>Details on my approach:</p>
+<ul class="simple">
+<li><p>Easier to come up with answers because not limited to 1 True, 3-4 False</p></li>
+<li><p>Can use hand-raising</p></li>
+<li><p>Gives more flexibility to have ambiguous questions without messing up the rest</p></li>
+<li><p>Try to make one of the earlier ones true (1 or 2), in general slightly more true, since this encourages participation.</p></li>
+<li><p>“My answer” instead of “the answer”</p></li>
+<li><p>Often, when the majority disagreed with me, we discovered an ambiguity or catch</p></li>
+<li><p>I don’t write down answers</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="real-time-documents-5-min">
+<h2>Real-time documents (5 min)<a class="headerlink" href="#real-time-documents-5-min" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="q-a-15-min">
+<h2>Q&amp;A (15 min)<a class="headerlink" href="#q-a-15-min" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="some-thoughts-on-teaching-in-general-time-permitting">
+<h2>Some thoughts on teaching in general (time-permitting)<a class="headerlink" href="#some-thoughts-on-teaching-in-general-time-permitting" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
