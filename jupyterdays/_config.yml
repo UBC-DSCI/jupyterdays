@@ -1,5 +1,6 @@
 title: "UBC JupyterDays 2020"
 author: Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu
+exclude_patterns: ["sessions/kolhatkar/README.md", "sessions/beuzen/data/README.md"]
 repository:
   url                       : https://github.com/UBC-DSCI/jupyterdays
   path_to_book              : jupyterdays

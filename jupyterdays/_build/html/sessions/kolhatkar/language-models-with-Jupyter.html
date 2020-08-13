@@ -1,0 +1,1606 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Teaching Computational Linguistics with Jupyter &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Code of Conduct" href="../../CODE_OF_CONDUCT.html" />
+    <link rel="prev" title="How to Build an Interactive Course" href="../boyce/interactive_online_course.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Schedule</p>
+</li>
+  <li class="">
+    <a href="../../schedule/day1.html">Day 1: Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day2.html">Day 2: Pedagogy and Assessment</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day3.html">Day 3: New Developments</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/speakers.html">Speakers</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 1 Sessions</p>
+</li>
+  <li class="">
+    <a href="../ostblom/jupyterlab-intro.html">Introduction to JupyterLab</a>
+  </li>
+  <li class="">
+    <a href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">Sharing your teaching materials using Git & GitHub</a>
+  </li>
+  <li class="">
+    <a href="../beuzen/jupyter_book_tutorial.html">Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../walls/a_tour_of_python_packages_for_scientific_computing.html">Python packages for scientific computing</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 2 Sessions</p>
+</li>
+  <li class="">
+    <a href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">Intro to using Canvas Speedgrader with Jupyter</a>
+  </li>
+  <li class="">
+    <a href="../lee/teaching_online_jupyter_days.html">Teaching in an online setting</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 3 Sessions</p>
+</li>
+  <li class="">
+    <a href="../wu/Jupyter_and_QuantEcon.html">Jupyter and QuantEcon</a>
+  </li>
+  <li class="">
+    <a href="../heagy/widgets-and-dashboards.html">Interactive exploration with Jupyter widgets and dashboards</a>
+  </li>
+  <li class="">
+    <a href="../boyce/interactive_online_course.html">Building an Interactive Online Course</a>
+  </li>
+  <li class="active">
+    <a href="">Computational linguistics with Jupyter</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Code of Conduct</p>
+</li>
+  <li class="">
+    <a href="../../CODE_OF_CONDUCT.html">Code of Conduct for Jupyterdays</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/kolhatkar/language-models-with-Jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/kolhatkar/language-models-with-Jupyter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/kolhatkar/language-models-with-Jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyter-day-presentation-language-models" class="nav-link">Jupyter Day presentation: Language Models</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#slide-settings" class="nav-link">Slide settings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#goal" class="nav-link">Goal</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#which-of-the-following-do-you-use-on-everyday-basis" class="nav-link">Which of the following do you use on everyday basis?</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#a-common-component-in-all-these-services-is-a-language-model" class="nav-link">A common component in all these services is a language model!!</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-is-a-language-model" class="nav-link">What is a language model?</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#language-model-examples" class="nav-link">Language model examples</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#voice-assistant-example" class="nav-link">Voice assistant example</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#language-modeling-why-should-we-care" class="nav-link">Language modeling: Why should we care?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#a-naive-way-to-calculate-probabilities-of-a-sentence" class="nav-link">A naive way to calculate probabilities of a sentence</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#markov-models-of-language" class="nav-link">Markov models of language</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#markov-model-of-language-bigram-language-model" class="nav-link">Markov model of language (bigram language model)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#estimating-probabilities-for-the-bigram-language-model" class="nav-link">Estimating probabilities for the bigram language model</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#text-generation-using-markov-models-of-languaage" class="nav-link">Text generation using Markov models of languaage</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#in-practice-the-corpus-dataset-is-huge-for-example-the-full-wikipedia-or-the-text-available-on-the-entire-internet-or-all-the-new-york-times-articles-from-the-last-20-years" class="nav-link">In practice the corpus (dataset) is huge. For example, the full Wikipedia or the text available on the entire Internet, or all the New York Times articles from the last 20 years.</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#considering-more-history" class="nav-link">Considering more history</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#google-n-gram-viewer" class="nav-link">Google n-gram viewer</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#more-advanced-language-models" class="nav-link">More advanced language models</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#gpt-3-language-model" class="nav-link">GPT-3 language model</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#limitations-of-language-models" class="nav-link">Limitations of language models</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#example-where-the-model-does-reasonably-well" class="nav-link">Example where the model does reasonably well</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#example-where-the-model-demonstrates-lack-of-common-sense-knowledge" class="nav-link">Example where the model demonstrates lack of common sense knowledge</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#beyond-language-generation" class="nav-link">Beyond language generation</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#summary" class="nav-link">Summary</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#resources" class="nav-link">Resources</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="teaching-computational-linguistics-with-jupyter">
+<h1>Teaching Computational Linguistics with Jupyter<a class="headerlink" href="#teaching-computational-linguistics-with-jupyter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="jupyter-day-presentation-language-models">
+<h2>Jupyter Day presentation: Language Models<a class="headerlink" href="#jupyter-day-presentation-language-models" title="Permalink to this headline">¶</a></h2>
+<p>Varada Kolhatkar [ʋəɾəda kɔːlɦəʈkər]</p>
+<p>Assistant Professor of Teaching in Computer Science</p>
+</div>
+<div class="section" id="slide-settings">
+<h2>Slide settings<a class="headerlink" href="#slide-settings" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">traitlets.config.manager</span> <span class="kn">import</span> <span class="n">BaseJSONConfigManager</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;.jupyter&quot;</span> <span class="o">/</span> <span class="s2">&quot;nbconfig&quot;</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">BaseJSONConfigManager</span><span class="p">(</span><span class="n">config_dir</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+        <span class="s2">&quot;rise&quot;</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;serif&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;transition&quot;</span><span class="p">:</span> <span class="s2">&quot;fade&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;start_slideshow_at&quot;</span><span class="p">:</span> <span class="s2">&quot;selected&quot;</span><span class="p">,</span>            
+            <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="s2">&quot;100%&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="s2">&quot;100%&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;header&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;footer&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;scroll&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;enable_chalkboard&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;slideNumber&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;center&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;controlsLayout&quot;</span><span class="p">:</span> <span class="s2">&quot;edges&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;slideNumber&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;hash&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+
+<span class="c1">## Set Altair default size</span>
+
+<span class="k">def</span> <span class="nf">theme_vk</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+            <span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;style&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;circle&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">},</span>
+                                <span class="s1">&#39;point&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span>
+                                <span class="s1">&#39;square&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">},</span>
+                                <span class="p">},</span>
+                       <span class="s1">&#39;legend&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;symbolSize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;titleFontSize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;labelFontSize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> 
+                       <span class="s1">&#39;axis&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;titleFontSize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;labelFontSize&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}},</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## import the libraries </span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+<span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
+<span class="c1"># pip install git+git://github.com/mgelbart/plot-classifier.git</span>
+<span class="kn">from</span> <span class="nn">plot_classifier</span> <span class="kn">import</span> <span class="n">plot_classifier</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span>
+
+
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_colwidth&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># pip install ipython-autotime</span>
+<span class="kn">import</span> <span class="nn">autotime</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Populating the interactive namespace from numpy and matplotlib
+</pre></div>
+</div>
+<div class="stderr docutils container">
+<pre class="stderr literal-block">/opt/miniconda3/envs/jupyterdays/lib/python3.7/site-packages/IPython/core/magics/pylab.py:160: UserWarning: pylab import has clobbered these variables: ['cm']
+`%matplotlib` prevents importing * from pylab and numpy
+  &quot;\n`%matplotlib` prevents importing * from pylab and numpy&quot;
+</pre>
+</div>
+<div class="stderr docutils container">
+<pre class="stderr literal-block">[nltk_data] Downloading package punkt to /Users/tbeuzen/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="goal">
+<h2>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To give you a high-level overview of language models.</p></li>
+<li><p>Demonstrate how I use Jupyter notebooks to teach with different modalities.</p>
+<ul>
+<li><p>Text</p></li>
+<li><p>Mathematical equations with latex</p></li>
+<li><p>Images s</p></li>
+<li><p>Code</p></li>
+<li><p>Videos</p></li>
+<li><p>Interactive websites</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">HTML</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+<span class="o">.</span><span class="n">rendered_html</span> <span class="n">table</span><span class="p">,</span> <span class="o">.</span><span class="n">rendered_html</span> <span class="n">th</span><span class="p">,</span> <span class="o">.</span><span class="n">rendered_html</span> <span class="n">tr</span><span class="p">,</span> <span class="o">.</span><span class="n">rendered_html</span> <span class="n">td</span> <span class="p">{</span>
+     <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">130</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">body</span><span class="o">.</span><span class="n">rise</span><span class="o">-</span><span class="n">enabled</span> <span class="n">div</span><span class="o">.</span><span class="n">inner_cell</span><span class="o">&gt;</span><span class="n">div</span><span class="o">.</span><span class="n">input_area</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">body</span><span class="o">.</span><span class="n">rise</span><span class="o">-</span><span class="n">enabled</span> <span class="n">div</span><span class="o">.</span><span class="n">output_subarea</span><span class="o">.</span><span class="n">output_text</span><span class="o">.</span><span class="n">output_result</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">body</span><span class="o">.</span><span class="n">rise</span><span class="o">-</span><span class="n">enabled</span> <span class="n">div</span><span class="o">.</span><span class="n">output_subarea</span><span class="o">.</span><span class="n">output_text</span><span class="o">.</span><span class="n">output_stream</span><span class="o">.</span><span class="n">output_stdout</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">150</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+     font-size: 130%;
+}
+
+body.rise-enabled div.inner_cell>div.input_area {
+    font-size: 100%;
+}
+
+body.rise-enabled div.output_subarea.output_text.output_result {
+    font-size: 100%;
+}
+body.rise-enabled div.output_subarea.output_text.output_stream.output_stdout {
+  font-size: 150%;
+}
+</style>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a url, display it as an iframe. </span>
+<span class="sd">    </span>
+<span class="sd">    Arguments: </span>
+<span class="sd">    ----------</span>
+<span class="sd">    url : str</span>
+<span class="sd">        The url to be displayed </span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">    ----------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;iframe src=</span><span class="si">%s</span><span class="s2"> width=1000 height=900 allowfullscreen&gt;&lt;/iframe&gt;&quot;</span><span class="o">%</span><span class="n">url</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="which-of-the-following-do-you-use-on-everyday-basis">
+<h2>Which of the following do you use on everyday basis?<a class="headerlink" href="#which-of-the-following-do-you-use-on-everyday-basis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Hover over the area above screen sharing to see the toolbar/options and click on “Annotate”.</p></li>
+<li><p>Select “Stamp” and put your favourite stamps in the appropriate box(s).</p></li>
+</ul>
+<center>
+<img src="images/annotation-exercise.png" height="1400" width="1400">
+</center><div class="section" id="a-common-component-in-all-these-services-is-a-language-model">
+<h3>A common component in all these services is <strong>a language model</strong>!!<a class="headerlink" href="#a-common-component-in-all-these-services-is-a-language-model" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="what-is-a-language-model">
+<h2>What is a language model?<a class="headerlink" href="#what-is-a-language-model" title="Permalink to this headline">¶</a></h2>
+<p>A model that computes the probability of a sequence of words or the probability of an upcoming word is called a <strong>language model</strong>.</p>
+<ul class="simple">
+<li><p>Compute the probability of a sentence or a sequence of words.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(w_1, w_2,\dots,w_t)\)</span></p></li>
+<li><p>P(I have read this book) &gt; P(eye have red this book)</p></li>
+</ul>
+</li>
+<li><p>A related task: What’s the probability of an upcoming word?</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(w_t|w_1,w_2,\dots,w_{t-1})\)</span></p></li>
+<li><p>P(book | read this) &gt; P(book | red this)</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="language-model-examples">
+<h3>Language model examples<a class="headerlink" href="#language-model-examples" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gmail smart compose</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://ai.googleblog.com/2018/05/smart-compose-using-neural-networks-to.html&quot;</span>
+<span class="n">display_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">/opt/miniconda3/envs/jupyterdays/lib/python3.7/site-packages/IPython/core/display.py:717: UserWarning: Consider using IPython.display.IFrame instead
+  warnings.warn(&quot;Consider using IPython.display.IFrame instead&quot;)
+</pre>
+</div>
+<div class="output text_html"><iframe src=https://ai.googleblog.com/2018/05/smart-compose-using-neural-networks-to.html width=1000 height=900 allowfullscreen></iframe></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="voice-assistant-example">
+<h2>Voice assistant example<a class="headerlink" href="#voice-assistant-example" title="Permalink to this headline">¶</a></h2>
+<center>
+<img src="images/voice-assistant-ex.png" height="1400" width="1400">
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### An example of a state-of-the-art language model</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.youtube.com/embed/fZSFNUT6iY8?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot;</span>
+<span class="n">display_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src=https://www.youtube.com/embed/fZSFNUT6iY8?rel=0&amp;controls=0&amp;showinfo=0 width=1000 height=900 allowfullscreen></iframe></div></div>
+</div>
+<div class="section" id="language-modeling-why-should-we-care">
+<h3>Language modeling: Why should we care?<a class="headerlink" href="#language-modeling-why-should-we-care" title="Permalink to this headline">¶</a></h3>
+<p>Powerful idea in NLP and helps in many tasks.</p>
+<ul class="simple">
+<li><p>Machine translation</p>
+<ul>
+<li><p>P(In the age of data algorithms have the answer) &gt; P(the age data of in algorithms answer the have)</p></li>
+</ul>
+</li>
+<li><p>Spelling correction</p>
+<ul>
+<li><p>My office is a 20  <span style="color:red">minuet</span> bike ride from my home.</p>
+<ul>
+<li><p>P(20 <span style="color:blue">minute</span> bike ride from my home) &gt; P(20 <span style="color:red">minuet</span> bike ride from my home)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Speech recognition</p>
+<ul>
+<li><p>P(<span style="color:blue">I read</span> a book) &gt; P(<span style="color:red">Eye red</span> a book)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="a-naive-way-to-calculate-probabilities-of-a-sentence">
+<h3>A naive way to calculate probabilities of a sentence<a class="headerlink" href="#a-naive-way-to-calculate-probabilities-of-a-sentence" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Calculate probabilities of a sequence by applying chain rule</p></li>
+<li><p>Example: Suppose we want to calculate the probability of the following sequence of words:</p></li>
+</ul>
+<p>$
+\begin{equation}
+\begin{split}
+P(\textrm{In the age of data algorithms have the answer}) =&amp; P(\textrm{In}) \times P(\textrm{the|In})\
+&amp; \times P(\textrm{age|In the}) \times P(\textrm{of|In the age})\
+&amp; \times P(\textrm{data|In the age of})\
+&amp; \times P(\textrm{algorithms|In the age of data}) \
+&amp;  \times P(\textrm{have|In the age of data algorithms}) \
+&amp; \dots
+\end{split}
+\end{equation}
+$</p>
+<ul class="simple">
+<li><p>How often the exact same long sequences of words occur in text? For example, how often the sequence “In the age of data algorithms have” is likely to occur in your data?</p></li>
+<li><p>The counts will be tiny and the model will be very sparse.</p></li>
+<li><p><span style="color:red">BAD IDEA!!</span></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="markov-models-of-language">
+<h2>Markov models of language<a class="headerlink" href="#markov-models-of-language" title="Permalink to this headline">¶</a></h2>
+<p><strong>Markov assumption: The future is conditionally independent of the past given present</strong></p>
+<center>
+<img src="images/Markov-assumption.png" height="500" width="500">
+</center>
+<ul class="simple">
+<li><p>Bigram language model</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(\textrm{algorithms|In the age of data}) \approx P(\textrm{algorithms|data})
+\]</div>
+<div class="section" id="markov-model-of-language-bigram-language-model">
+<h3>Markov model of language (bigram language model)<a class="headerlink" href="#markov-model-of-language-bigram-language-model" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use Markov assumption and calculate the probability of a sequence as follows!
+\begin{equation}
+\begin{split}
+P(\textrm{In the age of data algorithms have the answer}) =&amp; P(\textrm{In}) \times P(\textrm{the|In})\
+&amp; \times P(\textrm{age|the})\
+&amp; \times P(\textrm{of|age})\
+&amp; \times P(\textrm{data|of})\
+&amp; \times P(\textrm{algorithms|data}) \<br />
+&amp; \times P(\textrm{have|algorithms}) \<br />
+&amp; \times P(\textrm{the|have}) \<br />
+&amp; \times P(\textrm{answer|the}) \<br />
+\end{split}
+\end{equation}</p></li>
+</ul>
+</div>
+<div class="section" id="estimating-probabilities-for-the-bigram-language-model">
+<h3>Estimating probabilities for the bigram language model<a class="headerlink" href="#estimating-probabilities-for-the-bigram-language-model" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Example
+<span class="math notranslate nohighlight">\($P(\textrm{algorithms|data}) = \frac{Count(\textrm{data algorithms})}{Count(\textrm{data})}\)</span>$</p></li>
+</ul>
+</div>
+<div class="section" id="text-generation-using-markov-models-of-languaage">
+<h3>Text generation using Markov models of languaage<a class="headerlink" href="#text-generation-using-markov-models-of-languaage" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">toy_corpus</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;The birds they sang</span>
+<span class="s1">At the break of day</span>
+<span class="s1">Start again</span>
+<span class="s1">I heard them say</span>
+<span class="s1">Don&#39;t dwell on what</span>
+<span class="s1">Has passed away</span>
+<span class="s1">Or what is yet to be</span>
+<span class="s1">Yeah the wars they will</span>
+<span class="s1">Be fought again</span>
+<span class="s1">The holy dove</span>
+<span class="s1">She will be caught again</span>
+<span class="s1">Bought and sold</span>
+<span class="s1">And bought again</span>
+<span class="s1">The dove is never free</span>
+<span class="s1">Ring the bells (ring the bells) that still can ring</span>
+<span class="s1">Forget your perfect offering</span>
+<span class="s1">There is a crack in everything (there is a crack in everything)</span>
+<span class="s1">That&#39;s how the light gets in</span>
+<span class="s1">We asked for signs</span>
+<span class="s1">The signs were sent</span>
+<span class="s1">The birth betrayed</span>
+<span class="s1">The marriage spent</span>
+<span class="s1">Yeah the widowhood</span>
+<span class="s1">Of every government</span>
+<span class="s1">Signs for all to see</span>
+<span class="s1">I can&#39;t run no more</span>
+<span class="s1">With that lawless crowd</span>
+<span class="s1">While the killers in high places</span>
+<span class="s1">Say their prayers out loud</span>
+<span class="s1">But they&#39;ve summoned, they&#39;ve summoned up</span>
+<span class="s1">A thundercloud</span>
+<span class="s1">And they&#39;re going to hear from me</span>
+<span class="s1">Ring the bells that still can ring</span>
+<span class="s1">Forget your perfect offering</span>
+<span class="s1">There is a crack, a crack in everything (there is a crack in everything)</span>
+<span class="s1">That&#39;s how the light gets in</span>
+<span class="s1">You can add up the parts</span>
+<span class="s1">You won&#39;t have the sum</span>
+<span class="s1">You can strike up the march</span>
+<span class="s1">There is no drum</span>
+<span class="s1">Every heart, every heart to love will come</span>
+<span class="s1">But like a refugee</span>
+<span class="s1">Ring the bells that still can ring</span>
+<span class="s1">Forget your perfect offering</span>
+<span class="s1">There is a crack, a crack in everything (there is a crack in everything)</span>
+<span class="s1">That&#39;s how the light gets in</span>
+<span class="s1">Ring the bells that still can ring (ring the bells that still can ring)</span>
+<span class="s1">Forget your perfect offering</span>
+<span class="s1">There is a crack, a crack in everything (there is a crack in everything)</span>
+<span class="s1">That&#39;s how the light gets in</span>
+<span class="s1">That&#39;s how the light gets in</span>
+<span class="s1">That&#39;s how the light gets in&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">toy_corpus_tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">toy_corpus</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+
+<span class="n">frequencies</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">toy_corpus_tokens</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">frequencies</span><span class="p">[</span><span class="n">toy_corpus_tokens</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]][</span><span class="n">toy_corpus_tokens</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="n">freq_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">frequencies</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">freq_df</span> <span class="o">=</span> <span class="n">freq_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">freq_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>birds</th>
+      <th>break</th>
+      <th>wars</th>
+      <th>holy</th>
+      <th>dove</th>
+      <th>bells</th>
+      <th>light</th>
+      <th>signs</th>
+      <th>birth</th>
+      <th>marriage</th>
+      <th>...</th>
+      <th>out</th>
+      <th>loud</th>
+      <th>but</th>
+      <th>like</th>
+      <th>summoned</th>
+      <th>up</th>
+      <th>going</th>
+      <th>from</th>
+      <th>me</th>
+      <th>wo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>the</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>birds</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>they</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>sang</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>at</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>heart</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>love</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>come</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>like</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>refugee</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>115 rows × 115 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">trans_df</span> <span class="o">=</span> <span class="n">freq_df</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">freq_df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">trans_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>birds</th>
+      <th>break</th>
+      <th>wars</th>
+      <th>holy</th>
+      <th>dove</th>
+      <th>bells</th>
+      <th>light</th>
+      <th>signs</th>
+      <th>birth</th>
+      <th>marriage</th>
+      <th>...</th>
+      <th>out</th>
+      <th>loud</th>
+      <th>but</th>
+      <th>like</th>
+      <th>summoned</th>
+      <th>up</th>
+      <th>going</th>
+      <th>from</th>
+      <th>me</th>
+      <th>wo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>the</th>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>0.24</td>
+      <td>0.24</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>0.04</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>birds</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>they</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>sang</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>at</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>heart</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>love</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>come</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>like</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>refugee</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>115 rows × 115 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### Generate text using the Markov model above</span>
+<span class="n">start_char</span> <span class="o">=</span> <span class="s1">&#39;the&#39;</span>
+<span class="n">seq_len</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">seq</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">ch</span> <span class="o">=</span> <span class="n">start_char</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">seq_len</span><span class="p">):</span>    
+    <span class="n">seq</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">ch</span>
+    <span class="n">next_char</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">trans_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">p</span> <span class="o">=</span> <span class="n">trans_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ch</span><span class="p">,]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+    <span class="c1">#print(&#39;The sampled next character is: &#39;, next_char)</span>
+    <span class="n">ch</span> <span class="o">=</span> <span class="n">next_char</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;THE GENERATED SEQUENCE:</span><span class="se">\n</span><span class="s1"> &#39;</span><span class="p">,</span> <span class="n">seq</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>THE GENERATED SEQUENCE:
+   the dove is a crack in everything ) that &#39;s how the dove is yet to hear from me ring the killers in that &#39;s how the marriage spent yeah the sum you can strike up the light gets in you wo n&#39;t have the birth betrayed the light gets in everything ( ring the bells that &#39;s how the dove she will come but like a crack in everything ) that still can strike up the signs were sent the light gets in everything ) forget your perfect offering there is a refugee ring the killers in high places
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="in-practice-the-corpus-dataset-is-huge-for-example-the-full-wikipedia-or-the-text-available-on-the-entire-internet-or-all-the-new-york-times-articles-from-the-last-20-years">
+<h3>In practice the corpus (dataset) is huge. For example, the full Wikipedia or the text available on the entire Internet, or all the New York Times articles from the last 20 years.<a class="headerlink" href="#in-practice-the-corpus-dataset-is-huge-for-example-the-full-wikipedia-or-the-text-available-on-the-entire-internet-or-all-the-new-york-times-articles-from-the-last-20-years" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="considering-more-history">
+<h3>Considering more history<a class="headerlink" href="#considering-more-history" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Example: trigrams or four-gram language model</p>
+<ul>
+<li><p>Trigram language model
+<span class="math notranslate nohighlight">\($
+P(\textrm{algorithms|In the age of data}) \approx P(\textrm{algorithms|of data})
+$\)</span></p></li>
+<li><p>Four-gram language model
+<span class="math notranslate nohighlight">\($
+P(\textrm{algorithms|In the age of data}) \approx P(\textrm{algorithms|age of data})
+$\)</span></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="google-n-gram-viewer">
+<h3><a class="reference external" href="https://books.google.com/ngrams">Google n-gram viewer</a><a class="headerlink" href="#google-n-gram-viewer" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>All Our N-gram are Belong to You</p>
+<ul>
+<li><p>https://ai.googleblog.com/2006/08/all-our-n-gram-are-belong-toyou.html</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+Here at Google Research we have been using word n-gram models for a variety
+of R&D projects, such as statistical machine translation, speech recognition,
+spelling correction, entity detection, information extraction, and others.
+That's why we decided to share this enormous dataset with everyone. We
+processed 1,024,908,267,229 words of running text and are publishing the
+counts for all 1,176,470,663 five-word sequences that appear at least 40
+times. There are 13,588,391 unique words, after discarding words that appear
+less than 200 times.”
+</blockquote><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://books.google.com/ngrams/&quot;</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;iframe src=</span><span class="si">%s</span><span class="s2"> width=1000 height=800&gt;&lt;/iframe&gt;&quot;</span><span class="o">%</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">/opt/miniconda3/envs/jupyterdays/lib/python3.7/site-packages/IPython/core/display.py:717: UserWarning: Consider using IPython.display.IFrame instead
+  warnings.warn(&quot;Consider using IPython.display.IFrame instead&quot;)
+</pre>
+</div>
+<div class="output text_html"><iframe src=https://books.google.com/ngrams/ width=1000 height=800></iframe></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_ngrams</span><span class="p">(</span><span class="n">ngrams</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Plots ngrams using the Googlr n-gram viewer. </span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    ---------------------</span>
+<span class="sd">    </span>
+<span class="sd">    ngrams: </span>
+<span class="sd">        String with the n-gram to be searched. Words must be separated by spaces.</span>
+<span class="sd">    start_year: </span>
+<span class="sd">        </span>
+<span class="sd">    end_year: to year</span>
+<span class="sd">    corpus: corpus to be used (21:Spanish, 15:English, etc. check https://books.google.com/ngrams for more)</span>
+<span class="sd">    smoothing: number of years to average </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">ngrams</span> <span class="o">=</span> <span class="s2">&quot;+&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ngrams</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://books.google.com/ngrams/graph?content=</span><span class="si">%s</span><span class="s2">&amp;year_start=</span><span class="si">%d</span><span class="s2">&amp;year_end=</span><span class="si">%d</span><span class="s2">&amp;corpus=</span><span class="si">%d</span><span class="s2">&amp;smoothing=</span><span class="si">%d</span><span class="s2">&quot;</span><span class="o">%</span>
+          <span class="p">(</span><span class="n">ngrams</span><span class="p">,</span> <span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;iframe src=</span><span class="si">%s</span><span class="s2"> width=1000 height=650&gt;&lt;/iframe&gt;&quot;</span><span class="o">%</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1">#plot_ngrams(&quot;data science, databases&quot;, 1970, 2019, 21, 3)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="more-advanced-language-models">
+<h2>More advanced language models<a class="headerlink" href="#more-advanced-language-models" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Allow to use more history compared to bigram/trigram/4-gram models</p></li>
+<li><p>Built using deep neural networks using the following techniques</p>
+<ul>
+<li><p>Long-short term memory models</p></li>
+<li><p>Transformers</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="gpt-3-language-model">
+<h2><a class="reference external" href="https://github.com/openai/gpt-3">GPT-3 language model</a><a class="headerlink" href="#gpt-3-language-model" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A state-of-the-art language model with 175 billion parameters!!</p></li>
+<li><p>Task agnostic and works for many different tasks.</p></li>
+<li><p>Currently very popular (and overhyped)</p></li>
+</ul>
+</div>
+<div class="section" id="limitations-of-language-models">
+<h2>Limitations of language models<a class="headerlink" href="#limitations-of-language-models" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>All these complicated models are based on the simple idea of predicting next word given a sequence of words.</p></li>
+<li><p>These models do not have common-sense knowledge or the ability to reason or reflect.</p></li>
+</ul>
+<div class="section" id="example-where-the-model-does-reasonably-well">
+<h3>Example where the model does reasonably well<a class="headerlink" href="#example-where-the-model-does-reasonably-well" title="Permalink to this headline">¶</a></h3>
+<p>Q: How many eyes does a giraffe have?<br>
+A: A giraffe has two eyes.</p>
+<p>Q: How many legs does a frog have?<br>
+A: A frog has four legs.</p>
+<p>Q: Are there any animals with three legs?<br>
+A: No, there are no animals with three legs.</p>
+<p>Q: Why don’t animals have three legs?<br>
+A: Animals don’t have three legs because they would fall over.</p>
+<p><a class="reference external" href="https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html">Source</a></p>
+</div>
+<div class="section" id="example-where-the-model-demonstrates-lack-of-common-sense-knowledge">
+<h3>Example where the model demonstrates lack of common sense knowledge<a class="headerlink" href="#example-where-the-model-demonstrates-lack-of-common-sense-knowledge" title="Permalink to this headline">¶</a></h3>
+<p>Q: Which is heavier, a mouse or an elephant?<br>
+A: An elephant is heavier than a mouse.</p>
+<p>Q: Which is heavier, a mouse or a toaster?<br>
+A: A toaster is heavier than a mouse.</p>
+<p>Q: Which is heavier, a toaster or a pencil?<br>
+A: A pencil is heavier than a toaster.</p>
+<p><a class="reference external" href="https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html">Source</a></p>
+</div>
+<div class="section" id="beyond-language-generation">
+<h3>Beyond language generation<a class="headerlink" href="#beyond-language-generation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The same idea can be used to generate sequences beyond language.</p></li>
+<li><p>Here is an example of generating music:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://magenta.tensorflow.org/performance-rnn&quot;</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;iframe src=</span><span class="si">%s</span><span class="s2"> width=1000 height=650&gt;&lt;/iframe&gt;&quot;</span><span class="o">%</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src=https://magenta.tensorflow.org/performance-rnn width=1000 height=650></iframe></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>See <a class="reference external" href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">this famous blog</a>.</p></li>
+<li><p><a class="reference external" href="https://www.nytimes.com/2020/07/29/opinion/gpt-3-ai-automation.html">How Do You Know a Human Wrote This?</a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../boyce/interactive_online_course.html" title="previous page">How to Build an Interactive Course</a>
+    <a class='right-next' id="next-link" href="../../CODE_OF_CONDUCT.html" title="next page">Code of Conduct</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -21,6 +21,8 @@
 - header: Day 2 Sessions
 - file: sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter
   title: Intro to using Canvas Speedgrader with Jupyter
+- file: sessions/lee/teaching_online_jupyter_days
+  title: Teaching in an Online Setting
 
 - header: Day 3 Sessions
 - file: sessions/wu/Jupyter_and_QuantEcon.ipynb
@@ -29,6 +31,8 @@
   title: Interactive exploration with Jupyter widgets and dashboards
 - file: sessions/boyce/interactive_online_course
   title: Building an Interactive Online Course
+- file: sessions/kolhatkar/language-models-with-Jupyter
+  title: Computational linguistics with Jupyter
 
 - header: Code of Conduct
 - file: CODE_OF_CONDUCT.md

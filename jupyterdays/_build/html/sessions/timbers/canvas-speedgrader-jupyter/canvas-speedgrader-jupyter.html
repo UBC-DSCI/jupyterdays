@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Intro to using Canvas Speedgrader with Jupyter &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mystnb.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Teaching in an online setting" href="../../lee/teaching_online_jupyter_days.html" />
+    <link rel="prev" title="A Tour of Python Packages for Scientific Computing" href="../../walls/a_tour_of_python_packages_for_scientific_computing.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Schedule</p>
+</li>
+  <li class="">
+    <a href="../../../schedule/day1.html">Day 1: Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/day2.html">Day 2: Pedagogy and Assessment</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/day3.html">Day 3: New Developments</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/speakers.html">Speakers</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 1 Sessions</p>
+</li>
+  <li class="">
+    <a href="../../ostblom/jupyterlab-intro.html">Introduction to JupyterLab</a>
+  </li>
+  <li class="">
+    <a href="../sharing-materials-with-git/sharing-materials-with-git.html">Sharing your teaching materials using Git & GitHub</a>
+  </li>
+  <li class="">
+    <a href="../../beuzen/jupyter_book_tutorial.html">Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../../walls/a_tour_of_python_packages_for_scientific_computing.html">Python packages for scientific computing</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 2 Sessions</p>
+</li>
+  <li class="active">
+    <a href="">Intro to using Canvas Speedgrader with Jupyter</a>
+  </li>
+  <li class="">
+    <a href="../../lee/teaching_online_jupyter_days.html">Teaching in an online setting</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 3 Sessions</p>
+</li>
+  <li class="">
+    <a href="../../wu/Jupyter_and_QuantEcon.html">Jupyter and QuantEcon</a>
+  </li>
+  <li class="">
+    <a href="../../heagy/widgets-and-dashboards.html">Interactive exploration with Jupyter widgets and dashboards</a>
+  </li>
+  <li class="">
+    <a href="../../boyce/interactive_online_course.html">Building an Interactive Online Course</a>
+  </li>
+  <li class="">
+    <a href="../../kolhatkar/language-models-with-Jupyter.html">Computational linguistics with Jupyter</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Code of Conduct</p>
+</li>
+  <li class="">
+    <a href="../../../CODE_OF_CONDUCT.html">Code of Conduct for Jupyterdays</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction-to-me" class="nav-link">Introduction to me</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#learning-outcomes" class="nav-link">Learning outcomes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#file-submission-type-for-canvas-speedgrader-graded-jupyter-assignments" class="nav-link">File submission type for Canvas speedgrader graded Jupyter assignments</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#creating-canvas-rubrics-for-manual-grading-coding-assignments" class="nav-link">Creating Canvas rubrics for manual grading coding assignments</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-the-canvas-speedgrader-and-rubrics-to-grade-jupyter-assignments" class="nav-link">Using the Canvas speedgrader and rubrics to grade Jupyter assignments</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="intro-to-using-canvas-speedgrader-with-jupyter">
+<h1>Intro to using Canvas Speedgrader with Jupyter<a class="headerlink" href="#intro-to-using-canvas-speedgrader-with-jupyter" title="Permalink to this headline">¶</a></h1>
+<p>Now that you have learned how to create and share teaching materials using GitHub &amp; JupyterHub (<a class="reference external" href="https://ubc.syzygy.ca/">https://ubc.syzygy.ca/</a>), this session will demonstrate how you use Canvas and its speedgrader functionality to perform manual grading. This is probably the easiest and most straight-forward way to get started grading Jupyter assignments, but not the most efficient. Patrick Walls will talk about autograding Jupyter assignments using a tool called <a class="reference external" href="https://nbgrader.readthedocs.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">nbgrader</span></code></a>, which is more efficient but a little more complex to setup and use.</p>
+<div class="section" id="introduction-to-me">
+<h2>Introduction to me<a class="headerlink" href="#introduction-to-me" title="Permalink to this headline">¶</a></h2>
+<p>Hi! I am <a class="reference external" href="https://www.tiffanytimbers.com/">Tiffany Timbers</a>, an Assistant Professor of Teaching in the <a class="reference external" href="https://www.stat.ubc.ca/">Department of Statistics</a> at UBC. I am also a Co-Director for the <a class="reference external" href="https://ubc-mds.github.io/">Master of Data Science Program (Vancouver Option)</a>.</p>
+<div class="figure align-left" id="im-tiff">
+<a class="reference internal image-reference" href="../../../_images/ttimbers.png"><img alt="../../../_images/ttimbers.png" src="../../../_images/ttimbers.png" style="height: 200px;" /></a>
+</div>
+</div>
+<div class="section" id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
+<p>By the end of this session, participants will be able to:</p>
+<ol class="simple">
+<li><p>Choose which files students should submit for grading a Jupyter assignment using Canvas and its speedgrader functionality.</p></li>
+<li><p>Create a Canvas rubric for grading Jupyter assignments.</p></li>
+<li><p>Use Canvas and its speedgrader functionality to manually grade Jupyter assignments.</p></li>
+</ol>
+</div>
+<div class="section" id="file-submission-type-for-canvas-speedgrader-graded-jupyter-assignments">
+<h2>File submission type for Canvas speedgrader graded Jupyter assignments<a class="headerlink" href="#file-submission-type-for-canvas-speedgrader-graded-jupyter-assignments" title="Permalink to this headline">¶</a></h2>
+<p>Manually grading Jupyter assignments in Canvas using the speedgrader is pretty straightforward to set up, however there are a few small things to be aware of to make this run smoothly. First is the file type the students submit. When working on their assignments in Jupyter, the students will be working with an <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file. These files are great that they are executable and can run Python or R code, for example. However, they only render nicely in Jupyter (and on GitHub too). Such files look like this in a plain text editor (and do not render at all on Canvas):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+   <span class="s2">&quot;cell_type&quot;</span><span class="p">:</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;# Worksheet 1: Introduction to Data Science</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Welcome to DSCI 100: Introduction to Data Science!  </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Each week you will complete a lecture assignment like this one. For this worksheet, there are two parts:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;1. [Introduction to using Jupyter Notebooks](#1.-Introduction-to-Jupyter-Notebooks)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;2. [Introduction to analyzing data in R](#2.-Analyze-some-data)&quot;</span>
+   <span class="p">]</span>
+  <span class="p">},</span>
+ <span class="o">...</span>
+</pre></div>
+</div>
+<p>Thus, it is highly recommened to get the students to submit a more Canvas friendly file format for grading Jupyter assignments. Probably the lightest weight, and most true to render (i.e., in respect to what the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file looks like on Jupyter) filetype is an <code class="docutils literal notranslate"><span class="pre">.html</span></code> file. Happily, <code class="docutils literal notranslate"><span class="pre">.html</span></code> files are viewable in Canvas! <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> also works, but in practice we find that sometimes errors in markdown or LaTeX can lead to annoying error in the rendering to <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> process that are difficult to debug and demotivating for students.</p>
+<blockquote>
+<div><p>Note: I also always ask the students to submit the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file even though it cannot be rendered in Canvas, as it is the only way to test if their code actually runs.</p>
+</div></blockquote>
+<p>An <code class="docutils literal notranslate"><span class="pre">.html</span></code> render of the students <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> Jupyter assignment can be generated in Jupyter Lab via the File &gt; Export Notebook As… &gt; Export Notebook to HTML menu selection:</p>
+<div class="figure align-left" id="download-html">
+<a class="reference internal image-reference" href="../../../_images/download_html.png"><img alt="../../../_images/download_html.png" src="../../../_images/download_html.png" style="width: 800px;" /></a>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> Jupyter assignment can be downloaded from JupyterHub via right-clicking on the file and selecting “Download”:</p>
+<div class="figure align-left" id="download-ipynb">
+<a class="reference internal image-reference" href="../../../_images/download_ipynb.png"><img alt="../../../_images/download_ipynb.png" src="../../../_images/download_ipynb.png" style="width: 800px;" /></a>
+</div>
+<blockquote>
+<div><p>Note: this file conversion/rendering can also be done at the command line using the tool <code class="docutils literal notranslate"><span class="pre">nbconvert</span></code>, please see <a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/">the docs</a> to learn more.</p>
+</div></blockquote>
+<p>It is very important to clearly communicate these filetype restrictions to students. This can be done using text in the assignment instructions on Canvas, as well as by restricting the filetype for file submission for the assignment. Screen shots of these are shown below:</p>
+<div class="figure align-left" id="sample-assignment-01">
+<a class="reference internal image-reference" href="../../../_images/sample_assignment_01.png"><img alt="../../../_images/sample_assignment_01.png" src="../../../_images/sample_assignment_01.png" style="width: 800px;" /></a>
+</div>
+<div class="figure align-left" id="sample-assignment-02">
+<a class="reference internal image-reference" href="../../../_images/sample_assignment_02.png"><img alt="../../../_images/sample_assignment_02.png" src="../../../_images/sample_assignment_02.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="creating-canvas-rubrics-for-manual-grading-coding-assignments">
+<h2>Creating Canvas rubrics for manual grading coding assignments<a class="headerlink" href="#creating-canvas-rubrics-for-manual-grading-coding-assignments" title="Permalink to this headline">¶</a></h2>
+<p>Grading can be made more transparent and efficient with the use of rubrics! When creating assignments in Canvas, there is an option to create a rubric. Below is an exampe Canvas rubric for our sample assignment:</p>
+<div class="figure align-left" id="sample-assignment-03">
+<a class="reference internal image-reference" href="../../../_images/sample_assignment_03.png"><img alt="../../../_images/sample_assignment_03.png" src="../../../_images/sample_assignment_03.png" style="width: 700px;" /></a>
+</div>
+<p>You can see that some of the criteria in the rubric are specific to questions - and would be used to assess whether an answer was “correct” or not. Some of the criteria are more general - to the document and code as a whole. Both types of criteria are useful to fairly and wholistically assess a data science assignment. For more examples of data science assignment rubric criteria, you can visit the UBC MDS public GitHub repository where we publicly share all of our rubrics: <a class="reference external" href="https://github.com/UBC-MDS/public/tree/master/rubric">https://github.com/UBC-MDS/public/tree/master/rubric</a></p>
+</div>
+<div class="section" id="using-the-canvas-speedgrader-and-rubrics-to-grade-jupyter-assignments">
+<h2>Using the Canvas speedgrader and rubrics to grade Jupyter assignments<a class="headerlink" href="#using-the-canvas-speedgrader-and-rubrics-to-grade-jupyter-assignments" title="Permalink to this headline">¶</a></h2>
+<p>The Canvas speedgrader tool can be accessed from the assignment page:</p>
+<div class="figure align-left" id="speedgrader">
+<a class="reference internal image-reference" href="../../../_images/speedgrader.png"><img alt="../../../_images/speedgrader.png" src="../../../_images/speedgrader.png" style="width: 800px;" /></a>
+</div>
+<p>Once in the speedgrader tool, click on the “Rubric” button to view the rubric:</p>
+<div class="figure align-left" id="speedgrader-rubric-01">
+<a class="reference internal image-reference" href="../../../_images/speedgrader_rubric_01.png"><img alt="../../../_images/speedgrader_rubric_01.png" src="../../../_images/speedgrader_rubric_01.png" style="width: 800px;" /></a>
+</div>
+<p>Then the rubric and assignment can be viewed side by side and grades easily, efficiently and fairly entered:</p>
+<div class="figure align-left" id="speedgrader-rubric-02">
+<a class="reference internal image-reference" href="../../../_images/speedgrader_rubric_02.png"><img alt="../../../_images/speedgrader_rubric_02.png" src="../../../_images/speedgrader_rubric_02.png" style="width: 800px;" /></a>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../walls/a_tour_of_python_packages_for_scientific_computing.html" title="previous page">A Tour of Python Packages for Scientific Computing</a>
+    <a class='right-next' id="next-link" href="../../lee/teaching_online_jupyter_days.html" title="next page">Teaching in an online setting</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

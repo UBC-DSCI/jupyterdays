@@ -1,0 +1,588 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sharing your teaching materials using Git &amp; GitHub &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mystnb.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Jupyter Book" href="../../beuzen/jupyter_book_tutorial.html" />
+    <link rel="prev" title="Introduction to JupyterLab" href="../../ostblom/jupyterlab-intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Schedule</p>
+</li>
+  <li class="">
+    <a href="../../../schedule/day1.html">Day 1: Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/day2.html">Day 2: Pedagogy and Assessment</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/day3.html">Day 3: New Developments</a>
+  </li>
+  <li class="">
+    <a href="../../../schedule/speakers.html">Speakers</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 1 Sessions</p>
+</li>
+  <li class="">
+    <a href="../../ostblom/jupyterlab-intro.html">Introduction to JupyterLab</a>
+  </li>
+  <li class="active">
+    <a href="">Sharing your teaching materials using Git & GitHub</a>
+  </li>
+  <li class="">
+    <a href="../../beuzen/jupyter_book_tutorial.html">Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../../walls/a_tour_of_python_packages_for_scientific_computing.html">Python packages for scientific computing</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 2 Sessions</p>
+</li>
+  <li class="">
+    <a href="../canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">Intro to using Canvas Speedgrader with Jupyter</a>
+  </li>
+  <li class="">
+    <a href="../../lee/teaching_online_jupyter_days.html">Teaching in an online setting</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 3 Sessions</p>
+</li>
+  <li class="">
+    <a href="../../wu/Jupyter_and_QuantEcon.html">Jupyter and QuantEcon</a>
+  </li>
+  <li class="">
+    <a href="../../heagy/widgets-and-dashboards.html">Interactive exploration with Jupyter widgets and dashboards</a>
+  </li>
+  <li class="">
+    <a href="../../boyce/interactive_online_course.html">Building an Interactive Online Course</a>
+  </li>
+  <li class="">
+    <a href="../../kolhatkar/language-models-with-Jupyter.html">Computational linguistics with Jupyter</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Code of Conduct</p>
+</li>
+  <li class="">
+    <a href="../../../CODE_OF_CONDUCT.html">Code of Conduct for Jupyterdays</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/sessions/timbers/sharing-materials-with-git/sharing-materials-with-git.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/timbers/sharing-materials-with-git/sharing-materials-with-git.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/timbers/sharing-materials-with-git/sharing-materials-with-git.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction-to-me" class="nav-link">Introduction to me</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#learning-outcomes" class="nav-link">Learning outcomes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#walkthrough-of-a-demo-course-on-canvas" class="nav-link">Walkthrough of a demo course on Canvas</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#creating-a-course-repository-to-host-materials-on-github-com" class="nav-link">Creating a course repository to host materials on GitHub.com</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sign-up-for-a-free-account" class="nav-link">Sign up for a free account</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#create-new-repository-to-host-your-course-materials" class="nav-link">Create new repository to host your course materials</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#edit-and-add-materials-in-your-course-repository-on-github-com" class="nav-link">Edit and add materials in your course repository on GitHub.com</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#use-the-pen-tool-to-edit-existing-files" class="nav-link">Use the pen tool to edit existing files</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#use-the-add-file-drop-down-menu-and-create-new-file-to-create-new-plain-text-files" class="nav-link">Use the “Add file” drop down menu and “Create new file” to create new plain text files</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#use-the-add-file-drop-down-menu-and-upload-files-to-get-files-from-my-laptop-to-github-com" class="nav-link">Use the “Add file” drop down menu and “Upload files” to get files from my laptop to GitHub.com</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-jupyterhub-to-create-edit-content-as-well-as-send-updates-to-github-com" class="nav-link">Using JupyterHub to create & edit content, as well as send updates to GitHub.com</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#cloning-your-github-com-course-repository-to-a-jupyterhub" class="nav-link">Cloning your GitHub.com course repository to a JupyterHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#sending-changes-you-make-on-jupyterhub-back-to-github-com" class="nav-link">Sending changes you make on JupyterHub back to GitHub.com</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#git-add-the-modified-files" class="nav-link">1. git add the modified files</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#git-commit-the-changes-and-an-associated-useful-message-about-what-was-changed" class="nav-link">2. git commit the changes and an associated (useful) message about what was changed</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#git-push-the-changes-to-the-course-repository-on-github-com" class="nav-link">3. git push the changes to the course repository on GitHub.com</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#pulling-changes-made-in-our-course-repository-on-github-com-to-jupyterhub" class="nav-link">Pulling changes made in our course repository on GitHub.com to JupyterHub</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-nbgitpuller-to-share-course-materials-with-students-on-jupyterhub" class="nav-link">Using nbgitpuller to share course materials with students on JupyterHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#additional-resources" class="nav-link">Additional resources</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="sharing-your-teaching-materials-using-git-github">
+<h1>Sharing your teaching materials using Git &amp; GitHub<a class="headerlink" href="#sharing-your-teaching-materials-using-git-github" title="Permalink to this headline">¶</a></h1>
+<p>Now that you have learned how to access &amp; use UBC’s JupyterHub (<a class="reference external" href="https://ubc.syzygy.ca/">https://ubc.syzygy.ca/</a>), this session will demonstrate how to share your teaching materials using Git &amp; GitHub.</p>
+<div class="section" id="introduction-to-me">
+<h2>Introduction to me<a class="headerlink" href="#introduction-to-me" title="Permalink to this headline">¶</a></h2>
+<p>Hi! I am <a class="reference external" href="https://www.tiffanytimbers.com/">Tiffany Timbers</a>, an Assistant Professor of Teaching in the <a class="reference external" href="https://www.stat.ubc.ca/">Department of Statistics</a> at UBC. I am also a Co-Director for the <a class="reference external" href="https://ubc-mds.github.io/">Master of Data Science Program (Vancouver Option)</a>.</p>
+<div class="figure align-left" id="im-tiff">
+<a class="reference internal image-reference" href="../../../_images/ttimbers1.png"><img alt="../../../_images/ttimbers1.png" src="../../../_images/ttimbers1.png" style="height: 200px;" /></a>
+</div>
+</div>
+<div class="section" id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
+<p>By the end of this session, participants will be able to:</p>
+<ol class="simple">
+<li><p>Use <a class="reference external" href="https://github.com/">GitHub.com</a> to create a repository to host course materials, and use the web interface to edit and upload files.</p></li>
+<li><p>Use UBC’s JupyterHub (https://ubc.syzygy.ca/) to create &amp; edit content, as well as send updates to <a class="reference external" href="https://github.com/">GitHub.com</a>.</p></li>
+<li><p>Use <a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/index.html"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code></a> to create a link to distribute and share course materials (e.g., data sets and Jupyter notebooks) with students on UBC’s JupyterHub (https://ubc.syzygy.ca/).</p></li>
+</ol>
+</div>
+<div class="section" id="walkthrough-of-a-demo-course-on-canvas">
+<h2>Walkthrough of a demo course on Canvas<a class="headerlink" href="#walkthrough-of-a-demo-course-on-canvas" title="Permalink to this headline">¶</a></h2>
+<p>Canvas is current course management system used by UBC. We can keep the student experience with other courses at UBC consistent by using Canvas as the pointer to our course materials that we host on <a class="reference external" href="https://github.com/">GitHub.com</a> (a remote version control web archive). From the students perspective, nothing appears much different from their other courses and so there is no unnecessary cognitive load added for them to learn a new system.</p>
+<p>Why use <a class="reference external" href="https://github.com/">GitHub.com</a> for hosting materials? Well <a class="reference external" href="https://github.com/">GitHub.com</a> is a remote version control web archive that allows you to view the history of your files, track who made changes to which files, use issue tracking to log and assign course/assignment bugs for fixing, or new features to add. Additionally, it is an authentic data science tool used in industry and academia.</p>
+<p>Let’s explore a demo Canvas course:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://canvas.ubc.ca/courses/66517">https://canvas.ubc.ca/courses/66517</a></p></li>
+</ul>
+<p>Course source hosted on <a class="reference external" href="https://github.com/">GitHub.com</a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/UBC-DSCI/jupyterdays"><code class="docutils literal notranslate"><span class="pre">jupyterdays</span></code></a></p></li>
+</ul>
+<p>Some specific source files that might be of interest:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/UBC-DSCI/jupyterdays/blob/master/jupyterdays/index.md">Syllabus</a></p></li>
+<li><p><a class="reference external" href="https://github.com/UBC-DSCI/jupyterdays/tree/master/jupyterdays/sessions/ttimbers/sharing-materials-with-git/ttimbers/sharing-materials-with-git.ipynb">these notes</a></p></li>
+<li><p><a class="reference external" href="https://github.com/UBC-DSCI/jupyterdays/blob/master/homework/worksheet_01_python/worksheet_01_python.ipynb">Demo Jupyter (Python) Assignment</a></p></li>
+</ul>
+</div>
+<div class="section" id="creating-a-course-repository-to-host-materials-on-github-com">
+<h2>Creating a course repository to host materials on <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#creating-a-course-repository-to-host-materials-on-github-com" title="Permalink to this headline">¶</a></h2>
+<p>A repository on <a class="reference external" href="https://github.com/">GitHub.com</a> can used to host and share your course materials with your students (and fellow Instructors).</p>
+<div class="section" id="sign-up-for-a-free-account">
+<h3>Sign up for a free account<a class="headerlink" href="#sign-up-for-a-free-account" title="Permalink to this headline">¶</a></h3>
+<p>Before you can create repositories, you will need a <a class="reference external" href="https://github.com/">GitHub.com</a> account. You can sign up for a free account here: <a class="reference external" href="https://github.com/">https://github.com/</a></p>
+</div>
+<div class="section" id="create-new-repository-to-host-your-course-materials">
+<h3>Create new repository to host your course materials<a class="headerlink" href="#create-new-repository-to-host-your-course-materials" title="Permalink to this headline">¶</a></h3>
+<p>Login to <a class="reference external" href="https://github.com/">GitHub.com</a> and click on the “+” icon in the upper right hand corner, and then click on “New Repository” as shown below:</p>
+<div class="figure align-left" id="new-repository-01">
+<a class="reference internal image-reference" href="../../../_images/new_repository_01.png"><img alt="../../../_images/new_repository_01.png" src="../../../_images/new_repository_01.png" style="width: 600px;" /></a>
+</div>
+<p>On the next page, do the following:</p>
+<ul class="simple">
+<li><p>[ ] enter the name for the repository (here we put <code class="docutils literal notranslate"><span class="pre">dsci-101</span></code>)</p></li>
+<li><p>[ ] Select “Public”</p></li>
+<li><p>[ ] Select “Initialize this repository with a README”</p></li>
+<li><p>[ ] click on the green “Create Repository” button</p></li>
+</ul>
+<div class="figure align-left" id="new-repository-02">
+<a class="reference internal image-reference" href="../../../_images/new_repository_02.png"><img alt="../../../_images/new_repository_02.png" src="../../../_images/new_repository_02.png" style="width: 600px;" /></a>
+</div>
+<p>Now you should have a repository that looks something like this:</p>
+<div class="figure align-left" id="new-repository-03">
+<a class="reference internal image-reference" href="../../../_images/new_repository_03.png"><img alt="../../../_images/new_repository_03.png" src="../../../_images/new_repository_03.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="edit-and-add-materials-in-your-course-repository-on-github-com">
+<h2>Edit and add materials in your course repository on <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#edit-and-add-materials-in-your-course-repository-on-github-com" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways you can directly use the <a class="reference external" href="https://github.com/">GitHub.com</a> web interface; either using the pen tool to edit existing files, or the “Add file” drop down where you can choose to “Create new file” or “Upload files”.</p>
+<div class="section" id="use-the-pen-tool-to-edit-existing-files">
+<h3>Use the pen tool to edit existing files<a class="headerlink" href="#use-the-pen-tool-to-edit-existing-files" title="Permalink to this headline">¶</a></h3>
+<p>The pen tool can be used to edit existing plain text files. Click on the pen tool:</p>
+<div class="figure align-left" id="pen-tool-01">
+<a class="reference internal image-reference" href="../../../_images/pen-tool_01.png"><img alt="../../../_images/pen-tool_01.png" src="../../../_images/pen-tool_01.png" style="width: 600px;" /></a>
+</div>
+<p>Use the text box to make your changes:</p>
+<div class="figure align-left" id="pen-tool-02">
+<a class="reference internal image-reference" href="../../../_images/pen-tool_02.png"><img alt="../../../_images/pen-tool_02.png" src="../../../_images/pen-tool_02.png" style="width: 600px;" /></a>
+</div>
+<p>Save/commit your changes by click the green “Commit changes” button (adding a useful commit message is recommended).</p>
+<div class="figure align-left" id="pen-tool-03">
+<a class="reference internal image-reference" href="../../../_images/pen-tool_03.png"><img alt="../../../_images/pen-tool_03.png" src="../../../_images/pen-tool_03.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="use-the-add-file-drop-down-menu-and-create-new-file-to-create-new-plain-text-files">
+<h3>Use the “Add file” drop down menu and “Create new file” to create new plain text files<a class="headerlink" href="#use-the-add-file-drop-down-menu-and-create-new-file-to-create-new-plain-text-files" title="Permalink to this headline">¶</a></h3>
+<p>New, plain text files can be created via the “Add file” drop down menu and selecting the “Create new file” option:</p>
+<div class="figure align-left" id="create-new-file-01">
+<a class="reference internal image-reference" href="../../../_images/create-new-file_01.png"><img alt="../../../_images/create-new-file_01.png" src="../../../_images/create-new-file_01.png" style="width: 600px;" /></a>
+</div>
+<p>After click the “Create new file” option, a page will open with a small text box for the file name to be entered, and a larger text box where the desired file content text can be entered. Note the two tabs, “Edit new file” and “Preview”. Togelling betweent them lets you enter and edit text and view what the text will look like when rendered, respectively.</p>
+<div class="figure align-left" id="create-new-file-02">
+<a class="reference internal image-reference" href="../../../_images/create-new-file_02.png"><img alt="../../../_images/create-new-file_02.png" src="../../../_images/create-new-file_02.png" style="width: 600px;" /></a>
+</div>
+<p>Save/commit your changes by click the green “Commit changes” button at the bottom of the page (adding a useful commit message is recommended).</p>
+<div class="figure align-left" id="create-new-file-03">
+<a class="reference internal image-reference" href="../../../_images/create-new-file_03.png"><img alt="../../../_images/create-new-file_03.png" src="../../../_images/create-new-file_03.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="use-the-add-file-drop-down-menu-and-upload-files-to-get-files-from-my-laptop-to-github-com">
+<h3>Use the “Add file” drop down menu and “Upload files” to get files from my laptop to <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#use-the-add-file-drop-down-menu-and-upload-files-to-get-files-from-my-laptop-to-github-com" title="Permalink to this headline">¶</a></h3>
+<p>You can also upload files that you have created on your local machine by using the “Add file” drop down menu and selecting “Upload files”:</p>
+<div class="figure align-left" id="upload-files-01">
+<a class="reference internal image-reference" href="../../../_images/upload-files_01.png"><img alt="../../../_images/upload-files_01.png" src="../../../_images/upload-files_01.png" style="width: 600px;" /></a>
+</div>
+<p>To select the files from your local computer to upload, you can either drag and drop them into the grey box area shown below, or click the “choose your files” link to access a file browser dialog. Once the files you want to upload have been selected, click the green “Commit changes” button at the bottom of the page (adding a useful commit message is recommended).</p>
+<div class="figure align-left" id="upload-files-02">
+<a class="reference internal image-reference" href="../../../_images/upload-files_02.png"><img alt="../../../_images/upload-files_02.png" src="../../../_images/upload-files_02.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="using-jupyterhub-to-create-edit-content-as-well-as-send-updates-to-github-com">
+<h2>Using JupyterHub to create &amp; edit content, as well as send updates to <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#using-jupyterhub-to-create-edit-content-as-well-as-send-updates-to-github-com" title="Permalink to this headline">¶</a></h2>
+<p>Although there are several ways to create and edit files on <a class="reference external" href="https://github.com/">GitHub.com</a> they are not quite powerful enough for efficiently creating and editing complex files, or files that need to be executed to assess whether they work (e.g., files containing code). Thus, it is useful to be able to connect the course repository that was created on <a class="reference external" href="https://github.com/">GitHub.com</a> to a coding environment. This can be done on your local computer, or using a JupyterHub. Given the focus of these Jupyterdays, we will here show how to do this using a JupyterHub.</p>
+<div class="section" id="cloning-your-github-com-course-repository-to-a-jupyterhub">
+<h3>Cloning your <a class="reference external" href="https://github.com/">GitHub.com</a> course repository to a JupyterHub<a class="headerlink" href="#cloning-your-github-com-course-repository-to-a-jupyterhub" title="Permalink to this headline">¶</a></h3>
+<p>We will be using a Jupyter lab git extension tool to clone our <a class="reference external" href="https://github.com/">GitHub.com</a> course repository to the UBC JupyterHub. There are other ways to do this (e.g., use the Git command line tools in the terminal on JupyterHub), however we think this is the most user friendly way to introduce this.</p>
+<p>On the file browser tab, click the Git+ icon:</p>
+<div class="figure align-left" id="clone-01">
+<a class="reference internal image-reference" href="../../../_images/clone_01.png"><img alt="../../../_images/clone_01.png" src="../../../_images/clone_01.png" style="width: 600px;" /></a>
+</div>
+<p>Paste the url of the <a class="reference external" href="https://github.com/">GitHub.com</a> course repository you created and click the blue “CLONE” button:</p>
+<div class="figure align-left" id="clone-02">
+<a class="reference internal image-reference" href="../../../_images/clone_02.png"><img alt="../../../_images/clone_02.png" src="../../../_images/clone_02.png" style="width: 600px;" /></a>
+</div>
+<p>On the file browser tab, you will now see a folder for your course repository (and inside it will be all the files that existed on <a class="reference external" href="https://github.com/">GitHub.com</a>):</p>
+<div class="figure align-left" id="clone-03">
+<a class="reference internal image-reference" href="../../../_images/clone_03.png"><img alt="../../../_images/clone_03.png" src="../../../_images/clone_03.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="sending-changes-you-make-on-jupyterhub-back-to-github-com">
+<h3>Sending changes you make on JupyterHub back to <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#sending-changes-you-make-on-jupyterhub-back-to-github-com" title="Permalink to this headline">¶</a></h3>
+<p>Once you make changes (e.g., create or edit files) in your course repository on JupyterHub, you will need to send them back to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a> to be able to share these with your students. We can use the Jupyter lab git extension tool to do this. It is a three stage process which includes:</p>
+<ol class="simple">
+<li><p>a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> command to flag which modified files you want to send back to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a></p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command that logs the changes and an associated (useful) message about what was changed</p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> command that sends the added and committed changes to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a></p></li>
+</ol>
+<p>Below we walkthrough how you can use the Jupyter lab git extension tool to do each of the steps outlined above.</p>
+<div class="section" id="git-add-the-modified-files">
+<h4>1. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> the modified files<a class="headerlink" href="#git-add-the-modified-files" title="Permalink to this headline">¶</a></h4>
+<p>Below we created and saved a new file (named <code class="docutils literal notranslate"><span class="pre">demo-code.ipynb</span></code>) that we would like to send back to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a>. To <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> this modified file, we click the Jupyter lab git extension icon on the far left-hand side of Jupyter lab:</p>
+<div class="figure align-left" id="git-add-01">
+<a class="reference internal image-reference" href="../../../_images/git_add_01.png"><img alt="../../../_images/git_add_01.png" src="../../../_images/git_add_01.png" style="width: 600px;" /></a>
+</div>
+<p>This opens the Git graphical user interface (GUI) pane, and then we click the plus sign beside the file that we want to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>. <em>Note, because this is the first change for this file that we want to add, it lives under the “Untracked” heading. However, next time we edit this file and want to add the changes we made, we will find it under the “Changed” heading.</em></p>
+<blockquote>
+<div><p>Note: we can ignore the <code class="docutils literal notranslate"><span class="pre">demo-code-checkpoint.ipynb</span></code> file (sometimes called <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints</span></code>), as it can be thought of as another type of “back-up” of our Jupyter notebook file we created, and we only need to send the file we directly created and edited to <a class="reference external" href="https://github.com/">GitHub.com</a>.</p>
+</div></blockquote>
+<div class="figure align-left" id="git-add-02">
+<a class="reference internal image-reference" href="../../../_images/git_add_02.png"><img alt="../../../_images/git_add_02.png" src="../../../_images/git_add_02.png" style="width: 600px;" /></a>
+</div>
+<p>This moves the file from the “Untracked” heading to the “Staged” heading and we are ready to now <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> the changes to log them and associate a (useful) message about what was changed.</p>
+<div class="figure align-left" id="git-add-03">
+<a class="reference internal image-reference" href="../../../_images/git_add_03.png"><img alt="../../../_images/git_add_03.png" src="../../../_images/git_add_03.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="git-commit-the-changes-and-an-associated-useful-message-about-what-was-changed">
+<h4>2. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> the changes and an associated (useful) message about what was changed<a class="headerlink" href="#git-commit-the-changes-and-an-associated-useful-message-about-what-was-changed" title="Permalink to this headline">¶</a></h4>
+<p>To <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> the changes and an associated (useful) message about what was changed, we put our message in the text box at the bottom of the Git GUI pane and click on the blue “Commit” button. <em>Note: It is highly recommended to make this message useful and relevant to the changes that were made, as this can later be used to peruse the file history and understand how the file evolved.</em></p>
+<div class="figure align-left" id="git-commit-01">
+<a class="reference internal image-reference" href="../../../_images/git_commit_01.png"><img alt="../../../_images/git_commit_01.png" src="../../../_images/git_commit_01.png" style="width: 600px;" /></a>
+</div>
+<p>After commiting the file, you will see there there are 0 “Staged” files and we are now ready to push our changes (and the attached commit message) to our course repository on <a class="reference external" href="https://github.com/">GitHub.com</a>:</p>
+<div class="figure align-left" id="git-commit-02">
+<a class="reference internal image-reference" href="../../../_images/git_commit_02.png"><img alt="../../../_images/git_commit_02.png" src="../../../_images/git_commit_02.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="git-push-the-changes-to-the-course-repository-on-github-com">
+<h4>3. <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> the changes to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a><a class="headerlink" href="#git-push-the-changes-to-the-course-repository-on-github-com" title="Permalink to this headline">¶</a></h4>
+<p>To send our added and committed the changes to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a>, we need to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>. To do this we click on the cloud icon with the up arrow on the Git GUI pane:</p>
+<div class="figure align-left" id="git-push-01">
+<a class="reference internal image-reference" href="../../../_images/git_push_01.png"><img alt="../../../_images/git_push_01.png" src="../../../_images/git_push_01.png" style="width: 600px;" /></a>
+</div>
+<p>We will then be prompted to enter our <a class="reference external" href="https://github.com/">GitHub.com</a> username and password, and click the blue “OK” button:</p>
+<div class="figure align-left" id="git-push-02">
+<a class="reference internal image-reference" href="../../../_images/git_push_02.png"><img alt="../../../_images/git_push_02.png" src="../../../_images/git_push_02.png" style="width: 600px;" /></a>
+</div>
+<p>If the files were successfully pushed to our course repository on <a class="reference external" href="https://github.com/">GitHub.com</a> we will be given the success message shown below. <em>Note: click “Dismiss” to continue working in Jupyter.</em></p>
+<div class="figure align-left" id="git-push-03">
+<a class="reference internal image-reference" href="../../../_images/git_push_03.png"><img alt="../../../_images/git_push_03.png" src="../../../_images/git_push_03.png" style="width: 600px;" /></a>
+</div>
+<p>If you now go to the course repository on <a class="reference external" href="https://github.com/">GitHub.com</a> you will see the changes now exist there!</p>
+<div class="figure align-left" id="git-push-04">
+<a class="reference internal image-reference" href="../../../_images/git_push_04.png"><img alt="../../../_images/git_push_04.png" src="../../../_images/git_push_04.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="pulling-changes-made-in-our-course-repository-on-github-com-to-jupyterhub">
+<h3>Pulling changes made in our course repository on <a class="reference external" href="https://github.com/">GitHub.com</a> to JupyterHub<a class="headerlink" href="#pulling-changes-made-in-our-course-repository-on-github-com-to-jupyterhub" title="Permalink to this headline">¶</a></h3>
+<p>If you make changes in your course repository on <a class="reference external" href="https://github.com/">GitHub.com</a> using one of the tools described earlier in this session (e.g., the pen tool, or file create/upload menus) then you will need to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> those changes to the copy of the course repository on JupyterHub to get things in sync. You can do this using the Git GUI pane by clicking on the cloud icon with the down arrow:</p>
+<div class="figure align-left" id="git-pull-01">
+<a class="reference internal image-reference" href="../../../_images/git_pull_01.png"><img alt="../../../_images/git_pull_01.png" src="../../../_images/git_pull_01.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="using-nbgitpuller-to-share-course-materials-with-students-on-jupyterhub">
+<h2>Using <a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/index.html"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code></a> to share course materials with students on JupyterHub<a class="headerlink" href="#using-nbgitpuller-to-share-course-materials-with-students-on-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<p>Finally, to share your materials with your students you can give them the URL to the <a class="reference external" href="https://github.com/">GitHub.com</a> repository you created and they can browse the files there, you can create html versions of the files in the <a class="reference external" href="https://github.com/">GitHub.com</a> and embed the content in Canvas using iframes (e.g., one way to do this is to create a Jupyter book, stay tuned to the next talk to learn how to do this), or you can use <a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/index.html"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code></a> to create a special link that can be provided to the students. This special link automatically clones the <a class="reference external" href="https://github.com/">GitHub.com</a> repository (including all files) to the students persistent storage on the JupyterHub specified in the link. Additionally, the link can be setup so that it opens up to a desired file in that repository on the JupyterHub when clicked.</p>
+<p>The <a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/index.html"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code> documentation</a> has a very user friendly web interface, called the “nbgitpuller link generator” for crafting these special links: <a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/link.html">https://jupyterhub.github.io/nbgitpuller/link.html</a></p>
+<p>The nbgitpuller link generator looks like this:</p>
+<div class="figure align-left" id="nbgitpuller-link-generator-01">
+<a class="reference internal image-reference" href="../../../_images/nbgitpuller_link_generator_01.png"><img alt="../../../_images/nbgitpuller_link_generator_01.png" src="../../../_images/nbgitpuller_link_generator_01.png" style="width: 700px;" /></a>
+</div>
+<p>Here is a demonstration of how you would create a link to give to your students that would:</p>
+<ul class="simple">
+<li><p>clone the <code class="docutils literal notranslate"><span class="pre">dsci-101</span></code> course repository from <a class="reference external" href="https://github.com/">GitHub.com</a> to the UBC JupyterHub</p></li>
+<li><p>uses the Jupyter lab (as opposed to Jupyter notebook) interface when the link is clicked</p></li>
+<li><p>opens Jupyter lab to the specified file, here <code class="docutils literal notranslate"><span class="pre">demo-code.ipynb</span></code></p></li>
+</ul>
+<div class="figure align-left" id="nbgitpuller-link-generator-02">
+<a class="reference internal image-reference" href="../../../_images/nbgitpuller_link_generator_02.png"><img alt="../../../_images/nbgitpuller_link_generator_02.png" src="../../../_images/nbgitpuller_link_generator_02.png" style="width: 700px;" /></a>
+</div>
+<p>The link below is what is generated from the example above, and is the link you would share with your students:</p>
+<p><a class="reference external" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fttimbers%2Fdsci-101&amp;urlpath=lab%2Ftree%2Fdsci-101%2Fdemo-code.ipynb&amp;branch=master"><code class="docutils literal notranslate"><span class="pre">https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fttimbers%2Fdsci-101&amp;urlpath=lab%2Ftree%2Fdsci-101%2Fdemo-code.ipynb&amp;branch=master</span></code></a></p>
+<p>If you distribute the link on Canvas, your assignment instructions could look something like this:</p>
+<div class="figure align-left" id="sample-assignment-01">
+<a class="reference internal image-reference" href="../../../_images/sample_assignment_011.png"><img alt="../../../_images/sample_assignment_011.png" src="../../../_images/sample_assignment_011.png" style="width: 700px;" /></a>
+</div>
+</div>
+<div class="section" id="additional-resources">
+<h2>Additional resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lab.github.com/githubtraining/introduction-to-github">GitHub’s Introduction to GitHub free course</a></p></li>
+<li><p><a class="reference external" href="https://guides.github.com/introduction/git-handbook/">Git Handbook</a></p></li>
+<li><p><a class="reference external" href="https://jupyterhub.github.io/nbgitpuller/index.html"><code class="docutils literal notranslate"><span class="pre">nbgitpuller</span></code> documentation</a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../ostblom/jupyterlab-intro.html" title="previous page">Introduction to JupyterLab</a>
+    <a class='right-next' id="next-link" href="../../beuzen/jupyter_book_tutorial.html" title="next page">Jupyter Book</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>
