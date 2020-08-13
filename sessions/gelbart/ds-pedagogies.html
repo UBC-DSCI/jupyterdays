@@ -293,6 +293,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#real-time-documents-10-min">
+   Real-time documents (10 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#live-coding-in-jupyter-5-min">
    Live coding in Jupyter (5 min)
   </a>
@@ -310,13 +315,23 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#break-5-min">
-   Break (5 min)
+  <a class="reference internal nav-link" href="#another-quick-activity-before-the-break">
+   Another quick activity before the break
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#think-pair-share-15-min">
-   Think-pair-share (15 min)
+  <a class="reference internal nav-link" href="#break-5-10-min">
+   Break (5-10 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-activity-decision-trees-20-min">
+   Sample activity: decision trees (20 min)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#think-pair-share-5-10-min-time-permitting">
+   Think-pair-share (5-10 min, time permitting)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -327,18 +342,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#real-time-documents-5-min">
-   Real-time documents (5 min)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#q-a-15-min">
    Q&amp;A (15 min)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-thoughts-on-teaching-in-general-time-permitting">
-   Some thoughts on teaching in general (time-permitting)
   </a>
  </li>
 </ul>
@@ -366,22 +371,53 @@
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">OneHotEncoder</span><span class="p">,</span> <span class="n">FunctionTransformer</span>
 <span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
 
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span><span class="p">,</span> <span class="n">export_graphviz</span>
 <span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Ridge</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_validate</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># To fix later, don&#39;t want to break the Jupyter Book</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">graphviz</span>
+    <span class="n">graphviz_imported</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">graphviz_imported</span> <span class="o">=</span> <span class="kc">False</span>
+    
+<span class="k">def</span> <span class="nf">display_tree</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tree</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; For binary classification only &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">graphviz_imported</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">export_graphviz</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">feature_names</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">class_names</span><span class="o">=</span><span class="n">tree</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span><span class="n">impurity</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># adapted from https://stackoverflow.com/questions/44821349/python-graphviz-remove-legend-on-nodes-of-decisiontreeclassifier</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;(</span><span class="se">\\\\</span><span class="s1">nsamples = [0-9]+)(</span><span class="se">\\\\</span><span class="s1">nvalue = \[[0-9]+, [0-9]+\])(</span><span class="se">\\\\</span><span class="s1">nclass = [A-Za-z0-9]+)&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dot</span><span class="p">)</span>
+    <span class="n">dot</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span>     <span class="s1">&#39;(samples = [0-9]+)(</span><span class="se">\\\\</span><span class="s1">nvalue = \[[0-9]+, [0-9]+\])</span><span class="se">\\\\</span><span class="s1">n&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dot</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note to self: run these imports ^</p>
 <p>In this session I will discuss a few tips for teaching data science, especially with Jupyter notebooks:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.queensu.ca/ctl/teaching-support/instructional-strategies/problem-based-learning">Problem-based learning</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Live_coding">Live coding</a></p></li>
-<li><p>My implementation of <a class="reference external" href="https://en.wikipedia.org/wiki/Think-pair-share">think-pair-share</a></p></li>
-<li><p>Real-time collaborative documents (perfect for online teaching!)</p></li>
-<li><p>(Time-permitting) Some thoughts on teaching in general</p></li>
+<li><p>Real-time collaborative documents (10 min)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Live_coding">Live coding</a> with Jupyter (5 min)</p></li>
+<li><p><a class="reference external" href="https://www.queensu.ca/ctl/teaching-support/instructional-strategies/problem-based-learning">Problem-based learning</a> (20 min)</p></li>
+<li><p>Break (5-10 min)</p></li>
+<li><p>Sample activity: decision trees (20 min)</p></li>
+<li><p>My implementation of <a class="reference external" href="https://en.wikipedia.org/wiki/Think-pair-share">think-pair-share</a> (5-10 min, time-permitting)</p></li>
+<li><p>Q&amp;A (remaining time)</p></li>
 </ul>
 <div class="section" id="about-me">
 <h2>About me<a class="headerlink" href="#about-me" title="Permalink to this headline">¶</a></h2>
@@ -389,6 +425,19 @@
 <li><p>Assistant Professor of Teaching, UBC Computer Science</p></li>
 <li><p>Option Co-Director, UBC Master of Data Science program</p></li>
 <li><p>Background in machine learning</p></li>
+</ul>
+</div>
+<div class="section" id="real-time-documents-10-min">
+<h2>Real-time documents (10 min)<a class="headerlink" href="#real-time-documents-10-min" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Especially great for online teaching.</p></li>
+<li><p>Here is a <a class="reference external" href="https://docs.google.com/document/d/1I8uHzqTXzm4KlAsupKCsO_adoXslX-fCvS4-DW-5yws/edit?usp=sharing">Google Doc</a> for today.</p></li>
+<li><p>Let’s start by completing the Introductions and Activity 1.</p></li>
+<li><p>This tool pairs well with Jupyter.</p>
+<ul>
+<li><p>For example, I had students create visualizations and screenshot them in the document.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="live-coding-in-jupyter-5-min">
@@ -399,7 +448,7 @@
 <li><p>You’ve probably seen a lot of this but here’s my version:</p></li>
 </ul>
 <div><img src="img/regularization_ppt.png" width="500"/></div>
-<p>vs.</p>
+<p><br><br>vs.<br><br></p>
 <div><img src="img/regularization_ipynb.png" width="750"/></div><p>Main ideas:</p>
 <ul class="simple">
 <li><p>No “magic”.</p></li>
@@ -408,20 +457,19 @@
 </div>
 <div class="section" id="problem-based-learning-20-min">
 <h2>Problem-based learning (20 min)<a class="headerlink" href="#problem-based-learning-20-min" title="Permalink to this headline">¶</a></h2>
+<p>My CPSC 340 syllabus:</p>
 <ul class="simple">
-<li><p>My CPSC 340 syllabus:</p>
-<ul>
 <li><p>Day 1: Decision Trees</p></li>
 <li><p>Day 2: <span class="math notranslate nohighlight">\(k\)</span>-nearest neighbours</p></li>
-<li><p>etc.
-My CPSC 330 syllabus:</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>My CPSC 330 syllabus:</p>
+<ul class="simple">
 <li><p>Week 1: census dataset</p></li>
 <li><p>Week 2: houseing dataset</p></li>
 <li><p>etc.</p></li>
 </ul>
-</li>
-<li><p>Jupyter facilitates this “problem-based learning” really well.</p></li>
-</ul>
+<p>Jupyter facilitates this “problem-based learning” really well.</p>
 <div class="section" id="example-canadian-cheese-dataset">
 <h3>Example: Canadian cheese dataset<a class="headerlink" href="#example-canadian-cheese-dataset" title="Permalink to this headline">¶</a></h3>
 <p>Below I will show a pretend lesson using the <a class="reference external" href="https://open.canada.ca/data/en/dataset/3c16cd48-3ac3-453f-8260-6f745181c83b">Canadian Cheese Directory dataset</a> from Agriculture and Agri-Food Canada. This data is distributed under the <a class="reference external" href="https://open.canada.ca/en/open-government-licence-canada">Canadian Open Government License</a> so I have bundled it with this Jupyterbook.</p>
@@ -458,7 +506,13 @@ My CPSC 330 syllabus:</p></li>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">()</span>
-<span class="c1"># lm.fit(df_train, y_train)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lm.fit(df_train, y_train)</span>
 </pre></div>
 </div>
 </div>
@@ -991,9 +1045,14 @@ My CPSC 330 syllabus:</p></li>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipeline_dummy</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
     <span class="p">(</span><span class="s1">&#39;preprocessor&#39;</span><span class="p">,</span> <span class="n">preprocessor</span><span class="p">),</span>
     <span class="p">(</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="n">DummyRegressor</span><span class="p">())])</span>
-
-<span class="c1"># scores_dummy = cross_validate(pipeline_dummy, df_train, y_train, cv=5, return_train_score=True)</span>
-<span class="c1">#pd.DataFrame(scores_dummy)[[&quot;train_score&quot;, &quot;test_score&quot;]].mean()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># scores_dummy = cross_validate(pipeline_dummy, df_train, y_train, cv=5, return_train_score=True)</span>
+<span class="c1"># pd.DataFrame(scores_dummy)[[&quot;train_score&quot;, &quot;test_score&quot;]].mean()</span>
 </pre></div>
 </div>
 </div>
@@ -1043,11 +1102,440 @@ My CPSC 330 syllabus:</p></li>
 <p>etc.</p>
 </div>
 </div>
-<div class="section" id="break-5-min">
-<h2>Break (5 min)<a class="headerlink" href="#break-5-min" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="another-quick-activity-before-the-break">
+<h2>Another quick activity before the break<a class="headerlink" href="#another-quick-activity-before-the-break" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Let’s generate a dataset for another supervised learning problem: predicting whether someone has seen the movie <em>The Lion King</em>.</p></li>
+<li><p>Let’s head back to the <a class="reference external" href="https://docs.google.com/document/d/1I8uHzqTXzm4KlAsupKCsO_adoXslX-fCvS4-DW-5yws/edit?usp=sharing">Google Doc</a>.</p></li>
+</ul>
 </div>
-<div class="section" id="think-pair-share-15-min">
-<h2>Think-pair-share (15 min)<a class="headerlink" href="#think-pair-share-15-min" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="break-5-10-min">
+<h2>Break (5-10 min)<a class="headerlink" href="#break-5-10-min" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sample-activity-decision-trees-20-min">
+<h2>Sample activity: decision trees (20 min)<a class="headerlink" href="#sample-activity-decision-trees-20-min" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Basic idea: ask a bunch of yes/no questions until you end up at a prediction.</p></li>
+<li><p>E.g.</p>
+<ul>
+<li><p>If you are scared of lions, predict “No”</p></li>
+<li><p>Otherwise, if you’ve seen a movie in the last 2 weeks, predict “Yes”</p></li>
+<li><p>Otherwise, if you’d pay &gt; \$5 for a movie, predict “Yes”</p></li>
+<li><p>Otherwise, predict “No”</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>This “series of questions” approach can be drawn as a tree:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>            Are you scared of lions?
+            /          \
+           / True       \  False
+          /              \
+         No           Have you seen a movie in the last 2 weeks?
+                        /      \
+                  True /        \ False
+                      /          \ 
+                    Yes         Would you pay more than $5 for a movie?  
+                                 /           \
+                                / True        \ False
+                               /               \
+                              Yes              No
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The decision tree algorithm automatically learns a tree like this, based on the data set!</p>
+<ul>
+<li><p>We don’t have time to go through how the algorithm works.</p></li>
+<li><p>But it’s worth noting that it support two types of inputs:</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p>Categorical (e.g., Yes/No or more options)</p></li>
+<li><p>Numeric (a number)</p></li>
+</ol>
+<p>In the numeric case, the decision tree algorithm also picks the <em>threshold</em> (\$5 in this case)</p>
+<ul class="simple">
+<li><p>Let’s apply a decision tree to our <em>The Lion King</em> dataset.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lion_king</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/lionking_test.csv&quot;</span><span class="p">)</span>
+<span class="n">lion_king</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Are you scared of lions?</th>
+      <th>Have you watched a movie in the last 2 weeks?</th>
+      <th>How much would you pay to see a good movie? (in $)</th>
+      <th>Have you seen the movie The Lion King?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>No</td>
+      <td>No</td>
+      <td>10</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>10</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Yes</td>
+      <td>No</td>
+      <td>10</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>No</td>
+      <td>No</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lion_king</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">lion_king</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">lion_king</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="mi">2</span><span class="p">]]</span> <span class="o">==</span> <span class="s2">&quot;No&quot;</span>
+<span class="c1"># Note on the above: Encoding &quot;No&quot; as 1 and &quot;Yes&quot; as 0 because sklearn uses &lt;= 0.5; this makes the tree diagrams more readable.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_tree</span><span class="p">(</span><span class="n">lion_king</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">164</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">startupinfo</span><span class="o">=</span><span class="n">get_startupinfo</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>                                 <span class="n">errread</span><span class="p">,</span> <span class="n">errwrite</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">800</span>                                 <span class="n">restore_signals</span><span class="p">,</span> <span class="n">start_new_session</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>         <span class="k">except</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">_execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1550</span>                             <span class="n">err_msg</span> <span class="o">+=</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err_filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1551</span>                     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>                 <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;dot&#39;: &#39;dot&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>             <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">345</span>                 <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">_repr_svg_</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span> 
+<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">def</span> <span class="nf">_repr_svg_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span> 
+<span class="g g-Whitespace">    </span><span class="mi">115</span>     <span class="k">def</span> <span class="nf">pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">renderer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">pipe</span><span class="nt">(self, format, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>         <span class="n">out</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>                            <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">138</span>                            <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span> 
+<span class="g g-Whitespace">    </span><span class="mi">140</span>         <span class="k">return</span> <span class="n">out</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">pipe</span><span class="nt">(engine, format, data, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span><span class="s2">     cmd, _ = command(engine, format, None, renderer, formatter)</span>
+<span class="ne">--&gt; </span><span class="mi">244</span><span class="s2">     out, _ = run(cmd, input=data, capture_output=True, check=True, quiet=quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="s2">     return out</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span><span class="s2">     except OSError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span><span class="s2">         if e.errno == errno.ENOENT:</span>
+<span class="ne">--&gt; </span><span class="mi">167</span><span class="s2">             raise ExecutableNotFound(cmd)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="s2">             raise</span>
+
+<span class="ne">ExecutableNotFound</span>: failed to execute [&#39;dot&#39;, &#39;-Tsvg&#39;], make sure the Graphviz executables are on your systems&#39; PATH
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;graphviz.files.Source at 0x7f09714c5890&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>Yes    2
+No     2
+Name: Have you seen the movie The Lion King?, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">21</span><span class="o">/</span><span class="mi">30</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>0.75
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s make this more interesting by increasing the <strong>depth</strong> of the tree.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree2</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_tree</span><span class="p">(</span><span class="n">lion_king</span><span class="p">,</span> <span class="n">tree2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">164</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">startupinfo</span><span class="o">=</span><span class="n">get_startupinfo</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>                                 <span class="n">errread</span><span class="p">,</span> <span class="n">errwrite</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">800</span>                                 <span class="n">restore_signals</span><span class="p">,</span> <span class="n">start_new_session</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>         <span class="k">except</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">_execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1550</span>                             <span class="n">err_msg</span> <span class="o">+=</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err_filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1551</span>                     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>                 <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;dot&#39;: &#39;dot&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>             <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">345</span>                 <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">_repr_svg_</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span> 
+<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">def</span> <span class="nf">_repr_svg_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span> 
+<span class="g g-Whitespace">    </span><span class="mi">115</span>     <span class="k">def</span> <span class="nf">pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">renderer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">pipe</span><span class="nt">(self, format, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>         <span class="n">out</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>                            <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">138</span>                            <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span> 
+<span class="g g-Whitespace">    </span><span class="mi">140</span>         <span class="k">return</span> <span class="n">out</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">pipe</span><span class="nt">(engine, format, data, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span><span class="s2">     cmd, _ = command(engine, format, None, renderer, formatter)</span>
+<span class="ne">--&gt; </span><span class="mi">244</span><span class="s2">     out, _ = run(cmd, input=data, capture_output=True, check=True, quiet=quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="s2">     return out</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span><span class="s2">     except OSError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span><span class="s2">         if e.errno == errno.ENOENT:</span>
+<span class="ne">--&gt; </span><span class="mi">167</span><span class="s2">             raise ExecutableNotFound(cmd)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="s2">             raise</span>
+
+<span class="ne">ExecutableNotFound</span>: failed to execute [&#39;dot&#39;, &#39;-Tsvg&#39;], make sure the Graphviz executables are on your systems&#39; PATH
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;graphviz.files.Source at 0x7f09714c53d0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Please ignore the <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">0.5</span></code> above, it’s a detail we don’t need to get into here.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree_max</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree_max</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lion_king</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_tree</span><span class="p">(</span><span class="n">lion_king</span><span class="p">,</span> <span class="n">tree_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">164</span>         <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">startupinfo</span><span class="o">=</span><span class="n">get_startupinfo</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">__init__</span><span class="nt">(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>                                 <span class="n">errread</span><span class="p">,</span> <span class="n">errwrite</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">800</span>                                 <span class="n">restore_signals</span><span class="p">,</span> <span class="n">start_new_session</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>         <span class="k">except</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/subprocess.py</span> in <span class="ni">_execute_child</span><span class="nt">(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1550</span>                             <span class="n">err_msg</span> <span class="o">+=</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err_filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1551</span>                     <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">errno_num</span><span class="p">,</span> <span class="n">err_msg</span><span class="p">,</span> <span class="n">err_filename</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1552</span>                 <span class="k">raise</span> <span class="n">child_exception_type</span><span class="p">(</span><span class="n">err_msg</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;dot&#39;: &#39;dot&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ExecutableNotFound</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/IPython/core/formatters.py</span> in <span class="ni">__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span>             <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span>             <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">345</span>                 <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">_repr_svg_</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span> 
+<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">def</span> <span class="nf">_repr_svg_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">113</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span> 
+<span class="g g-Whitespace">    </span><span class="mi">115</span>     <span class="k">def</span> <span class="nf">pipe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">renderer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/files.py</span> in <span class="ni">pipe</span><span class="nt">(self, format, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>         <span class="n">out</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">pipe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>                            <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="n">formatter</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">138</span>                            <span class="n">quiet</span><span class="o">=</span><span class="n">quiet</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span> 
+<span class="g g-Whitespace">    </span><span class="mi">140</span>         <span class="k">return</span> <span class="n">out</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">pipe</span><span class="nt">(engine, format, data, renderer, formatter, quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span><span class="s2">     cmd, _ = command(engine, format, None, renderer, formatter)</span>
+<span class="ne">--&gt; </span><span class="mi">244</span><span class="s2">     out, _ = run(cmd, input=data, capture_output=True, check=True, quiet=quiet)</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="s2">     return out</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages/graphviz/backend.py</span> in <span class="ni">run</span><span class="nt">(cmd, input, capture_output, check, encoding, quiet, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span><span class="s2">     except OSError as e:</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span><span class="s2">         if e.errno == errno.ENOENT:</span>
+<span class="ne">--&gt; </span><span class="mi">167</span><span class="s2">             raise ExecutableNotFound(cmd)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="s2">             raise</span>
+
+<span class="ne">ExecutableNotFound</span>: failed to execute [&#39;dot&#39;, &#39;-Tsvg&#39;], make sure the Graphviz executables are on your systems&#39; PATH
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;graphviz.files.Source at 0x7f096b6e8bd0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="think-pair-share-5-10-min-time-permitting">
+<h2>Think-pair-share (5-10 min, time permitting)<a class="headerlink" href="#think-pair-share-5-10-min-time-permitting" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Think-pair-share is an evidence-based teaching approach.</p></li>
 <li><p>The idea is for students to learn from each other.</p></li>
@@ -1075,14 +1563,8 @@ My CPSC 330 syllabus:</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="real-time-documents-5-min">
-<h2>Real-time documents (5 min)<a class="headerlink" href="#real-time-documents-5-min" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="q-a-15-min">
 <h2>Q&amp;A (15 min)<a class="headerlink" href="#q-a-15-min" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="some-thoughts-on-teaching-in-general-time-permitting">
-<h2>Some thoughts on teaching in general (time-permitting)<a class="headerlink" href="#some-thoughts-on-teaching-in-general-time-permitting" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
