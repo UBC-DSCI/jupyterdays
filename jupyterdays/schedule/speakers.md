@@ -40,6 +40,11 @@ Evolutionary ecologist by training, Marie is a Research Computing Training Assis
 
 ## Warren Code
 
+Warren Code is the Associate Director for Skylight, the teaching and learning support unit of the Faculty of Science.  Warren leads, advises and assists in planning, research/evaluation and management for a range of teaching and learning projects across the Science departments, including some data science initiatives.  Warren is responsible for advising and professional development for department-based education specialists, evaluating impact on students and faculty, and connecting with people from UBC and other institutions interested in the accomplishments in teaching and learning within the Faculty of Science.  
+
+- Twitter: [warcode](https://twitter.com/warcode)
+- More on Skylight: [skylight.science.ubc.ca](https://skylight.science.ubc.ca/)
+
 ## Mike Gelbart
 
 Mike Gelbart is an Assistant Professor of Teaching in the UBC Department of Computer Science and an Option Co-Director for the Master of Data Science program. Mike received his PhD in machine learning, specifically hyperparameter optimization, in 2015. Since then, he has focussed on teaching data science and machine learning. To learn more about Mike, see [here](https://www.mikegelbart.com/).
