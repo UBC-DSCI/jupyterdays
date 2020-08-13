@@ -21,6 +21,6 @@ Once registered, you can visit the Jupyterdays Canvas course shell: [https://can
 | 1:00 pm  | [Interactive exploration with Jupyter widgets and dashboards](https://ubc-dsci.github.io/jupyterdays/sessions/heagy/widgets-and-dashboards.html) | [Lindsey Heagy](speakers.html#lindsey-heagy) |
 | 1:30 pm | [How to build an interactive online course](https://ubc-dsci.github.io/jupyterdays/sessions/boyce/interactive_online_course.html) | [Hayley Boyce](speakers.html#hayley-boyce) |
 | 2:00 pm  | *Break* | |
-| 2:15 pm  | Teaching computational linguistics with Jupyter | [Varada Kolhatkar](#varada-kolhatkar) |
+| 2:15 pm  | [Teaching computational linguistics with Jupyter](https://github.com/UBC-DSCI/jupyterdays/tree/master/jupyterdays/sessions/kolhatkar) | [Varada Kolhatkar](speakers.md#varada-kolhatkar) |
 | 2:45 pm  | *Closing remarks* | |
 | 3:00pm | *Session ends* | |
