@@ -23,6 +23,8 @@
   title: Intro to using Canvas Speedgrader with Jupyter
 - file: sessions/lee/teaching_online_jupyter_days
   title: Teaching in an Online Setting
+- file: sessions/gelbart/ds-pedagogies
+  title: Effective pedagogies for teaching data science
 
 - header: Day 3 Sessions
 - file: sessions/wu/Jupyter_and_QuantEcon.ipynb
