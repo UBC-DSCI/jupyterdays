@@ -75,6 +75,16 @@ toc-showmarkdowntxt: true
 
 ## Demonstration of md2canvas
 
+### What is it?
+
+[md2canvas](https://github.com/maracieco/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
+
+The documentation is [here](https://maracieco.github.io/md2canvas/index.html).
+
+md2canvas is currently under development with the main tasks being adding automatic testing using pytest and GitHub Actions (functional but limited), printing the quizzes without answers to paginated PDF using Sphinx (not started), and parameterizing the quizzes so that multiple versions can be generated.
+
+We are currently looking for alpha testers! If you see this as being useful for your work in any way, please try it out and give us any feedback you have. We are open to suggestions and constructive criticism.
+
 ### The Basic Commands
 
 1. Install the package:
@@ -86,10 +96,18 @@ toc-showmarkdowntxt: true
 2. Send a quiz to your canvas course:
 
     ```
-    md2canvas examples/demo_quiz/DemoQuiz.md -t 11224~PLAy00HrlbYVp7a6DV0a6X7pGQ13uLukhxF4ouz3JUeDJR9dzY0hazkcDOlUuY0t -c 51824 -u https://canvas.ubc.ca 
+    md2canvas examples/demo_quiz/DemoQuiz.md -f path/to/token.txt -c 51824 -u https://canvas.ubc.ca -s
     ```
 
-    Note: this command won't actually work, you will need to generate your own token and use your own course ID
+    -f provides the path to a file containing your authentication token
+    
+    -c provides the course ID
+
+    -u provides the Canvas URL
+
+    -s tells the program to save these three settings in a config file so they aren't required in the future
+
+    Note: this command won't actually work, you will need to generate your own token and use your own course ID.
 
 3. Strip the answers from your quiz so it can be distributed to students:
 
@@ -235,22 +253,23 @@ toc-showmarkdowntxt: true
 
     +++ {"ctype": "answer", "quesnum": 4}
 
-    Running the following code:
+    Check this with python:
 
-    ``` 
+    ```{code-cell} ipython3
+    :ctype: answer
+    :quesnum: 4
+
     import math
     r = 2
     ans = math.pi * r ** 2 / 2
-    print("%.3f" % ans)
-    ```
-
-    Prints out the answer:
-
-    ```
-    6.283
+    print(f"{ans:.3f}")
+    np.testing.assert_almost_equal(ans,6.383,decimals=3)
     ```
     ~~~
     ![Q4](media/Q4_jn.PNG)
     ![Q2](media/Q4_cu.PNG)
-    ![Q2](media/Q4_cg.PNG)1
+    ![Q2](media/Q4_cg.PNG)
 
+    In the future, we envision that md2canvas will be able to compute the answers just based off the code cells.
+
+6. Other question types also exist. There are examples of all of them in md2canvas/examples/sample_quiz/SampleQuiz.md.
