@@ -1,0 +1,1021 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jupyter Book &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="A Tour of Python Packages for Scientific Computing" href="../walls/a_tour_of_python_packages_for_scientific_computing.html" />
+    <link rel="prev" title="Sharing your teaching materials using Git &amp; GitHub" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Schedule</p>
+</li>
+  <li class="">
+    <a href="../../schedule/day1.html">Day 1: Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day2.html">Day 2: Pedagogy and Assessment</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day3.html">Day 3: New Developments</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/speakers.html">Speakers</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 1 Sessions</p>
+</li>
+  <li class="">
+    <a href="../ostblom/jupyterlab-intro.html">Introduction to JupyterLab</a>
+  </li>
+  <li class="">
+    <a href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">Sharing your teaching materials using Git & GitHub</a>
+  </li>
+  <li class="active">
+    <a href="">Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../walls/a_tour_of_python_packages_for_scientific_computing.html">Python packages for scientific computing</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 2 Sessions</p>
+</li>
+  <li class="">
+    <a href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">Intro to using Canvas Speedgrader with Jupyter</a>
+  </li>
+  <li class="">
+    <a href="../lee/teaching_online_jupyter_days.html">Teaching in an online setting</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 3 Sessions</p>
+</li>
+  <li class="">
+    <a href="../wu/Jupyter_and_QuantEcon.html">Jupyter and QuantEcon</a>
+  </li>
+  <li class="">
+    <a href="../heagy/widgets-and-dashboards.html">Interactive exploration with Jupyter widgets and dashboards</a>
+  </li>
+  <li class="">
+    <a href="../boyce/interactive_online_course.html">Building an Interactive Online Course</a>
+  </li>
+  <li class="">
+    <a href="../kolhatkar/language-models-with-Jupyter.html">Computational linguistics with Jupyter</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Code of Conduct</p>
+</li>
+  <li class="">
+    <a href="../../CODE_OF_CONDUCT.html">Code of Conduct for Jupyterdays</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/beuzen/jupyter_book_tutorial.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/beuzen/jupyter_book_tutorial.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/beuzen/jupyter_book_tutorial.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">1. Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#i-m-tom-nice-to-meet-you" class="nav-link">I’m Tom. Nice to meet you!</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id1" class="nav-link">1.1. Jupyter Book</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#key-jupyter-book-features" class="nav-link">1.2. Key Jupyter Book Features</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#key-jupyter-book-information" class="nav-link">1.3 Key Jupyter Book Information</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyter-book-tutorial" class="nav-link">2. Jupyter Book Tutorial</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#installing-jupyter-book" class="nav-link">3. Installing Jupyter Book</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#creating-a-book-structure" class="nav-link">4. Creating a Book Structure</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#adding-content" class="nav-link">5. Adding Content</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#re-structuring-our-book-directory" class="nav-link">5.1. Re-structuring Our Book Directory</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adding-a-markdown-content-file" class="nav-link">5.2. Adding a Markdown Content File</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#markdown-text" class="nav-link">5.2.1. Markdown Text</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#figures" class="nav-link">5.2.2. Figures</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#math-and-equations" class="nav-link">5.2.3. Math and Equations</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#controlling-the-page-layout" class="nav-link">5.2.4. Controlling the Page Layout</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#admonitions" class="nav-link">5.2.5. Admonitions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#citations-and-a-bibliography" class="nav-link">5.2.6. Citations and a Bibliography</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adding-a-jupyter-notebook-content-file" class="nav-link">5.3. Adding a Jupyter Notebook Content File</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#publishing-a-book-online" class="nav-link">6. Publishing a Book Online</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#interactive-content" class="nav-link">7. Interactive Content</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#binder" class="nav-link">7.1 Binder</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#thebelab" class="nav-link">7.2 ThebeLab</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#wrapping-up" class="nav-link">8. Wrapping Up</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter-book">
+<h1>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="i-m-tom-nice-to-meet-you">
+<h3>I’m Tom. Nice to meet you!<a class="headerlink" href="#i-m-tom-nice-to-meet-you" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="im-tom">
+<a class="reference internal image-reference" href="../../_images/me.jpg"><img alt="../../_images/me.jpg" src="../../_images/me.jpg" style="height: 280px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">This is me!</span><a class="headerlink" href="#im-tom" title="Permalink to this image">¶</a></p>
+</div>
+<p>I’m a postdoc with the <a class="reference external" href="https://masterdatascience.ubc.ca/">UBC Master of Data Science</a>. I have a background in Civil Engineering / Climate Science &amp; PhD in Coastal Engineering (topic: Using machine learning for predicting coastal storm erosion). Strong Python / intermediate R.</p>
+</div>
+<div class="section" id="id1">
+<h3>1.1. Jupyter Book<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="book-logo">
+<img alt="../../_images/book_logo.png" src="../../_images/book_logo.png" />
+<p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">The Jupyter Book logo.</span><a class="headerlink" href="#book-logo" title="Permalink to this image">¶</a></p>
+</div>
+<p>Jupyter Book is an open-source project for building books and documents from standard computational and data science materials such as Jupyter Notebooks and Markdown documents.</p>
+<p>In fact, this website is built with Jupyter Book!</p>
+<p>In this session, I’ll go through an example of creating a Jupyter Book from scratch and some of the key features Jupyter Book offers. If you’re interested in using Jupyter Book and learning more, check out the excellent <a class="reference external" href="https://jupyterbook.org/intro.html">official Jupyter Book documentation</a>.</p>
+</div>
+<div class="section" id="key-jupyter-book-features">
+<h3>1.2. Key Jupyter Book Features<a class="headerlink" href="#key-jupyter-book-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Write publication-quality content including figures, math, citations &amp; cross-references!</p></li>
+<li><p>Write content as Jupyter Notebooks, markdown, or reStructuredText</p></li>
+<li><p>Add interactivity to your book, e.g., toggle visibility of cells, connect with an online service like Binder, and include interactive outputs (e.g., figures and widgets).</p></li>
+<li><p>Generate a variety of outputs, including websites (HTML, CSS, JS), markdown and PDF.</p></li>
+<li><p>A command-line interface to quickly build books, e.g., <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybook/</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Read more in the <a class="reference external" href="https://jupyterbook.org/intro.html">official Jupyter Book documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="key-jupyter-book-information">
+<h3>1.3 Key Jupyter Book Information<a class="headerlink" href="#key-jupyter-book-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Jupyter Book is part of the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable Book Project</a>, an “international collaboration to build open source tools that facilitate publishing computational narratives using the Jupyter ecosystem”.</p></li>
+<li><p>Jupyter Book uses the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> documentation tool.</p></li>
+<li><p>Jupyter Book is currently at <code class="docutils literal notranslate"><span class="pre">v0.7.4</span></code> and is actively being developed, there may be some breaking backward compatibility API changes prior to the <code class="docutils literal notranslate"><span class="pre">v1.0.0</span></code> release.</p></li>
+<li><p>There is a growing community contributing to and discussing Jupyter Book: check out the <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues">GitHub Issues</a> page for the latest discussions and developments.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="jupyter-book-tutorial">
+<h2>2. Jupyter Book Tutorial<a class="headerlink" href="#jupyter-book-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>In this workshop we are going to build our very own Jupyter Book, containing text, images and code related to our favourite planet - <strong>Jupiter</strong>!</p>
+<p>Let’s take a look at that book now: <a class="reference external" href="http://www.tomasbeuzen.com/my-jupiter-book/">http://www.tomasbeuzen.com/my-jupiter-book/</a></p>
+<p>If you want to follow this tutorial on your own machine, you’ll need the following:</p>
+<ul class="simple">
+<li><p>Python (recommended: install the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> distribution)</p></li>
+<li><p><a class="reference external" href="https://github.com/join">GitHub account</a></p></li>
+<li><p>Linux/MacOS (Jupyter Book on Windows is an active area of development)</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>A note from Phil Austin, who is actively working on Windows integration:</p>
+<blockquote>
+<div><p>The “<a class="reference external" href="https://jupyterbook.org/advanced/advanced.html#working-on-windows">Working on Windows</a>” documentation I wrote at the beginning of the summer is completely out of date. Windows is very close to parity with unix now.  If anyone needs to make a jupyter-book on windows, the extra steps after installing would be to upgrade jupyter-book using this <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/723">PR</a> and use the current master for <a class="reference external" href="https://github.com/jupyter/jupyter-sphinx/pull/147">jupyter-sphinx</a>.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="installing-jupyter-book">
+<h2>3. Installing Jupyter Book<a class="headerlink" href="#installing-jupyter-book" title="Permalink to this headline">¶</a></h2>
+<p>The first thing we need to do is install Jupyter Book. I <strong>highly recommend you do this in a virtual environment</strong>. I use <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/">conda</a> to manage my virtual environments - if you’re interested in doing the same, I recommend installing the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> distribution.</p>
+<p>You can create and activate a new environment with <code class="docutils literal notranslate"><span class="pre">conda</span></code> using the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda create -n jupydays <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.8 -y
+$ conda activate jupydays
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that we are naming our environment “jdays” here but you can call it anything you like.</p>
+</div>
+<p>Now it’s time to install Jupyter Book. We’ll also need the <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>, <a class="reference external" href="https://plotly.com/">Plotly</a> and <a class="reference external" href="https://sphinx-thebe.readthedocs.io/en/latest/?badge=latest">sphinx-thebe</a> libraries so we’ll install those too:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install jupyter-book pandas plotly sphinx-thebe
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-a-book-structure">
+<h2>4. Creating a Book Structure<a class="headerlink" href="#creating-a-book-structure" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Book comes with a CL tool that allows you to quickly create and build books. To create the skeleton of our book, type the following at the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create jupiter
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here we are calling our book “jupiter”, but you can choose to call your book anything you like.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use the short-hand <code class="docutils literal notranslate"><span class="pre">jb</span></code> for <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">jupiter</span></code>.</p>
+</div>
+<p>You will now have a new directory called <code class="docutils literal notranslate"><span class="pre">jupiter</span></code> (or whatever you chose to call your book), with the following contents:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupiter
+  ├── _config.yml
+  ├── _toc.yml
+  ├── content.md
+  ├── intro.md
+  ├── markdown.md
+  ├── notebooks.ipynb
+  ├── references.bib
+  └── requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-content">
+<h2>5. Adding Content<a class="headerlink" href="#adding-content" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="re-structuring-our-book-directory">
+<h3>5.1. Re-structuring Our Book Directory<a class="headerlink" href="#re-structuring-our-book-directory" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter Book supports a number of file types:</p>
+<ul class="simple">
+<li><p>Markdown (.md)</p></li>
+<li><p>Notebooks (.ipynb)</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>As Markdown and Jupyter Notebooks will likely be the most common file types you will use, I’ll show an example of them here.</p>
+<p>We’ll start from scratch, so go ahead and <strong>delete</strong> the following starter files in your book directory:</p>
+<ul class="simple">
+<li><p>content.md</p></li>
+<li><p>intro.md</p></li>
+<li><p>markdown.md</p></li>
+<li><p>notebooks.ipynb</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm content.md intro.md markdown.md notebooks.ipynb
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-a-markdown-content-file">
+<h3>5.2. Adding a Markdown Content File<a class="headerlink" href="#adding-a-markdown-content-file" title="Permalink to this headline">¶</a></h3>
+<p>Let’s start our book by adding a markdown file. Open up your new book in an editor of your choice (I recommend JupyterLab as we’ll be adding a Jupyter Notebook in the next section) and create a new markdown file named <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code>.</p>
+<p>We’ll use this file as a demonstration of some of the main types of content you can add to a Jupyter Book.</p>
+<div class="section" id="markdown-text">
+<h4>5.2.1. Markdown Text<a class="headerlink" href="#markdown-text" title="Permalink to this headline">¶</a></h4>
+<p>We’ll start by adding some simple Markdown text to our file. If you are not familiar with markdown syntax, check out this <a class="reference external" href="https://www.markdownguide.org/cheat-sheet/">cheat sheet</a>. You can copy-paste the following content directly into your <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Jupiter Book
+
+This book contains information about the planet **Jupiter** - the fifth planet from the sun and the largest planet in the solar system!
+</pre></div>
+</div>
+<p>Before we take a look at how our book renders with this text, let’s add an image too.</p>
+</div>
+<div class="section" id="figures">
+<h4>5.2.2. Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h4>
+<p>You can include figures in your Jupyter Book using the following syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} my_image.png
+---
+height: 150px
+name: my-image
+---
+Here is my image&#39;s caption!
+```
+</pre></div>
+</div>
+<p>While your image can be contained and referenced to from your book’s root directory, you can also include images via urls. Let’s include an image of the planet Jupiter in our <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file using the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg
+---
+height: 300px
+name: jupiter-figure
+---
+The beautiful planet Jupiter!
+```
+</pre></div>
+</div>
+<p>The reason we give our image a “name” is so that we can easily reference it with the syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{numref}`jupiter-figure`
+</pre></div>
+</div>
+<p>Let’s add a sentence including a reference to our figure to demonstrate this. The full file should now look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Jupiter Book
+
+This book contains information about the planet Jupiter - the fifth planet from the sun and the largest planet in the solar system! {numref}`jupiter-figure` below shows an image of Jupiter captured by the Hubble Space Telescope on June 27, 2019.
+
+```{figure} https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg
+---
+height: 300px
+name: jupiter-figure
+---
+The beautiful planet Jupiter! Source: [NASA](https://solarsystem.nasa.gov/resources/2486/hubbles-new-portrait-of-jupiter/?category=planets_jupiter).
+```
+</pre></div>
+</div>
+<p>At this point, we should probably build our book to make sure it’s looking as expected. To do that we first need to modify our <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. This file contains the table of contents of our book. Open that file now and remove everything in there. Then simply add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">introduction</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are a number of ways you can configure your table of contents, e.g., with Headers, Sub-headers, Chapters, Section, etc, that I won’t go into here because it is all very well explained in the official <a class="reference external" href="https://jupyterbook.org/customize/toc.html">Jupyter Book documentation</a>!</p>
+</div>
+<p>We can now build our book from the command line by making sure that we are in our book’s root directory and then using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ jb build ./
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You may get some red warnings printed to your output as the book is built, but these are typically just warnings or suggestions for how to improve your book.</p>
+</div>
+<p>Once the build is finished you’ll have a new sub-directory called <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> in your book’s root, navigate to that location and open up <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code>. It should look something like this:</p>
+<div class="figure align-default" id="first-build">
+<a class="reference internal image-reference" href="../../_images/first-build.png"><img alt="../../_images/first-build.png" src="../../_images/first-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">First build of our Jupiter book.</span><a class="headerlink" href="#first-build" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="math-and-equations">
+<h4>5.2.3. Math and Equations<a class="headerlink" href="#math-and-equations" title="Permalink to this headline">¶</a></h4>
+<p>Jupyter Book uses <a class="reference external" href="http://docs.mathjax.org/en/latest/">MathJax</a> for typesetting math which allows you to add LaTeX-style maths to your book. You can add inline maths, math blocks and numbered equations to your Jupyter Book. Let’s go ahead and create a new heading in our <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file that includes some maths.</p>
+<p>Inline math can be defined using <code class="docutils literal notranslate"><span class="pre">$</span></code> as follows:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>Jupiter has a mass of:  <span class="s">$</span><span class="nb">m_{j} </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">9</span><span class="nb"> </span><span class="nv">\times</span><span class="nb"> </span><span class="m">10</span><span class="nb">^{</span><span class="m">27</span><span class="nb">} kg</span><span class="s">$</span>
+</pre></div>
+</div>
+<p>Jupiter has a mass of:  <span class="math notranslate nohighlight">\(m_{j} \approx 1.9 \times 10^{27} kg\)</span></p>
+<p>Math blocks can be defined using <code class="docutils literal notranslate"><span class="pre">$$</span></code> notation:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  m_{j} </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">9</span><span class="nb"> </span><span class="nv">\times</span><span class="nb"> </span><span class="m">10</span><span class="nb">^{</span><span class="m">27</span><span class="nb">} kg</span>
+<span class="s">$$</span>
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+  m_{j} \approx 1.9 \times 10^{27} kg
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you prefer, math blocks can also be defined with <code class="docutils literal notranslate"><span class="pre">\begin{equation}</span></code> and <code class="docutils literal notranslate"><span class="pre">\begin{equation}</span></code> instead of <code class="docutils literal notranslate"><span class="pre">$$</span></code>.</p>
+</div>
+<p>Numbered equations can be defined like this (this is the style I recommend you use most often):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{math}
+:label: my_label
+m_{j} \approx 1.9 \times 10^{27} kg
+```
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-my-equation-label">
+<span class="eqno">(1)<a class="headerlink" href="#equation-my-equation-label" title="Permalink to this equation">¶</a></span>\[m_{j} \approx 1.9 \times 10^{27} kg\]</div>
+<p>Let’s add some more content to our Jupiter book. Copy and append the following text to your <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>## The Mass of Jupiter
+
+We can estimate the mass of Jupiter from the period and size of an object orbiting it. For example, we can use Jupiter&#39;s moon Callisto to estimate it&#39;s mass.
+
+Callisto&#39;s period: $p_{c}=16.7 days$
+
+Callisto&#39;s orbit radius: $r_{c}=1,900,000 km$
+
+Now, using [Kepler&#39;s Law](https://solarsystem.nasa.gov/resources/310/orbits-and-keplers-laws/) we can work out the mass of Jupiter.
+
+```{math}
+:label: eq1
+m_{j} \approx \frac{r_{c}}{p_{c}} \times 7.9 \times 10^{10}
+```
+
+```{math}
+:label: eq2
+m_{j} \approx 1.9 \times 10^{27} kg
+```
+</pre></div>
+</div>
+<p>You can then re-build your book (<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>) and open <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> to make sure everything is rendering as expected.</p>
+</div>
+<div class="section" id="controlling-the-page-layout">
+<h4>5.2.4. Controlling the Page Layout<a class="headerlink" href="#controlling-the-page-layout" title="Permalink to this headline">¶</a></h4>
+<p>There are a number of different ways you can control the layout of your Jupyter Book pages which are described in detail in the official <a class="reference external" href="https://jupyterbook.org/content/layout.html">Jupyter Book docs</a>. The layout change I use most often is adding content to a margin on my page. You can add a margin using the following directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{margin} An optional title
+Some margin content.
+```
+</pre></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Example margin</p>
+<p>Add content here - you can add text, equations, images or cells within the margin!</p>
+</div>
+<p>Let’s add some margin content to our book now:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{margin} Did you know?
+Jupiter is 11.0x larger than Earth!
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="admonitions">
+<h4>5.2.5. Admonitions<a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h4>
+<p>You may have noticed that I enjoy adding admonitions to my books - they can be used to break up your book’s content and draw attention to important information. There are all sorts of different admonitions you can use in Jupyter Book which are listed <a class="reference external" href="https://jupyterbook.org/reference/cheatsheet.html#admonitions">here in the Jupyter Book documentation</a>. Admonitions are created with the syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+I am a useful note!
+```
+</pre></div>
+</div>
+<p>Here are a few examples:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I am a useful note!</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>I am a helpful tip!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I am a dire warning!</p>
+</div>
+<p>Feel free to add the following admonition to <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{hint}
+NASA provides a lot more information about the physical characteristics of Jupiter [here](https://solarsystem.nasa.gov/planets/jupiter/by-the-numbers/).
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="citations-and-a-bibliography">
+<h4>5.2.6. Citations and a Bibliography<a class="headerlink" href="#citations-and-a-bibliography" title="Permalink to this headline">¶</a></h4>
+<p>The last piece of content I want to show you is adding references and a bibliography to your book. You can add citations of any works stored in the <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> bibtex file that is located in your book’s root directory.</p>
+<p>To include a citation in your book, add a bibtex entry to <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="o">---</span>
+
+<span class="nd">@article</span><span class="p">{</span><span class="n">mayor1995jupiter</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">A</span> <span class="n">Jupiter</span><span class="o">-</span><span class="n">mass</span> <span class="n">companion</span> <span class="n">to</span> <span class="n">a</span> <span class="n">solar</span><span class="o">-</span><span class="nb">type</span> <span class="n">star</span><span class="p">},</span>
+    <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Mayor</span><span class="p">,</span> <span class="n">Michel</span> <span class="ow">and</span> <span class="n">Queloz</span><span class="p">,</span> <span class="n">Didier</span><span class="p">},</span>
+    <span class="n">journal</span><span class="o">=</span><span class="p">{</span><span class="n">Nature</span><span class="p">},</span>
+    <span class="n">volume</span><span class="o">=</span><span class="p">{</span><span class="mi">378</span><span class="p">},</span>
+    <span class="n">number</span><span class="o">=</span><span class="p">{</span><span class="mi">6555</span><span class="p">},</span>
+    <span class="n">pages</span><span class="o">=</span><span class="p">{</span><span class="mi">355</span><span class="o">--</span><span class="mi">359</span><span class="p">},</span>
+    <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">1995</span><span class="p">},</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="p">{</span><span class="n">Nature</span> <span class="n">Publishing</span> <span class="n">Group</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@article</span><span class="p">{</span><span class="n">guillot1999interiors</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="n">Interiors</span> <span class="n">of</span> <span class="n">giant</span> <span class="n">planets</span> <span class="n">inside</span> <span class="ow">and</span> <span class="n">outside</span> <span class="n">the</span> <span class="n">solar</span> <span class="n">system</span><span class="p">},</span>
+    <span class="n">author</span><span class="o">=</span><span class="p">{</span><span class="n">Guillot</span><span class="p">,</span> <span class="n">Tristan</span><span class="p">},</span>
+    <span class="n">journal</span><span class="o">=</span><span class="p">{</span><span class="n">Science</span><span class="p">},</span>
+    <span class="n">volume</span><span class="o">=</span><span class="p">{</span><span class="mi">286</span><span class="p">},</span>
+    <span class="n">number</span><span class="o">=</span><span class="p">{</span><span class="mi">5437</span><span class="p">},</span>
+    <span class="n">pages</span><span class="o">=</span><span class="p">{</span><span class="mi">72</span><span class="o">--</span><span class="mi">77</span><span class="p">},</span>
+    <span class="n">year</span><span class="o">=</span><span class="p">{</span><span class="mi">1999</span><span class="p">},</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="p">{</span><span class="n">American</span> <span class="n">Association</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Advancement</span> <span class="n">of</span> <span class="n">Science</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>See the <a class="reference external" href="http://www.bibtex.org/Using/">BibTex documentation</a> for information about the BibTex reference style. Google Scholar facilitates exporting a bibtex citation format.</p>
+</div>
+<p>You can then reference the work in your Jupyter Book using the following directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite}`mayor1995jupiter`
+</pre></div>
+</div>
+<p>Or for multiple citations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{cite}`mayor1995jupiter,guillot1999interiors`
+</pre></div>
+</div>
+<p>You can then create a bibliography from <code class="docutils literal notranslate"><span class="pre">references.bib</span></code> using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{bibliography} references.bib
+```
+</pre></div>
+</div>
+<p>For example, try adding this to your <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>There might even be more planets out there with a similar mass to Jupiter {cite}`mayor1995jupiter,guillot1999interiors`!
+
+## Bibliography
+
+```{bibliography} references.bib
+```
+</pre></div>
+</div>
+<p>Your final <code class="docutils literal notranslate"><span class="pre">introduction.md</span></code> file should look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Jupiter Book
+
+This book contains information about the planet Jupiter - the fifth planet from the sun and the largest planet in the solar system! {numref}`jupiter-figure` below shows an image of Jupiter captured by the Hubble Space Telescope on June 27, 2019.
+
+```{figure} https://solarsystem.nasa.gov/system/resources/detail_files/2486_stsci-h-p1936a_1800.jpg
+---
+height: 300px
+name: jupiter-figure
+---
+The beautiful planet Jupiter! Source: [NASA](https://solarsystem.nasa.gov/resources/2486/hubbles-new-portrait-of-jupiter/?category=planets_jupiter).
+```
+
+## The Mass of Jupiter
+
+We can estimate the mass of Jupiter from the period and size of an object orbiting it. For example, we can use Jupiter&#39;s moon Callisto to estimate it&#39;s mass.
+
+Callisto&#39;s period: $p_{c}=16.7 days$
+
+Callisto&#39;s orbit radius: $r_{c}=1,900,000 km$
+
+Now, using [Kepler&#39;s Law](https://solarsystem.nasa.gov/resources/310/orbits-and-keplers-laws/) we can work out the mass of Jupiter.
+
+```{math}
+:label: eq1
+m_{j} \approx \frac{r_{c}}{p_{c}} \times 7.9 \times 10^{10}
+```
+
+```{math}
+:label: eq2
+m_{j} \approx 1.9 \times 10^{27} kg
+```
+
+```{margin} Did you know?
+Jupiter is 11.0x larger than Earth!
+```
+
+```{hint}
+NASA provides a lot more information about the physical characteristics of Jupiter [here](https://solarsystem.nasa.gov/planets/jupiter/by-the-numbers/).
+```
+
+There might even be more planets out there with a similar mass to Jupiter {cite}`mayor1995jupiter,guillot1999interiors`!
+
+## Bibliography
+
+```{bibliography} references.bib
+```
+</pre></div>
+</div>
+<p>And should render like this:</p>
+<div class="figure align-default" id="second-build">
+<a class="reference internal image-reference" href="../../_images/second-build.png"><img alt="../../_images/second-build.png" src="../../_images/second-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">The final build of the introduction page of our Jupiter book.</span><a class="headerlink" href="#second-build" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="adding-a-jupyter-notebook-content-file">
+<h3>5.3. Adding a Jupyter Notebook Content File<a class="headerlink" href="#adding-a-jupyter-notebook-content-file" title="Permalink to this headline">¶</a></h3>
+<p>In the last section we explored adding content to our book through a markdown <code class="docutils literal notranslate"><span class="pre">.md</span></code> file. You can also add content using a Jupyter Notebook!</p>
+<p>All of the same formatting and style workflows we saw above apply to a Jupyter Notebook too - simply add them to a markdown cell and you’re on your way! The real utility of a Jupyter Notebook is that we can include code and code output in our book!</p>
+<p>Let’s get started with the following:</p>
+<ul class="simple">
+<li><p>Create a new notebook called <code class="docutils literal notranslate"><span class="pre">great_red_spot.ipynb</span></code>;</p></li>
+<li><p>Add this file to your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>;</p></li>
+<li><p>Add a markdown cell with the following content:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># The Great Red Spot
+
+Jupiter’s iconic Great Red Spot (GRS) is actually an enormous storm that is bigger than Earth that has raged for hundreds of years! {numref}`great-red-spot` below shows an image of Jupiter captured by the Hubble Space Telescope on June 27, 2019.
+
+```{figure} https://solarsystem.nasa.gov/system/resources/detail_files/626_PIA21775.jpg
+---
+height: 300px
+name: great-red-spot
+---
+Jupiter&#39;s Great Red Spot! Source: [NASA](https://solarsystem.nasa.gov/resources/626/jupiters-great-red-spot-in-true-color/?category=planets_jupiter).
+```
+
+Jupiter&#39;s GRS has been observed to be shrinking for about the last century and a half! [Here](https://github.com/UBC-DSCI/jupyterdays/tree/master/jupyterdays/sessions/beuzen/data) is some data of the length of the GRS spanning the last ~150 years which we can use to investigate this phenomenon.
+</pre></div>
+</div>
+<p>Now try building your book (<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>) to make sure everything is looking okay! Using the left-side content bar, navigate to the new page “The Great Red Spot” which should look like this:</p>
+<div class="figure align-default" id="third-build">
+<a class="reference internal image-reference" href="../../_images/third-build.png"><img alt="../../_images/third-build.png" src="../../_images/third-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">The build of our new page on Jupiter’s Great Red Spot.</span><a class="headerlink" href="#third-build" title="Permalink to this image">¶</a></p>
+</div>
+<p>Okay great! Now let’s import that data we referenced so that we can create some plots.</p>
+<p>Create a new <code class="docutils literal notranslate"><span class="pre">code</span></code> cell underneath the current <code class="docutils literal notranslate"><span class="pre">markdown</span></code> cell and add the following code to read in our dataset of the GRS as a Pandas Dataframe.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;plotly&quot;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UBC-DSCI/jupyterdays/master/jupyterdays/sessions/beuzen/data/GRS_data.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> 
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are printing output to the display with the use of <code class="docutils literal notranslate"><span class="pre">df.head()</span></code> and this will show up in our rendered Jupyter Book!</p>
+</div>
+<p>If you re-build your book (<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>) at this point, you’ll see something like the following:</p>
+<div class="figure align-default" id="fourth-build">
+<a class="reference internal image-reference" href="../../_images/fourth-build.png"><img alt="../../_images/fourth-build.png" src="../../_images/fourth-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">A dataframe of the size of Jupiter’s Great Red Spot.</span><a class="headerlink" href="#fourth-build" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, we can use this data to create some plots.</p>
+<p>Plots in your Jupyter Book may be static (e.g., <a class="reference external" href="https://matplotlib.org/">matplotlib</a>, <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a>) or interactive (e.g., <a class="reference external" href="https://altair-viz.github.io/index.html">altair</a>, <a class="reference external" href="https://plotly.com/python/">plotly</a>, <a class="reference external" href="https://bokeh.org/">bokeh</a>). See the official <a class="reference external" href="https://jupyterbook.org/interactive/interactive.html">Jupyter Book</a> documentation for more information on including plots in your Jupyter Book.</p>
+<p>For this tutorial, we will create a few example plots using Plotly (through the <a class="reference external" href="https://plotly.com/python/pandas-backend/">Pandas backend</a>).</p>
+<p>Let’s first create a simple scatter plot of our data. Create a new code cell in your notebook and add the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;notebook&quot;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;GRS Length&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Recorder&quot;</span><span class="p">,</span>
+                      <span class="n">range_x</span><span class="o">=</span><span class="p">[</span><span class="mi">1870</span><span class="p">,</span> <span class="mi">2030</span><span class="p">],</span> <span class="n">range_y</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+                      <span class="n">width</span><span class="o">=</span><span class="mi">650</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s2">&quot;Great Red Spot Size&quot;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mf">0.92</span><span class="p">})</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>While we’re at it, let’s also create an animated plot. Create another new code cell and add the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;GRS Length&quot;</span><span class="p">,</span>
+                      <span class="n">animation_frame</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span>
+                      <span class="n">range_x</span><span class="o">=</span><span class="p">[</span><span class="mi">1870</span><span class="p">,</span> <span class="mi">2030</span><span class="p">],</span> <span class="n">range_y</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+                      <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">520</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s2">&quot;Great Red Spot Size Animation&quot;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mf">0.94</span><span class="p">})</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">updatemenus</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">buttons</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;frame&quot;</span><span class="p">][</span><span class="s2">&quot;duration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Plotly has <a class="reference external" href="https://plotly.com/python/renderers/">different renderers</a> available to output plots. You may need to experiment with renderers to get the output you want in your Jupyter Book - I’ve found that the <code class="docutils literal notranslate"><span class="pre">pio.renderers.default</span> <span class="pre">=</span> <span class="pre">&quot;notebook&quot;</span></code> works with the current version of Jupyter Book.</p>
+</div>
+<p>Now, let’s re-build our book (<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>) and take a look!</p>
+<div class="figure align-default" id="fifth-build">
+<a class="reference internal image-reference" href="../../_images/fifth-build.png"><img alt="../../_images/fifth-build.png" src="../../_images/fifth-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Some plots of the Jupiter Great Red Spot data.</span><a class="headerlink" href="#fifth-build" title="Permalink to this image">¶</a></p>
+</div>
+<p>You may want to hide some of the code in your book - no problem! That’s easily done with Jupyter Book too. There are a few ways to hide content in your Jupyter Book as documented in the <a class="reference external" href="https://jupyterbook.org/interactive/hiding.html">official docs</a>.</p>
+<p>The one we are interested in here is hiding code input. We can do that easily by adding the tag <code class="docutils literal notranslate"><span class="pre">hide-input</span></code> to the cell we wish to hide. There are various ways to add tags to cell in Jupyter Notebooks. In Jupyter Lab, click the gear icon in the left side-bar, and then add the desired tag as shown below:</p>
+<div class="figure align-default" id="hide-content">
+<a class="reference internal image-reference" href="../../_images/hide-content.png"><img alt="../../_images/hide-content.png" src="../../_images/hide-content.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Adding the “hide-content” tag to a cell in Jupyter Lab.</span><a class="headerlink" href="#hide-content" title="Permalink to this image">¶</a></p>
+</div>
+<p>Go ahead and add the <code class="docutils literal notranslate"><span class="pre">hide-input</span></code> tags to both plotting cells in your <code class="docutils literal notranslate"><span class="pre">great_red_spot.ipynb</span></code> file. When you re-build the book, you’ll see that the code input is hidden (but can be toggled with the <code class="docutils literal notranslate"><span class="pre">+</span></code> icon):</p>
+<div class="figure align-default" id="sixth-build">
+<a class="reference internal image-reference" href="../../_images/sixth-build.png"><img alt="../../_images/sixth-build.png" src="../../_images/sixth-build.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Some plots of the Jupiter Great Red Spot data with the code input hidden!</span><a class="headerlink" href="#sixth-build" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can also store notebook content like values, plots, or dataframes in variables that can be used throughout your notebook using the <code class="docutils literal notranslate"><span class="pre">glue</span></code> tool, which is described in more detail in the official <a class="reference external" href="https://jupyterbook.org/content/glue.html">Jupyter Book documentation</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="publishing-a-book-online">
+<h2>6. Publishing a Book Online<a class="headerlink" href="#publishing-a-book-online" title="Permalink to this headline">¶</a></h2>
+<p>Okay, we now have a beautiful book about Jupiter that we’d like to share with the world! The process of publishing your book online is described in the <a class="reference external" href="https://jupyterbook.org/start/publish.html">Jupyter Book documentation</a> - which I contributed to :).</p>
+<p>The quickest option for publishing your book online is to use <a class="reference external" href="https://pages.github.com/">GitHub Pages</a> and you can get up and running in just a few easy steps:</p>
+<ol>
+<li><p>Create a <a class="reference external" href="https://github.com/new">new GitHub repository</a> to host your book (make your repository public and do not initialize with a README file).</p>
+<div class="figure align-default" id="new-github">
+<a class="reference internal image-reference" href="../../_images/new-github.png"><img alt="../../_images/new-github.png" src="../../_images/new-github.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Creating a new GitHub repository.</span><a class="headerlink" href="#new-github" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p>Navigate to your local book’s root directory from the command line and link it to your new remote GitHub repository with (GitHub provides you with instructions on how to do this):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
+git remote add origin git@github.com:&lt;user&gt;/&lt;repo-name&gt;.git
+git add .
+git commit -m <span class="s2">&quot;first commit&quot;</span>
+git push -u origin master
+</pre></div>
+</div>
+</li>
+<li><p>Install the <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> tool:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ghp-import
+</pre></div>
+</div>
+</li>
+<li><p>From your book’s local root directory (which should contain the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder) call <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> and point it to your HTML files, like so:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f ./_build/html
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> works by copying all of the contents of your built book (i.e., the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder) to a branch of your repository called <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, and pushes it to GitHub.</p>
+</div>
+<p>After a few minutes your site should be viewable online at a url such as: <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/&lt;myonlinebook&gt;/</span></code>. For example, my repository is available at: <a class="reference external" href="http://www.tomasbeuzen.com/my-jupiter-book/introduction.html">http://www.tomasbeuzen.com/my-jupiter-book/introduction.html</a></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>My GitHub is configured to publish pages using my personal domain &lt;www.tomasbeuzen.com&gt;. The default domain is tomasbeuzen.github.io and your link will have a similar syntax, unless otherwise configured.</p>
+</div>
+<p>You can also choose to automate the build and deploy process with GitHub Actions - for example, every time you push new content to your GitHub repository, your book can be automatically built and deployed. Implementing this automatic deployment is described <a class="reference external" href="https://jupyterbook.org/publish/gh-pages.html#automatically-host-your-book-with-github-actions">here</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For those interested, I’m in the process of cleaning up a <a class="reference external" href="https://github.com/UBC-MDS/cookiecutter-jupyter-book">cookiecutter template</a> for making Jupyter Books that includes the GitHub Actions workflow files.</p>
+</div>
+</div>
+<div class="section" id="interactive-content">
+<h2>7. Interactive Content<a class="headerlink" href="#interactive-content" title="Permalink to this headline">¶</a></h2>
+<p>Last but not least - let’s add interactivity to our book. Because Jupyter Books can be built with Jupyter Notebooks, you can enable users to launch live Jupyter sessions in the cloud directly from your book and interact with your code content. Jupyter Book currently facilitates interactivity through <a class="reference external" href="https://mybinder.org/">Binder</a>, <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a>, <a class="reference external" href="https://colab.research.google.com/notebooks/intro.ipynb#recent=true">Google Colab</a> and <a class="reference external" href="https://thebelab.readthedocs.io/en/latest/">ThebeLab</a>.</p>
+<div class="section" id="binder">
+<h3>7.1 Binder<a class="headerlink" href="#binder" title="Permalink to this headline">¶</a></h3>
+<p>If your Jupyter Book is hosted online on GitHub, you can automatically insert buttons in your Jupyter Book that link to its Jupyter Notebooks running in Binder. When a user clicks the button, they’ll be taken to a live version of the page. Assuming your code doesn’t require a significant amount of CPU or RAM, you can use the free, public BinderHub running at <a class="reference external" href="https://mybinder.org">https://mybinder.org</a>.</p>
+<p>To set up Binder link buttons in each page of your Jupyter Book, add the following configuration to your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">binderhub_url</span><span class="p">:</span> <span class="s2">&quot;https://mybinder.org&quot;</span>  <span class="c1"># The URL for your BinderHub (e.g., https://mybinder.org)</span>
+
+<span class="n">repository</span><span class="p">:</span>
+  <span class="n">url</span>          <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">TomasBeuzen</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">jupiter</span><span class="o">-</span><span class="n">book</span>  <span class="c1"># The URL to your book&#39;s repository</span>
+  <span class="n">path_to_book</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># A path to your book&#39;s folder, relative to the repository root.</span>
+  <span class="n">branch</span>       <span class="p">:</span> <span class="n">master</span>  <span class="c1"># Which branch of the repository should be used when creating links</span>
+</pre></div>
+</div>
+<p>We’ll also need to add a <code class="docutils literal notranslate"><span class="pre">.binder/requirements.txt</span></code> file to help build our interactive Binder environment. In your book’s root directory, create, a new text file <code class="docutils literal notranslate"><span class="pre">.binder/requirements.txt</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir .binder
+touch .binder/requirements.txt
+</pre></div>
+</div>
+<p>Add the following content to that file (which points to the existing <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file in our book’s root):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">r</span> <span class="o">../</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code> file in our book’s root directory, change the content to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">sphinx</span><span class="o">-</span><span class="n">thebe</span>
+<span class="n">pandas</span>
+<span class="n">plotly</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> and <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> package are not actually required here but they are required for automating the building of your book with GitHub Actions so I’ve left them in.</p>
+</div>
+<p>Re-build your book (<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">./</span></code>) and open up the “The Great Red Spot” page and you’ll see a new rocket ship button at the top of the screen that allows you to launch your notebook in Binder!</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/binder.png"><img alt="../../_images/binder.png" src="../../_images/binder.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Adding interactivity through Binder.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="thebelab">
+<h3>7.2 ThebeLab<a class="headerlink" href="#thebelab" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://thebelab.readthedocs.io/en/latest/">Thebe Lab</a> is a tool that turns your static HTML pages interactive, powered by a kernel. It is a work-in-progress which you can follow in the <a class="reference external" href="https://thebelab.readthedocs.io/en/latest/">official docs</a>. This functionality allows users to run code and see outputs in your Jupyter book <strong>without leaving the page</strong>!</p>
+<p>To set up Thebelab in your Jupyter Book, add the following configuration to your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">launch_buttons</span><span class="p">:</span>
+  <span class="n">notebook_interface</span> <span class="p">:</span> <span class="s2">&quot;classic&quot;</span> <span class="c1"># The interface interactive links will activate [&quot;classic&quot;, &quot;jupyterlab&quot;]</span>
+  <span class="n">binderhub_url</span>      <span class="p">:</span> <span class="s2">&quot;https://mybinder.org&quot;</span>
+  <span class="n">thebe</span>              <span class="p">:</span> <span class="n">true</span>
+
+<span class="n">repository</span><span class="p">:</span>
+  <span class="n">url</span>          <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">TomasBeuzen</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">jupiter</span><span class="o">-</span><span class="n">book</span>  <span class="c1"># The URL to your book&#39;s repository</span>
+  <span class="n">path_to_book</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>  <span class="c1"># A path to your book&#39;s folder, relative to the repository root.</span>
+  <span class="n">branch</span>       <span class="p">:</span> <span class="n">master</span>  <span class="c1"># Which branch of the repository should be used when creating links</span>
+
+<span class="n">sphinx</span><span class="p">:</span>
+  <span class="n">extra_extensions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">sphinx_thebe</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/thebelab.png"><img alt="../../_images/thebelab.png" src="../../_images/thebelab.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Adding interactivity through ThebeLab.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can have code cells (even hidden ones) execute automatically when Thebe is initialized! Read more about that <a class="reference external" href="https://jupyterbook.org/interactive/launchbuttons.html#running-cells-in-thebe-when-it-is-initialized">here</a>.</p>
+</div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>8. Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>Congratulations! You’ve made it to the end of the tutorial. I hope you learned something about how useful Jupyter Book could be in creating and distributing open-source material (and maybe you learned something about the planet Jupiter too!).</p>
+<p>I’ll leave you with a few examples of Jupyter Book being used out in the wild:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubc-mds.github.io/py-pkgs/content/00-preface.html">The Python Packaging book: Py-Pkgs</a></p></li>
+<li><p><a class="reference external" href="https://brian-rose.github.io/ClimateLaboratoryBook/home.html">The Climate Laboratory Book</a></p></li>
+<li><p><a class="reference external" href="https://geographicdata.science/book/intro">Geographic Data Science with PySAL and the PyData Stack</a></p></li>
+<li><p><a class="reference external" href="https://noahgift.github.io/aws-ml-guide/intro">AWS Certified Machine Learning-Specialty (ML-S) Guide</a></p></li>
+<li><p><a class="reference external" href="https://www.inferentialthinking.com/chapters/intro">Computational and Inferential Thinking</a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html" title="previous page">Sharing your teaching materials using Git &amp; GitHub</a>
+    <a class='right-next' id="next-link" href="../walls/a_tour_of_python_packages_for_scientific_computing.html" title="next page">A Tour of Python Packages for Scientific Computing</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

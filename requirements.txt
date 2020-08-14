@@ -1,5 +1,15 @@
 jupyter-book==0.7.1
 ghp-import==0.5.5
-pandas==1.0.5
 plotly==4.8.2
 seaborn==0.10.0
+numpy==1.18.1
+scipy==1.4.1
+matplotlib==3.2.2
+pandas==1.1.0
+scikit-learn==0.23.1
+networkx==2.4
+Pillow==7.2.0
+nltk==3.5
+ipython-autotime==0.1
+plot-classifier @ git+git://github.com/mgelbart/plot-classifier.git@2bebd4dabfa2412fdec16bf12ed5f06d1f61c91a
+graphviz>=0.14

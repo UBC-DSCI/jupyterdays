@@ -11,13 +11,13 @@ Once registered, you can visit the Jupyterdays Canvas course shell: [https://can
 | Time | Session Title | Session Lead |
 | -- | -- | -- |
 | 9:00 am  | *Welcome* | [Tiffany Timbers](speakers.html#tiffany-timbers) |
-| 9:15 am  | Intro to using Canvas Speedgrader with Jupyter | [Tiffany Timbers](speakers.html#tiffany-timbers) |
+| 9:15 am  | [Intro to using Canvas Speedgrader with Jupyter](https://ubc-dsci.github.io/jupyterdays/sessions/timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html) | [Tiffany Timbers](speakers.html#tiffany-timbers) |
 | 9:30 am  | [Introduction to nbgrader](#introduction-to-nbgrader) | [Patrick Walls](speakers.html#patrick-walls) |
 | 10:45 am | *Break* | |
 | 11:00 am | [Teaching in an online setting](https://github.com/UBC-DSCI/jupyterdays/blob/master/jupyterdays/schedule/day2.md#teaching-in-an-online-setting) | [Melissa Lee](speakers.html#melissa-lee) |
 | 11:30 am | *Lunch* | |
 | 1:00 pm  | Accessibility and inclusivity in teaching data science | [Warren Code](speakers.html#warren-code) |
-| 1:30 pm  | Active learning with Jupyter Book | [Firas Moosvi](speakers.html#firas-moosvi) |
+| 1:30 pm  | [Active learning with Jupyter Book](https://firas.moosvi.com/books/active-learning-technologies) | [Firas Moosvi](speakers.html#firas-moosvi) |
 | 2:00 pm  | *Break* | |
 | 2:15 pm  | [Effective pedagogies for teaching data science](https://github.com/UBC-DSCI/jupyterdays/blob/master/jupyterdays/schedule/day2.md#effective-pedagogies-for-teaching-data-science) | [Mike Gelbart](speakers.html#mike-gelbart) |
 | 3:30 pm  | *Session ends* | |

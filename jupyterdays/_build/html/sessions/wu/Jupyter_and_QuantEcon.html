@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jupyter and QuantEcon &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interactive exploration with widgets and dashboards" href="../heagy/widgets-and-dashboards.html" />
+    <link rel="prev" title="Teaching in an online setting" href="../lee/teaching_online_jupyter_days.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+<li class="navbar-special">
+<p class="margin-caption">Schedule</p>
+</li>
+  <li class="">
+    <a href="../../schedule/day1.html">Day 1: Getting Started</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day2.html">Day 2: Pedagogy and Assessment</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/day3.html">Day 3: New Developments</a>
+  </li>
+  <li class="">
+    <a href="../../schedule/speakers.html">Speakers</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 1 Sessions</p>
+</li>
+  <li class="">
+    <a href="../ostblom/jupyterlab-intro.html">Introduction to JupyterLab</a>
+  </li>
+  <li class="">
+    <a href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">Sharing your teaching materials using Git & GitHub</a>
+  </li>
+  <li class="">
+    <a href="../beuzen/jupyter_book_tutorial.html">Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../walls/a_tour_of_python_packages_for_scientific_computing.html">Python packages for scientific computing</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 2 Sessions</p>
+</li>
+  <li class="">
+    <a href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">Intro to using Canvas Speedgrader with Jupyter</a>
+  </li>
+  <li class="">
+    <a href="../lee/teaching_online_jupyter_days.html">Teaching in an online setting</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Day 3 Sessions</p>
+</li>
+  <li class="active">
+    <a href="">Jupyter and QuantEcon</a>
+  </li>
+  <li class="">
+    <a href="../heagy/widgets-and-dashboards.html">Interactive exploration with Jupyter widgets and dashboards</a>
+  </li>
+  <li class="">
+    <a href="../boyce/interactive_online_course.html">Building an Interactive Online Course</a>
+  </li>
+  <li class="">
+    <a href="../kolhatkar/language-models-with-Jupyter.html">Computational linguistics with Jupyter</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Code of Conduct</p>
+</li>
+  <li class="">
+    <a href="../../CODE_OF_CONDUCT.html">Code of Conduct for Jupyterdays</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/wu/Jupyter_and_QuantEcon.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/wu/Jupyter_and_QuantEcon.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/wu/Jupyter_and_QuantEcon.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#about-quantecon" class="nav-link">About QuantEcon</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#quantecon-datascience" class="nav-link">QuantEcon DataScience</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyter-and-quantecon-datascience-lectures" class="nav-link">Jupyter and QuantEcon DataScience Lectures</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#running-the-lectures-with-jupyter" class="nav-link">Running the Lectures with Jupyter</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#writing-updating-lectures" class="nav-link">Writing/Updating Lectures</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#teaching" class="nav-link">Teaching</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#instructor-s-experience" class="nav-link">Instructor’s Experience</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#students-feedback" class="nav-link">Students’ Feedback</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#final-project-showcase" class="nav-link">Final Project Showcase</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter-and-quantecon">
+<h1>Jupyter and QuantEcon<a class="headerlink" href="#jupyter-and-quantecon" title="Permalink to this headline">¶</a></h1>
+<p>Peifan Wu (Postdoc &#64; Vancouver School of Economics, Intructor of ECON323)</p>
+<div class="section" id="about-quantecon">
+<h2>About QuantEcon<a class="headerlink" href="#about-quantecon" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://quantecon.org/">QuantEcon</a> is a nonprofit organization dedicated to improving economic modeling by enhancing computational tools for economists. In particular, it provides three sets of lectures:</p>
+<ul class="simple">
+<li><p>QuantEcon with Python</p>
+<ul>
+<li><p>Basic: Introductory</p></li>
+<li><p>Advanced: Tools in (macro)economic Research</p></li>
+</ul>
+</li>
+<li><p>QuantEcon with Julia</p></li>
+<li><p><strong>QuantEcon DataScience</strong></p></li>
+</ul>
+<div class="section" id="quantecon-datascience">
+<h3>QuantEcon DataScience<a class="headerlink" href="#quantecon-datascience" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://datascience.quantecon.org/">QuantEcon DataScience</a> presents lectures on (Python) programming, data science, and economics.</p>
+<ul class="simple">
+<li><p>Consists of different parts</p>
+<ul>
+<li><p><a class="reference external" href="https://datascience.quantecon.org/python_fundamentals/">Python Fundamentals</a>: Basic operations, collections, control flow, functions, etc.</p></li>
+<li><p><a class="reference external" href="https://datascience.quantecon.org/scientific/">Scientific Computing</a>: Brief intro to Numpy and Scipy; Optimizations; Basic Applications in Economics</p></li>
+<li><p><a class="reference external" href="https://datascience.quantecon.org/pandas/">Pandas</a>: Playing around with Pandas DataFrames</p></li>
+<li><p><a class="reference external" href="https://datascience.quantecon.org/applications/">Applications</a>: Case studies. More advanced techniques in visualization; More statistical methods and machine learning in Economics</p></li>
+</ul>
+</li>
+<li><p>Taught in various places</p>
+<ul>
+<li><p>Utilize all the course contents: UBC, Huazhong University of Science and Technology</p></li>
+<li><p>Partly used: 5+ schools around the world (NYU, PennState, Peking-HSBC Business School, NUS)</p></li>
+</ul>
+</li>
+<li><p>Good Resource for Self-study</p>
+<ul>
+<li><p>Lectures in the form of Jupyter notebooks <a class="reference external" href="https://github.com/QuantEcon/quantecon-notebooks-datascience.git">Github Repository</a></p></li>
+<li><p><a class="reference external" href="https://discourse.quantecon.org/">Discourse forum</a> for Q&amp;A</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="jupyter-and-quantecon-datascience-lectures">
+<h2>Jupyter and QuantEcon DataScience Lectures<a class="headerlink" href="#jupyter-and-quantecon-datascience-lectures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="running-the-lectures-with-jupyter">
+<h3>Running the Lectures with Jupyter<a class="headerlink" href="#running-the-lectures-with-jupyter" title="Permalink to this headline">¶</a></h3>
+<p>We offer several options to run the lectures:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://datascience.quantecon.org/introduction/local_install.html">Local Installation</a> (<em>not recommended</em>) running the notebooks offline and locally</p></li>
+<li><p>Running on the cloud, with NBGitPuller(https://github.com/jupyterhub/nbgitpuller) fetching the latest version of the notebooks</p>
+<ul>
+<li><p>Google Colab</p></li>
+<li><p><a class="reference external" href="https://ubc.syzygy.ca/">ubc.syzygy.ca</a></p></li>
+<li><p><a class="reference external" href="https://pims.syzygy.ca/">pims.syzygy.ca</a></p></li>
+<li><p>We can help setup Jupyter Hubs if people want to teach with this material</p></li>
+</ul>
+</li>
+</ul>
+<p>(Demo: Navigation Bar)</p>
+<p>Advantages:</p>
+<ul class="simple">
+<li><p>A uniform environment saves teaching time from software installation</p></li>
+<li><p>In-class demonstrations can be easily shared and fully replicated by the students</p></li>
+</ul>
+</div>
+<div class="section" id="writing-updating-lectures">
+<h3>Writing/Updating Lectures<a class="headerlink" href="#writing-updating-lectures" title="Permalink to this headline">¶</a></h3>
+<p>We write the lectures with <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code>(rst) file format. For webpage formatting, we include custom environments (<code class="docutils literal notranslate"><span class="pre">warning</span></code>, <code class="docutils literal notranslate"><span class="pre">exercise</span></code>, etc).</p>
+<p>Then the <a class="reference external" href="https://jupinx.quantecon.org/">Jupinx</a> tool converts <code class="docutils literal notranslate"><span class="pre">rst</span></code> files into a website via Jupyter Notebooks. The name of <a class="reference external" href="https://jupinx.quantecon.org/">Jupinx</a> comes from Jupyter + Sphinx.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupinx.quantecon.org/">Jupinx</a> generates several versions of notebooks: original vs executed, website vs local ones</p></li>
+<li><p>WYSIWYG</p></li>
+<li><p>The source files are synchronized from Github repositories, and compilations are on AWS clusters.</p></li>
+</ul>
+<p>For web-based data, we cache the data we need on AWS bucket.</p>
+<ul class="simple">
+<li><p>Fetching data online depends on the stability of the API, and the Internet. Not ideal for teaching.</p></li>
+<li><p>Some data are relatively large and takes time for the Jupyter notebook to download.</p></li>
+<li><p>Easy and consistent to maintain.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="teaching">
+<h2>Teaching<a class="headerlink" href="#teaching" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instructor-s-experience">
+<h3>Instructor’s Experience<a class="headerlink" href="#instructor-s-experience" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Code and execute in class, immediate feedback from the students</p></li>
+<li><p>Students vary in programming background. Skip the hardest steps…</p></li>
+<li><p>Explain in detail the meaning of the codes, and do variations</p></li>
+<li><p>Remote teaching through Canvas is slick!</p></li>
+</ul>
+</div>
+<div class="section" id="students-feedback">
+<h3>Students’ Feedback<a class="headerlink" href="#students-feedback" title="Permalink to this headline">¶</a></h3>
+<p>(Mean 4.5/5.0, IM 4.7/5.0 – not bad!) The students love the comprehensive selection of the topics and the inter-discipline course material. The setting of this course is perfect for online teaching during COVID-19 as well.</p>
+<p>Feedback and comments:</p>
+<ul class="simple">
+<li><p><em>It touches too many topic without spending sufficient time on each of them</em></p>
+<ul>
+<li><p>We aim at an introductory course that covers a wide range of topics</p></li>
+<li><p>We don’t require previous knowledge on machine learning</p></li>
+</ul>
+</li>
+<li><p><em>Focus on the machine learning portion</em></p>
+<ul>
+<li><p>This course is more about economics</p></li>
+<li><p>Maybe machine learning in data science programs?</p></li>
+</ul>
+</li>
+<li><p><em>This class would greatly benefit from a flipped class format</em></p>
+<ul>
+<li><p>Instead of going through the lectures one by one, we can put more course material for reading and give interactive coding sessions</p></li>
+<li><p>More interactive options?</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="final-project-showcase">
+<h3>Final Project Showcase<a class="headerlink" href="#final-project-showcase" title="Permalink to this headline">¶</a></h3>
+<p>The students are supposed to work on a <a class="reference external" href="https://github.com/ubcecon/ECON323_2020/blob/master/final_project.md">final project</a> at the end of the semester and we showcase their projects <a class="reference external" href="https://datascience.quantecon.org/projects.html">here</a> with their permissions.</p>
+<ul class="simple">
+<li><p>Resume building, advertising, cross-reference…</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../lee/teaching_online_jupyter_days.html" title="previous page">Teaching in an online setting</a>
+    <a class='right-next' id="next-link" href="../heagy/widgets-and-dashboards.html" title="next page">Interactive exploration with widgets and dashboards</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
