@@ -298,19 +298,54 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-options">
+   Course Options
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#course-examples">
    Course Examples
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#course-options">
-   Course Options
+  <a class="reference internal nav-link" href="#pre-requisites">
+   Pre Requisites
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#setup">
    Setup
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-interactive-components">
+   Setting up the Interactive Components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meta-json">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       meta.json
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requirement-txt">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       requirement.txt
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-a-binder">
+     Build a Binder
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repository-structure">
@@ -351,10 +386,10 @@
 <h1>How to Build an Interactive Course<a class="headerlink" href="#how-to-build-an-interactive-course" title="Permalink to this headline">¶</a></h1>
 <p>Using an open source framework created by SpaCy developer <a class="reference external" href="https://github.com/ines">Ines Montani</a></p>
 <h1>Table of Contents<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Learning-Outcomes" data-toc-modified-id="Learning-Outcomes-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Learning Outcomes</a></span></li><li><span><a href="#Course-Examples" data-toc-modified-id="Course-Examples-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Course Examples</a></span></li><li><span><a href="#Course-Options" data-toc-modified-id="Course-Options-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Course Options</a></span></li><li><span><a href="#Setup" data-toc-modified-id="Setup-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Setup</a></span></li><li><span><a href="#Repository-Structure" data-toc-modified-id="Repository-Structure-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Repository Structure</a></span></li><li><span><a href="#Demo---How-to-make-it-work" data-toc-modified-id="Demo---How-to-make-it-work-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Demo - How to make it work</a></span></li><li><span><a href="#Sneak-Peak:-A-brief--look-at-what-I've-been-working-on:" data-toc-modified-id="Sneak-Peak:-A-brief--look-at-what-I've-been-working-on:-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Sneak Peak: A brief  look at what I've been working on:</a></span></li><li><span><a href="#Resources" data-toc-modified-id="Resources-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Resources</a></span></li><li><span><a href="#Thank-you!" data-toc-modified-id="Thank-you!-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Thank you!</a></span></li></ul></div><div class="section" id="introduction">
+<div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Learning-Outcomes" data-toc-modified-id="Learning-Outcomes-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Learning Outcomes</a></span></li><li><span><a href="#Course-Options" data-toc-modified-id="Course-Options-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Course Options</a></span></li><li><span><a href="#Course-Examples" data-toc-modified-id="Course-Examples-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Course Examples</a></span></li><li><span><a href="#Pre-Requisites" data-toc-modified-id="Pre-Requisites-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Pre Requisites</a></span></li><li><span><a href="#Setup" data-toc-modified-id="Setup-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Setup</a></span></li><li><span><a href="#Setting-up-the-Interactive-Components" data-toc-modified-id="Setting-up-the-Interactive-Components-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Setting up the Interactive Components</a></span><ul class="toc-item"><li><span><a href="#meta.json" data-toc-modified-id="meta.json-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span><code>meta.json</code></a></span></li><li><span><a href="#requirement.txt" data-toc-modified-id="requirement.txt-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span><code>requirement.txt</code></a></span></li><li><span><a href="#Build-a-Binder" data-toc-modified-id="Build-a-Binder-7.3"><span class="toc-item-num">7.3&nbsp;&nbsp;</span>Build a Binder</a></span></li></ul></li><li><span><a href="#Repository-Structure" data-toc-modified-id="Repository-Structure-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Repository Structure</a></span></li><li><span><a href="#Demo---How-to-make-it-work" data-toc-modified-id="Demo---How-to-make-it-work-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Demo - How to make it work</a></span></li><li><span><a href="#Sneak-Peak:-A-brief--look-at-what-I've-been-working-on:" data-toc-modified-id="Sneak-Peak:-A-brief--look-at-what-I've-been-working-on:-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Sneak Peak: A brief  look at what I've been working on:</a></span></li><li><span><a href="#Resources" data-toc-modified-id="Resources-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Resources</a></span></li><li><span><a href="#Thank-you!" data-toc-modified-id="Thank-you!-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Thank you!</a></span></li></ul></div><div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p><img alt="" src="../../_images/wave.png" /></p>
-<p>Hello! My name is Hayley Boyce. I work for the University of British Columbia’s Master of Data Science program as an Educational Specialist. I did my undergraduate degree in Applied mathematics and I am an alumna of the Master of Data Science program.</p>
+<p>Hello! My name is Hayley Boyce. I work for the University of British Columbia’s Master of Data Science program as an Education Specialist. I did my undergraduate degree in Applied mathematics and I am an alumna of the Master of Data Science program.</p>
 <p>For the last 8 months I have been working with an open source platform where you can built your own online interactive course. This course was developed by SpaCy developer <a class="reference external" href="https://github.com/ines">Ines Montani</a>.</p>
 </div>
 <div class="section" id="learning-outcomes">
@@ -369,17 +404,6 @@
 <li><p>See how it can be scaled to larger courses.</p></li>
 </ol>
 </div>
-<div class="section" id="course-examples">
-<h2>Course Examples<a class="headerlink" href="#course-examples" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://course.spacy.io/en">Advanced NLP with SpaCy</a></p></li>
-<li><p><a class="reference external" href="https://r-bootcamp.netlify.app/">R Bootcamp</a> - by Ted Laderas</p></li>
-<li><p><a class="reference external" href="https://noamross.github.io/gams-in-r-course/">Generalized Additive Models in R</a> - by Noam Ross</p></li>
-<li><p><a class="reference external" href="https://supervised-ml-course.netlify.app/">Supervised Machine Learning: Case Studies in R!</a> - by Julia Silge</p></li>
-<li><p><a class="reference external" href="https://guide.allennlp.org/your-first-model#7">Allen NLP Guide</a> (inspired by this framework)</p></li>
-<li><p>And coming September 22, 2020 <a class="reference external" href="https://mcl-dsci-011-programming-in-python.netlify.app/">Programing in Python for Data Science</a> by Tiffany Timbers, Mike Gelbart and Hayley Boyce</p></li>
-</ul>
-</div>
 <div class="section" id="course-options">
 <h2>Course Options<a class="headerlink" href="#course-options" title="Permalink to this headline">¶</a></h2>
 <p>Currently this platform is available in 2 programming languages:</p>
@@ -387,108 +411,64 @@
 <li><p><a class="reference external" href="https://github.com/ines/course-starter-python">Python</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ines/course-starter-r">R</a></p></li>
 </ul>
-<p>Of course this course can be used for other non programming subjects but the interactivity is limited to multiple choice questions only.</p>
+<p>Of course this platform can be used for other non programming subjects but the interactivity is limited to multiple choice questions only.</p>
+</div>
+<div class="section" id="course-examples">
+<h2>Course Examples<a class="headerlink" href="#course-examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://course.spacy.io/en">Advanced NLP with SpaCy</a></p></li>
+<li><p><a class="reference external" href="https://r-bootcamp.netlify.app/">R Bootcamp</a> - by Ted Laderas</p></li>
+<li><p><a class="reference external" href="https://noamross.github.io/gams-in-r-course/">Generalized Additive Models in R</a> - by Noam Ross</p></li>
+<li><p><a class="reference external" href="https://supervised-ml-course.netlify.app/">Supervised Machine Learning: Case Studies in R!</a> - by Julia Silge</p></li>
+<li><p>And coming September 22, 2020 <a class="reference external" href="https://mcl-dsci-011-programming-in-python.netlify.app/">Programing in Python for Data Science</a> by Tiffany Timbers, Mike Gelbart and Hayley Boyce</p></li>
+</ul>
+</div>
+<div class="section" id="pre-requisites">
+<h2>Pre Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Knowledge in GitHub</p></li>
+<li><p>Familiarity with <code class="docutils literal notranslate"><span class="pre">.md</span></code> files</p></li>
+<li><p>A chosen language of R or Python</p></li>
+</ul>
 </div>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Docker compose for Python</p></li>
+<li><p><a class="reference external" href="https://github.com/ines/course-starter-python#-quickstart">Quick Start in Readme</a></p></li>
 <li><p>Python Course <a class="reference external" href="https://ines.github.io/course-starter-python/">Documentation</a></p></li>
-<li><p>Installation of Node and Gatsby</p></li>
+<li><p>Docker compose for Python</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If you have any issues with Python setup, I recommend looking in the issue of the <a class="reference external" href="https://github.com/ines/course-starter-python/issues">course-starter-python repo</a> or even referring to her <a class="reference external" href="https://github.com/ines/spacy-course">SpaCy course repo</a>.</p>
 </div>
 </div>
+<div class="section" id="setting-up-the-interactive-components">
+<h2>Setting up the Interactive Components<a class="headerlink" href="#setting-up-the-interactive-components" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="meta-json">
+<h3><code class="docutils literal notranslate"><span class="pre">meta.json</span></code><a class="headerlink" href="#meta-json" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>This is where you specify the repository that will be use for the binder</p></li>
+<li><p>Course information and links</p></li>
+</ul>
+</div>
+<div class="section" id="requirement-txt">
+<h3><code class="docutils literal notranslate"><span class="pre">requirement.txt</span></code><a class="headerlink" href="#requirement-txt" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>This needs to be changed on the branch you specified in the <code class="docutils literal notranslate"><span class="pre">meta.json</span></code> file</p></li>
+</ul>
+</div>
+<div class="section" id="build-a-binder">
+<h3>Build a Binder<a class="headerlink" href="#build-a-binder" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Build a binder for your branch</p></li>
+</ul>
+</div>
+</div>
 <div class="section" id="repository-structure">
 <h2>Repository Structure<a class="headerlink" href="#repository-structure" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>course-starter-python
-├── .gitignore          
-├── .prettierrc          
-├── LICENSE             
-├── README.md            
-├── docker-compose.yml  
-├── dockerfile          
-├── gatsby-browser.js    
-├── gatsby-config.js    
-├── gatsby-node.js      
-├── main.js
-├── meta.json         
-├── package-lock.json
-├── package.json
-├── theme.sass          
-│   │
-├── binder   
-|   └── requirements.txt     
-│   │
-├── chapter               
-|   ├── module0.md
-|   ├── module1.md
-|   ├── ...
-|   └── moduleN.md
-│   │    
-├── data                     
-    └── exercise-data.csv
-│   │
-├── exercises            
-|   ├── exercise_01.py
-|   ├── solution_01.py
-|   └── test_01.py
-│   │
-├── slides              
-|   ├── module0_00.md
-|   ├── ...
-|   └── moduleN_nn.md
-│   │
-├── src                 
-|   ├── markdown.js
-|   ├── context.js
-|   ├── components              
-|   |   ├── button.js
-|   |   ├── choice.js
-|   |   ├── code.js
-|   |   ├── exercise.js
-|   |   ├── hint.js
-|   |   ├── juniper.js
-|   |   ├── layout.js
-|   |   ├── link.js
-|   |   ├── seo.js
-|   |   ├── slides.js
-|   |   └── typography.js
-|   |   |   
-|   ├── pages              
-|   |   └── index.js
-|   |   |
-|   ├── styles               
-|   |   ├── button.module.sass
-|   |   ├── choice.module.sass
-|   |   ├── code.module.sass
-|   |   ├── exercise.module.sass
-|   |   ├── hint.module.sass
-|   |   ├── index.module.sass
-|   |   ├── index.sass
-|   |   ├── layout.module.sass
-|   |   ├── link.module.sass
-|   |   ├── reveal.css
-|   |   ├── slides.module.sass
-|   |   └── typography.module.sass
-|   |   |
-    └── templates              
-        └── chapter.js
-|   |   |
-└── static               
-    ├── icon.png
-    ├── icon_check.svg
-    ├── icon_slides.svg
-    ├── logo.svg
-    ├── profile.jpg
-    └── social.jpg
-
-</pre></div>
-</div>
-<p>We are going to concentrate on these ones:</p>
 <ul class="simple">
+<li><p>There are a lot of folders and files but the main ones we are going to focus on are:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chapters/</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">slides/</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exercises/</span></code></p></li>
@@ -496,7 +476,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">static/</span></code></p></li>
 <li><p>Important things I don’t have time to talk about but that are explained in the documentation:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">meta.json</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme.sass</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">src/</span></code></p></li>
 </ul>
