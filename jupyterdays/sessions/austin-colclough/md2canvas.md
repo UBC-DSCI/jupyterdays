@@ -293,7 +293,3 @@ We are currently looking for alpha testers! If you see this as being useful for 
 * [Fall term work/learn for graduate or undergraduate students](https://drive.google.com/file/d/1VOEqOtkfVxsU885GiH_tGRPOihzoPzwG/view?usp=sharing)
 
 * [Apply at the worklearn program site](https://students.ubc.ca/career/ubc-experiences/work-learn-program)
-
-```{code-cell} ipython3
-
-```

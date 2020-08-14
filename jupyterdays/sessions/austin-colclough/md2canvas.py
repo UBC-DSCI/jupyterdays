@@ -288,5 +288,3 @@
 # * [Fall term work/learn for graduate or undergraduate students](https://drive.google.com/file/d/1VOEqOtkfVxsU885GiH_tGRPOihzoPzwG/view?usp=sharing)
 #
 # * [Apply at the worklearn program site](https://students.ubc.ca/career/ubc-experiences/work-learn-program)
-
-# %%
