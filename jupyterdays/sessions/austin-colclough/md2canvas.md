@@ -20,7 +20,7 @@ toc-showmarkdowntxt: true
 
 +++
 
-## Introduction
+## Part I Introduction
 
 +++
 
@@ -35,11 +35,12 @@ toc-showmarkdowntxt: true
 
 ### A brief history of the internet
 
-* [Eben Moglen](https://en.wikipedia.org/wiki/Eben_Moglen): coined the term "low-friction collaboration"
-
-* Jupyter/opensource/github: very low friction
+* [Eben Moglen](https://en.wikipedia.org/wiki/Eben_Moglen): coined the term "low-friction collaboration".  Collaboration is a human instinct, just need to remove obstacles preventing it.
 
 * Canvas: Very high friction (by design and necessity)
+* Jupyter/opensource/github: very low friction
+
+
 
 
 ### OCESE and top-down learning for open source computing
@@ -52,7 +53,7 @@ toc-showmarkdowntxt: true
 
 ### Project goal
 
-* collaborate on quizzes using jupyter/[jupytext](https://jupytext.readthedocs.io/en/latest/introduction.html) in a low friction environment
+* collaborate on constructing quizzes using jupyter/[jupytext](https://jupytext.readthedocs.io/en/latest/introduction.html) in a low friction environment
 
 * deploy on canvas for testing and grading
 
@@ -66,15 +67,21 @@ toc-showmarkdowntxt: true
 
 - quizzes stay on github (private repo if needed), canvas is read-only
 
-```{code-cell} ipython3
+### The canvas restful api
 
-```
+* [Representational state transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
+  * [canvas api reference](https://canvas.instructure.com/doc/api/quizzes.html)
 
-# Part II
+  * [canvas live api](https://canvas.ubc.ca/doc/api/live#!/quizzes.json/create_quiz_post_2)
 
-## Demonstration of md2canvas
+### Coming
 
+* Parameterized problems with [papermill_jupytext](https://github.com/mwouts/papermill_jupytext)
+
++++
+
+## Part II demo
 ### What is it?
 
 [md2canvas](https://github.com/eoas-ubc/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
@@ -220,7 +227,7 @@ We are currently looking for alpha testers! If you see this as being useful for 
 
     +++ {"ctype": "answer", "quesnum": 3}
 
-    The image included in this question is automatically updloaded to Canvas when md2canvas is run. This means that if you can see it when you preview the markdown or Jupyter Notebook, you will see it on Canvas as well.
+    The image included in this question is automatically uploaded to Canvas when md2canvas is run. This means that if you can see it when you preview the markdown or Jupyter Notebook, you will see it on Canvas as well.
     ```
     ![Q3](media/Q3_jn.PNG)
     ![Q2](media/Q3_cu.PNG)
