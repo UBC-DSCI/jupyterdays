@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Markdown to canvas &#8212; UBC JupyterDays 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Schedule
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day1.html">
+   Day 1: Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day2.html">
+   Day 2: Pedagogy and Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day3.html">
+   Day 3: New Developments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/speakers.html">
+   Speakers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 1 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ostblom/jupyterlab-intro.html">
+   Introduction to JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">
+   Sharing your teaching materials using Git &amp; GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../beuzen/jupyter_book_tutorial.html">
+   Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../walls/a_tour_of_python_packages_for_scientific_computing.html">
+   Python packages for scientific computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 2 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">
+   Intro to using Canvas Speedgrader with Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lee/teaching_online_jupyter_days.html">
+   Teaching in an Online Setting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://firas.moosvi.com/books/active-learning-technologies/">
+   Active learning with Jupyter Book
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gelbart/ds-pedagogies.html">
+   Effective pedagogies for teaching data science
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 3 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wu/Jupyter_and_QuantEcon.html">
+   Jupyter and QuantEcon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../heagy/widgets-and-dashboards.html">
+   Interactive exploration with Jupyter widgets and dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../boyce/interactive_online_course.html">
+   Building an Interactive Online Course
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../kolhatkar/language-models-with-Jupyter.html">
+   Computational linguistics with Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Code of Conduct
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html">
+   Code of Conduct for Jupyterdays
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/sessions/austin-colclough/md2canvas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/austin-colclough/md2canvas.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/austin-colclough/md2canvas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/austin-colclough/md2canvas.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-i-introduction">
+   Part I Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shared-presentation">
+     Shared presentation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-big-picture">
+   The big picture
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-brief-history-of-the-internet">
+     A brief history of the internet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ocese-and-top-down-learning-for-open-source-computing">
+     OCESE and top-down learning for open source computing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#md2canvas">
+   md2canvas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-goal">
+     Project goal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-typical-quiz">
+     A typical quiz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-canvas-rest-api">
+     The canvas REST api
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coming-next">
+     Coming next
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-ii-demo">
+   Part II demo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-it">
+     What is it?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-basic-commands">
+     The Basic Commands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quiz-details">
+     Quiz Details
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#we-re-hiring">
+   We’re hiring!
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="markdown-to-canvas">
+<h1>Markdown to canvas<a class="headerlink" href="#markdown-to-canvas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="part-i-introduction">
+<h2>Part I Introduction<a class="headerlink" href="#part-i-introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="shared-presentation">
+<h3>Shared presentation<a class="headerlink" href="#shared-presentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Part 1: Phil Austin (Associate professor, EOAS) – set the scene</p></li>
+<li><p>Part 2: Mara Colclough (4th year honours computer science – demo)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-big-picture">
+<h2>The big picture<a class="headerlink" href="#the-big-picture" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-brief-history-of-the-internet">
+<h3>A brief history of the internet<a class="headerlink" href="#a-brief-history-of-the-internet" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eben_Moglen">Eben Moglen</a>: coined the term “low-friction collaboration”.  Collaboration is a human instinct, just need to remove obstacles preventing it.</p></li>
+<li><p>Canvas: Very high friction (by design and necessity)</p></li>
+<li><p>Jupyter/opensource/github: very low friction</p></li>
+</ul>
+</div>
+<div class="section" id="ocese-and-top-down-learning-for-open-source-computing">
+<h3>OCESE and top-down learning for open source computing<a class="headerlink" href="#ocese-and-top-down-learning-for-open-source-computing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://eoas-ubc.github.io/">Open-source computing for earth science education</a></p></li>
+<li><p><a class="reference external" href="https://github.com/eoas-ubc/eoas_hpc_edu/blob/master/Readme.md">EOAS HPC tutorials</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="md2canvas">
+<h2>md2canvas<a class="headerlink" href="#md2canvas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-goal">
+<h3>Project goal<a class="headerlink" href="#project-goal" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>collaborate on constructing quizzes using jupyter/<a class="reference external" href="https://jupytext.readthedocs.io/en/latest/introduction.html">jupytext</a> in a low friction environment</p></li>
+<li><p>deploy on canvas for testing and grading</p></li>
+</ul>
+</div>
+<div class="section" id="a-typical-quiz">
+<h3>A typical quiz<a class="headerlink" href="#a-typical-quiz" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="midterm_sample/quiz2_2019t1.html"><span class="doc std std-doc">An EOSC 340 quiz</span></a></p></li>
+<li><p>What I want:</p>
+<ul>
+<li><p>single source of truth (one document provides questions/answers with explanations)</p></li>
+<li><p>quizzes stay on github (private repo if needed), canvas is read-only</p></li>
+<li><p>metadata can be added to build quiz database</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="the-canvas-rest-api">
+<h3>The canvas REST api<a class="headerlink" href="#the-canvas-rest-api" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Representational_state_transfer">Representational state transfer</a></p>
+<ul>
+<li><p><a class="reference external" href="https://canvas.instructure.com/doc/api/quizzes.html">canvas api reference</a></p></li>
+<li><p><a class="reference external" href="https://canvas.ubc.ca/doc/api/live#%21/quizzes.json/create_quiz_post_2">canvas live api</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="coming-next">
+<h3>Coming next<a class="headerlink" href="#coming-next" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Parameterized problems with <a class="reference external" href="https://github.com/mwouts/papermill_jupytext">papermill_jupytext</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="part-ii-demo">
+<h2>Part II demo<a class="headerlink" href="#part-ii-demo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-it">
+<h3>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/eoas-ubc/md2canvas">md2canvas</a> is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.</p>
+<p>The documentation is <a class="reference external" href="https://maracieco.github.io/md2canvas/index.html">here</a>.</p>
+<p>md2canvas is currently under development with the main tasks being adding automatic testing using pytest and GitHub Actions (functional but limited), printing the quizzes without answers to paginated PDF using Sphinx (not started), and parameterizing the quizzes so that multiple versions can be generated.</p>
+<p>We are currently looking for alpha testers! If you see this as being useful for your work in any way, please try it out and give us any feedback you have. We are open to suggestions and constructive criticism.</p>
+</div>
+<div class="section" id="the-basic-commands">
+<h3>The Basic Commands<a class="headerlink" href="#the-basic-commands" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>Install the package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">maracieco</span><span class="o">/</span><span class="n">md2canvas</span>
+</pre></div>
+</div>
+</li>
+<li><p>Send a quiz to your canvas course:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md2canvas</span> <span class="n">examples</span><span class="o">/</span><span class="n">demo_quiz</span><span class="o">/</span><span class="n">DemoQuiz</span><span class="o">.</span><span class="n">md</span> <span class="o">-</span><span class="n">f</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">token</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">c</span> <span class="mi">51824</span> <span class="o">-</span><span class="n">u</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">canvas</span><span class="o">.</span><span class="n">ubc</span><span class="o">.</span><span class="n">ca</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>-f provides the path to a file containing your authentication token</p>
+<p>-c provides the course ID</p>
+<p>-u provides the Canvas URL</p>
+<p>-s tells the program to save these three settings in a config file so they aren’t required in the future</p>
+<p>Note: this command won’t actually work, you will need to generate your own token and use your own course ID.</p>
+</li>
+<li><p>Strip the answers from your quiz so it can be distributed to students:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anstrip</span> <span class="n">examples</span><span class="o">/</span><span class="n">demo_quiz</span><span class="o">/</span><span class="n">DemoQuiz</span><span class="o">.</span><span class="n">md</span> <span class="n">examples</span><span class="o">/</span><span class="n">demo_quiz</span><span class="o">/</span><span class="n">DemoQuizStripped</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="quiz-details">
+<h3>Quiz Details<a class="headerlink" href="#quiz-details" title="Permalink to this headline">¶</a></h3>
+<ol>
+<li><p>md2canvas uses the cells and their metadata to parse the questions with their answers and send them to Canvas</p></li>
+<li><p>Here is a simple example question in its pure markdown form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;question&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;question_type&quot;</span><span class="p">:</span> <span class="s2">&quot;multiple_answers_question&quot;</span><span class="p">}</span>
+
+<span class="c1">### Question 1</span>
+<span class="n">Choose</span> <span class="n">the</span> <span class="n">odd</span> <span class="n">numbers</span><span class="o">.</span>
+
+<span class="o">*</span> <span class="mi">1</span>
+<span class="o">*</span> <span class="mi">2</span>
+<span class="o">*</span> <span class="mi">3</span>
+<span class="o">*</span> <span class="mi">4</span>
+<span class="o">*</span> <span class="mi">5</span>
+
+<span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;answer&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="n">Answers</span>
+<span class="o">*</span> <span class="kc">True</span>
+<span class="o">*</span> <span class="kc">False</span>
+<span class="o">*</span> <span class="kc">True</span>
+<span class="o">*</span> <span class="kc">False</span>
+<span class="o">*</span> <span class="kc">True</span>
+
+<span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;answer&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">answers</span> <span class="n">question</span><span class="o">.</span> <span class="n">On</span> <span class="n">Canvas</span><span class="p">,</span> <span class="n">it</span> <span class="n">shows</span> <span class="n">up</span> <span class="k">with</span> <span class="n">square</span> <span class="n">boxes</span> <span class="n">beside</span> <span class="n">the</span> <span class="n">answers</span> <span class="ow">and</span> <span class="n">allows</span> <span class="n">the</span> <span class="n">quiz</span> <span class="n">taker</span> <span class="n">to</span> <span class="n">select</span> <span class="n">multiple</span> <span class="n">answers</span><span class="o">.</span> <span class="n">The</span> <span class="n">truth</span> <span class="n">values</span> <span class="n">of</span> <span class="n">the</span> <span class="n">different</span> <span class="n">answers</span> <span class="n">match</span> <span class="n">up</span> <span class="n">one</span> <span class="n">to</span> <span class="n">one</span><span class="o">.</span> <span class="n">A</span> <span class="n">similar</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">question</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">multiple</span> <span class="o">*</span><span class="n">choice</span><span class="o">*</span> <span class="n">question</span><span class="p">,</span> <span class="n">which</span> <span class="n">only</span> <span class="n">allows</span> <span class="n">one</span> <span class="n">answer</span> <span class="n">to</span> <span class="n">be</span> <span class="n">chosen</span> <span class="ow">and</span> <span class="n">has</span> <span class="n">circles</span> <span class="n">beside</span> <span class="n">the</span> <span class="n">answers</span> <span class="n">on</span> <span class="n">Canvas</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>And here is a screenshot of it in a Jupyter Notebook:</p>
+<p><img alt="Q1" src="../../_images/Q1_jn.PNG" /></p>
+<p>In general, there will be one question cell that contains all the info necessary to understand and solve the question. It will be followed by some answer cells. The first one will be parsed for answer data and must follow specific formatting. The following cells can be anything, so they can be used as descriptions of the answers or code cells for computation or anything really. All of these cells will be stripped by anstrip as long as they are tagged as answer cells in the metadata.</p>
+<p>When this question is part of a quiz that is pushed to Canvas, it looks like this for the student during the quiz:</p>
+<p><img alt="Q1" src="../../_images/Q1_cu.PNG" /></p>
+<p>And like this once the quiz has been graded:</p>
+<p><img alt="Q1" src="../../_images/Q1_cg.PNG" /></p>
+</li>
+<li><p>Here is another example that is a matching question, notice that it sets an extra field in the metadata (points_possible) that changes the number of points the question is worth:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;question&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;question_type&quot;</span><span class="p">:</span> <span class="s2">&quot;matching_question&quot;</span><span class="p">,</span> <span class="s2">&quot;points_possible&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+
+<span class="c1">### Question 2</span>
+<span class="n">Match</span> <span class="n">the</span> <span class="n">same</span> <span class="n">words</span> <span class="n">to</span> <span class="n">each</span> <span class="n">other</span><span class="o">.</span>
+
+<span class="n">Left</span>
+
+<span class="o">*</span> <span class="n">apple</span>
+<span class="o">*</span> <span class="n">bat</span>
+<span class="o">*</span> <span class="n">cat</span>
+<span class="o">*</span> <span class="n">dog</span>
+
+<span class="n">Right</span>
+
+<span class="o">*</span> <span class="n">frog</span>
+<span class="o">*</span> <span class="n">cat</span>
+<span class="o">*</span> <span class="n">bat</span>
+<span class="o">*</span> <span class="n">exam</span>
+<span class="o">*</span> <span class="n">apple</span>
+<span class="o">*</span> <span class="n">dog</span>
+
+<span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;answer&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="n">Matchings</span>
+
+<span class="o">*</span> <span class="mi">5</span>
+<span class="o">*</span> <span class="mi">3</span>
+<span class="o">*</span> <span class="mi">2</span>
+<span class="o">*</span> <span class="mi">6</span>
+
+<span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;ctype&quot;</span><span class="p">:</span> <span class="s2">&quot;answer&quot;</span><span class="p">,</span> <span class="s2">&quot;quesnum&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="n">The</span> <span class="n">goal</span> <span class="n">of</span> <span class="n">this</span> <span class="n">question</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">find</span> <span class="n">the</span> <span class="n">matching</span> <span class="n">words</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">the</span> <span class="n">first</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">left</span> <span class="nb">list</span> <span class="p">(</span><span class="n">apple</span><span class="p">)</span> <span class="n">appears</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">fifth</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="nb">list</span><span class="o">.</span> <span class="n">Because</span> <span class="n">of</span> <span class="n">this</span><span class="p">,</span> <span class="n">the</span> <span class="n">first</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">answer</span> <span class="n">key</span> <span class="ow">is</span> <span class="mf">5.</span> <span class="n">Note</span> <span class="n">also</span> <span class="n">that</span> <span class="n">there</span> <span class="n">are</span> <span class="n">some</span> <span class="n">extra</span> <span class="n">answers</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="nb">list</span> <span class="n">which</span> <span class="n">act</span> <span class="k">as</span> <span class="n">distractors</span> <span class="ow">and</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">a</span> <span class="n">pairing</span><span class="o">.</span> <span class="n">In</span> <span class="n">order</span> <span class="k">for</span> <span class="n">these</span> <span class="n">questions</span> <span class="n">to</span> <span class="n">be</span> <span class="n">parsed</span> <span class="n">correctly</span><span class="p">,</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">right</span> <span class="nb">list</span> <span class="n">must</span> <span class="n">be</span> <span class="n">at</span> <span class="n">least</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">left</span> <span class="nb">list</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><img alt="Q2" src="../../_images/Q2_jn.PNG" />
+<img alt="Q2" src="../../_images/Q2_cu.PNG" />
+<img alt="Q2" src="../../_images/Q2_cu_options.PNG" />
+<img alt="Q2" src="../../_images/Q2_cg.PNG" /></p>
+</li>
+<li><p>This is a simpler type of question called a short answer question:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+++ {&quot;ctype&quot;: &quot;question&quot;, &quot;quesnum&quot;: 3, &quot;question_type&quot;: &quot;short_answer_question&quot;}
+
+### Question 3
+Type one of the words from the following image.
+
+![text](media/captcha.png)
+
++++ {&quot;ctype&quot;: &quot;answer&quot;, &quot;quesnum&quot;: 3}
+
+Answers
+* overlooks
+* inquiry
+
++++ {&quot;ctype&quot;: &quot;answer&quot;, &quot;quesnum&quot;: 3}
+
+The image included in this question is automatically uploaded to Canvas when md2canvas is run. This means that if you can see it when you preview the markdown or Jupyter Notebook, you will see it on Canvas as well.
+</pre></div>
+</div>
+<p><img alt="Q3" src="../../_images/Q3_jn.PNG" />
+<img alt="Q2" src="../../_images/Q3_cu.PNG" />
+<img alt="Q2" src="../../_images/Q3_cg.PNG" /></p>
+</li>
+<li><p>Finally, this question shows off LaTeX:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+++ {&quot;ctype&quot;: &quot;question&quot;, &quot;quesnum&quot;: 4, &quot;question_type&quot;: &quot;numerical_question&quot;}
+
+### Question 4
+Evaluate the expression $$\frac{\pi r^2}{2}$$ where $r = 2$?
+
+Give your answer to three decimal places.
+
++++ {&quot;ctype&quot;: &quot;answer&quot;, &quot;quesnum&quot;: 4}
+
+* 6.283, 3: precision_answer
+
++++ {&quot;ctype&quot;: &quot;answer&quot;, &quot;quesnum&quot;: 4}
+
+Check this with python:
+
+```{code-cell} ipython3
+:ctype: answer
+:quesnum: 4
+
+import math
+r = 2
+ans = math.pi * r ** 2 / 2
+print(f&quot;{ans:.3f}&quot;)
+np.testing.assert_almost_equal(ans,6.383,decimals=3)
+```
+</pre></div>
+</div>
+<p><img alt="Q4" src="../../_images/Q4_jn.PNG" />
+<img alt="Q2" src="../../_images/Q4_cu.PNG" />
+<img alt="Q2" src="../../_images/Q4_cg.PNG" /></p>
+<p>In the future, we envision that md2canvas will be able to compute the answers just based off the code cells.</p>
+</li>
+<li><p>Other question types also exist. There are examples of all of them in md2canvas/examples/sample_quiz/SampleQuiz.md.</p></li>
+<li><p>We are now testing this code! The tests (found <a class="reference external" href="https://github.com/maracieco/md2canvas/actions">here</a>) run on every change, so the validity is maintained.</p></li>
+<li><p>Again, we are looking for alpha testers. Any feedback is greatly appreciated!</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The combination of jupyter/jupytext works well for quiz creation.<br />
+Quizzes can be uploaded to github, tested with github actions, printed to pdfs, and
+deployed on canvas.</p></li>
+<li><p>The canvas REST api works, is (relatively) easy to use from python, with some quirks.</p></li>
+<li><p><a class="reference external" href="https://github.com/mwouts/papermill_jupytext">papermill_jupytext</a> opens up the possibility of distributing different quizzes to each student, generate many different practice problems, etc.</p></li>
+</ul>
+</div>
+<div class="section" id="we-re-hiring">
+<h2>We’re hiring!<a class="headerlink" href="#we-re-hiring" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://drive.google.com/file/d/1VOEqOtkfVxsU885GiH_tGRPOihzoPzwG/view?usp=sharing">Fall term work/learn for graduate or undergraduate students</a></p></li>
+<li><p><a class="reference external" href="https://students.ubc.ca/career/ubc-experiences/work-learn-program">Apply at the worklearn program site</a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
