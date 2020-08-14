@@ -60,13 +60,14 @@
 #
 # * [An EOSC 340 quiz](midterm_sample/quiz2_2019t1.md)
 #
-# * What I want
+# * What I want:
 #
-# - single source of truth (one document provides questions/answers with explanations)
+#   - single source of truth (one document provides questions/answers with explanations)
+#   - quizzes stay on github (private repo if needed), canvas is read-only
+#   - metadata can be added to build quiz database  
+#   
 #
-# - quizzes stay on github (private repo if needed), canvas is read-only
-#
-# ### The canvas restful api
+# ### The canvas REST api
 #
 # * [Representational state transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
 #
@@ -74,7 +75,7 @@
 #
 #   * [canvas live api](https://canvas.ubc.ca/doc/api/live#!/quizzes.json/create_quiz_post_2)
 #
-# ### Coming
+# ### Coming next
 #
 # * Parameterized problems with [papermill_jupytext](https://github.com/mwouts/papermill_jupytext)
 
@@ -82,7 +83,7 @@
 # ## Part II demo
 # ### What is it?
 #
-# [md2canvas](https://github.com/maracieco/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
+# [md2canvas](https://github.com/eoas-ubc/md2canvas) is a command that can be used to convert your Jupyter Notebook quizzes (in markdown or notebook format) directly to Canvas quizzes, which can then be automatically pushed to your Canvas course. It also has the ability to strip the answers from your quiz so that it is distributable to students and the public.
 #
 # The documentation is [here](https://maracieco.github.io/md2canvas/index.html).
 #
@@ -127,39 +128,29 @@
 # 2. Here is a simple example question in its pure markdown form:
 #
 #     ```
-#     +++ {"ctype": "question", "quesnum": 2, "question_type": "matching_question", "points_possible": 5}
+#     +++ {"ctype": "question", "quesnum": 1, "question_type": "multiple_answers_question"}
 #
-#     ### Question 2
-#     Match the same words to each other.
+#     ### Question 1
+#     Choose the odd numbers.
 #
-#     Left
-#
-#     * apple
-#     * bat
-#     * cat
-#     * dog
-#
-#     Right
-#
-#     * frog
-#     * cat
-#     * bat
-#     * exam
-#     * apple
-#     * dog
-#
-#     +++ {"ctype": "answer", "quesnum": 2}
-#
-#     Matchings
-#
-#     * 5
-#     * 3
+#     * 1
 #     * 2
-#     * 6
+#     * 3
+#     * 4
+#     * 5
 #
-#     +++ {"ctype": "answer", "quesnum": 2}
+#     +++ {"ctype": "answer", "quesnum": 1}
 #
-#     The goal of this question is to find the matching words. For example, the first word in the left list (apple) appears in the fifth position in the right list. Because of this, the first value in the answer key is 5. Note also that there are some extra answers in the right list which act as distractors and do not have a pairing. In order for these questions to be parsed correctly, the length of the right list must be at least the length of the left list.
+#     Answers
+#     * True
+#     * False
+#     * True
+#     * False
+#     * True
+#
+#     +++ {"ctype": "answer", "quesnum": 1}
+#
+#     This is a multiple answers question. On Canvas, it shows up with square boxes beside the answers and allows the quiz taker to select multiple answers. The truth values of the different answers match up one to one. A similar type of question is the multiple *choice* question, which only allows one answer to be chosen and has circles beside the answers on Canvas.
 #     ```
 #
 #     And here is a screenshot of it in a Jupyter Notebook:
@@ -235,9 +226,7 @@
 #
 #     +++ {"ctype": "answer", "quesnum": 3}
 #
-#     The image included in this question is automatically updloaded to Canvas when md2canvas is run. This means that if you can see it when you preview the markdown or Jupyter Notebook, you will see it on Canvas as well.
-#
-#     +++ {"ctype": "question", "quesnum": 4, "question_type": "numerical_question"}
+#     The image included in this question is automatically uploaded to Canvas when md2canvas is run. This means that if you can see it when you preview the markdown or Jupyter Notebook, you will see it on Canvas as well.
 #     ```
 #     ![Q3](media/Q3_jn.PNG)
 #     ![Q2](media/Q3_cu.PNG)
@@ -278,5 +267,26 @@
 #     In the future, we envision that md2canvas will be able to compute the answers just based off the code cells.
 #
 # 6. Other question types also exist. There are examples of all of them in md2canvas/examples/sample_quiz/SampleQuiz.md.
+# 7. We are now testing this code! The tests (found [here](https://github.com/maracieco/md2canvas/actions)) run on every change, so the validity is maintained.
+# 8. Again, we are looking for alpha testers. Any feedback is greatly appreciated!
+#
+# ## Summary
+
+# %% [markdown]
+# * The combination of jupyter/jupytext works well for quiz creation.  
+#   Quizzes can be uploaded to github, tested with github actions, printed to pdfs, and
+#   deployed on canvas.
+#   
+# * The canvas REST api works, is (relatively) easy to use from python, with some quirks.
+#   
+# * [papermill_jupytext](https://github.com/mwouts/papermill_jupytext) opens up the possibility of distributing different quizzes to each student, generate many different practice problems, etc.
+
+# %% [markdown]
+# ## We're hiring!
+
+# %% [markdown]
+# * [Fall term work/learn for graduate or undergraduate students](https://drive.google.com/file/d/1VOEqOtkfVxsU885GiH_tGRPOihzoPzwG/view?usp=sharing)
+#
+# * [Apply at the worklearn program site](https://students.ubc.ca/career/ubc-experiences/work-learn-program)
 
 # %%

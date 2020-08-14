@@ -61,13 +61,14 @@ toc-showmarkdowntxt: true
 
 * [An EOSC 340 quiz](midterm_sample/quiz2_2019t1.md)
 
-* What I want
+* What I want:
 
-- single source of truth (one document provides questions/answers with explanations)
+  - single source of truth (one document provides questions/answers with explanations)
+  - quizzes stay on github (private repo if needed), canvas is read-only
+  - metadata can be added to build quiz database  
+  
 
-- quizzes stay on github (private repo if needed), canvas is read-only
-
-### The canvas restful api
+### The canvas REST api
 
 * [Representational state transfer](https://en.wikipedia.org/wiki/Representational_state_transfer)
 
@@ -75,7 +76,7 @@ toc-showmarkdowntxt: true
 
   * [canvas live api](https://canvas.ubc.ca/doc/api/live#!/quizzes.json/create_quiz_post_2)
 
-### Coming
+### Coming next
 
 * Parameterized problems with [papermill_jupytext](https://github.com/mwouts/papermill_jupytext)
 
@@ -270,3 +271,29 @@ We are currently looking for alpha testers! If you see this as being useful for 
 6. Other question types also exist. There are examples of all of them in md2canvas/examples/sample_quiz/SampleQuiz.md.
 7. We are now testing this code! The tests (found [here](https://github.com/maracieco/md2canvas/actions)) run on every change, so the validity is maintained.
 8. Again, we are looking for alpha testers. Any feedback is greatly appreciated!
+
+## Summary
+
++++
+
+* The combination of jupyter/jupytext works well for quiz creation.  
+  Quizzes can be uploaded to github, tested with github actions, printed to pdfs, and
+  deployed on canvas.
+  
+* The canvas REST api works, is (relatively) easy to use from python, with some quirks.
+  
+* [papermill_jupytext](https://github.com/mwouts/papermill_jupytext) opens up the possibility of distributing different quizzes to each student, generate many different practice problems, etc.
+
++++
+
+## We're hiring!
+
++++
+
+* [Fall term work/learn for graduate or undergraduate students](https://drive.google.com/file/d/1VOEqOtkfVxsU885GiH_tGRPOihzoPzwG/view?usp=sharing)
+
+* [Apply at the worklearn program site](https://students.ubc.ca/career/ubc-experiences/work-learn-program)
+
+```{code-cell} ipython3
+
+```
