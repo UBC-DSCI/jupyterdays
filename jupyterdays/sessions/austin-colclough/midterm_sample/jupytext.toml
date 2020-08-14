@@ -1,0 +1,2 @@
+# Always pair ipynb notebooks to md and py files
+default_jupytext_formats = "ipynb,md:myst,py:percent"
