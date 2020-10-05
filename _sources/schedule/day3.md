@@ -12,7 +12,7 @@ Once registered, you can visit the Jupyterdays Canvas course shell: [https://can
 | Time | Session Title | Session Lead |
 | -- | -- | -- |
 | 9:00 am  | *Welcome* | [Warren Code](speakers.html#warren-code) |
-| 9:15 am | Finding datasets for data science | [Jeremy Buhler](speakers.html#jeremy-buhler) |
+| 9:15 am | [Finding datasets for data science](https://ubc-dsci.github.io/jupyterdays/sessions/buhler) | [Jeremy Buhler](speakers.html#jeremy-buhler) |
 | 9:45 am | [Writing Canvas quizzes with Jupyter](https://github.com/UBC-DSCI/jupyterdays/tree/master/jupyterdays/sessions/austin-colclough) | [Philip Austin/Mara Colclough](speakers.html#philip-austin) |
 | 10:15 am | *Break* | |
 | 10:30 am | [Julia & Jupyter](https://westgrid-slides.netlify.app/jupyterdays2020/#/) | [Marie-Hélène Burle](speakers.html#marie-helene-burle) |

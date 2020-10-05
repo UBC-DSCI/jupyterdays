@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Finding Data for Data Science &#8212; UBC JupyterDays 2020</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">UBC JupyterDays 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Schedule
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day1.html">
+   Day 1: Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day2.html">
+   Day 2: Pedagogy and Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/day3.html">
+   Day 3: New Developments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../schedule/speakers.html">
+   Speakers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 1 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ostblom/jupyterlab-intro.html">
+   Introduction to JupyterLab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/sharing-materials-with-git/sharing-materials-with-git.html">
+   Sharing your teaching materials using Git &amp; GitHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../beuzen/jupyter_book_tutorial.html">
+   Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../walls/a_tour_of_python_packages_for_scientific_computing.html">
+   Python packages for scientific computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 2 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../timbers/canvas-speedgrader-jupyter/canvas-speedgrader-jupyter.html">
+   Intro to using Canvas Speedgrader with Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lee/teaching_online_jupyter_days.html">
+   Teaching in an Online Setting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://firas.moosvi.com/books/active-learning-technologies/">
+   Active learning with Jupyter Book
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../gelbart/ds-pedagogies.html">
+   Effective pedagogies for teaching data science
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Day 3 Sessions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wu/Jupyter_and_QuantEcon.html">
+   Jupyter and QuantEcon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../heagy/widgets-and-dashboards.html">
+   Interactive exploration with Jupyter widgets and dashboards
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../boyce/interactive_online_course.html">
+   Building an Interactive Online Course
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Code of Conduct
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CODE_OF_CONDUCT.html">
+   Code of Conduct for Jupyterdays
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/sessions/buhler/finding_data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/UBC-DSCI/jupyterdays"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/UBC-DSCI/jupyterdays/issues/new?title=Issue%20on%20page%20%2Fsessions/buhler/finding_data.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://ubc.syzygy.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/UBC-DSCI/jupyterdays&urlpath=tree/jupyterdays/jupyterdays/sessions/buhler/finding_data.ipynb&branch=master"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubc-library-research-commons">
+   UBC Library Research Commons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selected-data-sources">
+   Selected data sources
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abacus">
+   Abacus
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-examples-from-abacus">
+     Data examples from Abacus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abacus-upgrade-august-2020">
+     Abacus upgrade, August 2020
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planet">
+   Planet
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#planet-resources">
+     <em>
+      Planet
+     </em>
+     resources
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geodisy">
+   Geodisy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#research-commons-contacts">
+   Research Commons contacts
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="finding-data-for-data-science">
+<h1>Finding Data for Data Science<a class="headerlink" href="#finding-data-for-data-science" title="Permalink to this headline">¶</a></h1>
+<p><strong>Jeremy Buhler</strong><br />
+Data Librarian, UBC Library Research Commons</p>
+<div class="section" id="ubc-library-research-commons">
+<h2>UBC Library Research Commons<a class="headerlink" href="#ubc-library-research-commons" title="Permalink to this headline">¶</a></h2>
+<p>A multidisciplinary hub that supports research and provides training in research-enabling skills.</p>
+<ul class="simple">
+<li><p>Finding and accessing data</p></li>
+<li><p>Geospatial data and GIS</p></li>
+</ul>
+</div>
+<div class="section" id="selected-data-sources">
+<h2>Selected data sources<a class="headerlink" href="#selected-data-sources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://abacus.library.ubc.ca">Abacus</a></strong> - UBC Library repository for open and licensed data</p></li>
+<li><p><strong><a class="reference external" href="https://www.planet.com/products/planet-imagery/">Planet</a></strong> - Satellite imagery and archive</p></li>
+<li><p><strong><a class="reference external" href="https://geo.frdr-dfdr.ca/">Geodisy</a></strong> - Spatial discovery layer for Canadian research data</p></li>
+</ul>
+</div>
+<div class="section" id="abacus">
+<h2>Abacus<a class="headerlink" href="#abacus" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://abacus.library.ubc.ca">Abacus</a> is a data repository hosted by UBC Library and used by SFU, UBC, UNBC, and UVic.</p>
+<p>The collection is selective: data is acquired to support research and teaching needs.</p>
+<div class="section" id="data-examples-from-abacus">
+<h3>Data examples from Abacus<a class="headerlink" href="#data-examples-from-abacus" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Statistics Canada microdata (e.g <a class="reference external" href="http://hdl.handle.net/11272/10711">2016 Census PUMF</a>)</p></li>
+<li><p>Recordings from the <a class="reference external" href="https://www.ldc.upenn.edu/about">Linguistic Data Consortium</a> (e.g. <a class="reference external" href="http://hdl.handle.net/11272/2PJSR">TIMIT</a>)</p></li>
+<li><p>UBC LiDAR (2010, 2015) and orthophotos (2000-2020)</p></li>
+</ul>
+</div>
+<div class="section" id="abacus-upgrade-august-2020">
+<h3>Abacus upgrade, August 2020<a class="headerlink" href="#abacus-upgrade-august-2020" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Cleaner interface</p></li>
+<li><p>API access to data files, documentation, and metadata</p></li>
+<li><p>Statistics Canada PUMFs freely available</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="planet">
+<h2>Planet<a class="headerlink" href="#planet" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Planet</em> company operates satellites that image the entire Earth landmass on a daily basis.</p>
+<p>In 2020 UBC Library licensed <a class="reference external" href="https://www.planet.com/products/planet-imagery/">Planet Imagery and Archive</a>, giving UBC researchers and instructors access to imagery from the PlanetScope and RapidEye satellites.</p>
+<p><em>Global, weekly, 5m resolution, multispectral imagery going back to 2009.</em></p>
+<div style="width: 48%; float: left">
+Before - Aug 26, 2020 
+<img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/E721/production/_113896195_before.jpg" width="500px" /></div>
+<div style="width: 48%; float: right">
+After - Aug 31, 2020 
+<img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/71F1/production/_113896192_after.jpg" width="500px" /></div>
+<p><em>‘Planet’ imagery linked from BBC News story, <a class="reference external" href="https://www.bbc.com/news/science-environment-53737138">Milne Ice Shelf: Satellites capture Arctic ice split</a></em></p>
+<div class="section" id="planet-resources">
+<h3><em>Planet</em> resources<a class="headerlink" href="#planet-resources" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://resources.library.ubc.ca/page.php?id=2551">Information about accessing Planet</a></p></li>
+<li><p><a class="reference external" href="https://github.com/planetlabs/notebooks">Planet Jupyter notebooks</a></p>
+<ul>
+<li><p>use the API</p></li>
+<li><p>process Planet data</p></li>
+<li><p>analyze and visualize Planet data</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="geodisy">
+<h2>Geodisy<a class="headerlink" href="#geodisy" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://geo.frdr-dfdr.ca/">Geodisy</a> is a spatial discovery platform for Canadian open research data that allows users to find data using a map instead of keywords.</p>
+<p>Geodisy was developed by a team from UBC Library and UBC Advanced Research Computing (ARC) with funding from CANARIE.</p>
+</div>
+<div class="section" id="research-commons-contacts">
+<h2>Research Commons contacts<a class="headerlink" href="#research-commons-contacts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Jeremy Buhler, Data Librarian, <a class="reference external" href="mailto:jeremy&#46;buhler&#37;&#52;&#48;ubc&#46;ca">jeremy<span>&#46;</span>buhler<span>&#64;</span>ubc<span>&#46;</span>ca</a></p></li>
+<li><p>Evan Thornberry, GIS Librarian, <a class="reference external" href="mailto:evan&#46;thornberry&#37;&#52;&#48;ubc&#46;ca">evan<span>&#46;</span>thornberry<span>&#64;</span>ubc<span>&#46;</span>ca</a></p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tomas Beuzen, Hayley Boyce, Warren Code, Tiffany Timbers, Patrick Walls, Peifan Wu<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
