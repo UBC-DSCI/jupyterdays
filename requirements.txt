@@ -2,7 +2,7 @@ jupyter-book==0.7.1
 ghp-import==0.5.5
 plotly==4.8.2
 seaborn==0.10.0
-numpy==1.18.1
+numpy==1.22.0
 scipy==1.4.1
 matplotlib==3.2.2
 pandas==1.1.0
