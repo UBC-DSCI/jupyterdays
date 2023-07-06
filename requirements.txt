@@ -3,7 +3,7 @@ ghp-import==0.5.5
 plotly==4.8.2
 seaborn==0.10.0
 numpy==1.18.1
-scipy==1.4.1
+scipy==1.10.0
 matplotlib==3.2.2
 pandas==1.1.0
 scikit-learn==0.23.1
